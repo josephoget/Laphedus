@@ -1,39 +1,76 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-
-export default function LaphedusSite() {
-  const [lang, setLang] = useState("en");
-
-  const content = {
-    en: {
-      title: "Welcome to Laphedus",
-      description: "Simple and smart apps made with care.",
-      button: "Contact Us"
-    },
-    tr: {
-      title: "Laphedus'a Hoş Geldiniz",
-      description: "Özenle yapılmış basit ve akıllı uygulamalar.",
-      button: "Bize Ulaşın"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laphedus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #eef2ff, #ffffff);
+      color: #333;
+      text-align: center;
+      padding: 2rem;
     }
-  };
+    .switch {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 1rem;
+      max-width: 500px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #4f46e5;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="switch">
+    <button onclick="toggleLang()" id="langButton">Türkçe</button>
+  </div>
 
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-100 to-white p-4">
-      <div className="absolute top-4 right-4">
-        <Button variant="outline" onClick={() => setLang(lang === "en" ? "tr" : "en")}> 
-          {lang === "en" ? "Türkçe" : "English"}
-        </Button>
-      </div>
+  <div class="card">
+    <h1 id="title">Welcome to Laphedus</h1>
+    <p id="desc">Simple and smart apps made with care.</p>
+    <button id="contact">Contact Us</button>
+  </div>
 
-      <div className="text-center max-w-md bg-white p-6 rounded-2xl shadow-xl">
-        <h1 className="text-3xl font-bold text-indigo-700 mb-4">
-          {content[lang].title}
-        </h1>
-        <p className="text-gray-600 text-lg mb-6">
-          {content[lang].description}
-        </p>
-        <Button>{content[lang].button}</Button>
-      </div>
-    </div>
-  );
-}
+  <script>
+    let lang = 'en';
+    const content = {
+      en: {
+        title: "Welcome to Laphedus",
+        desc: "Simple and smart apps made with care.",
+        contact: "Contact Us",
+        switch: "Türkçe"
+      },
+      tr: {
+        title: "Laphedus'a Hoş Geldiniz",
+        desc: "Özenle yapılmış basit ve akıllı uygulamalar.",
+        contact: "Bize Ulaşın",
+        switch: "English"
+      }
+    };
+
+    function toggleLang() {
+      lang = lang === 'en' ? 'tr' : 'en';
+      document.getElementById('title').innerText = content[lang].title;
+      document.getElementById('desc').innerText = content[lang].desc;
+      document.getElementById('contact').innerText = content[lang].contact;
+      document.getElementById('langButton').innerText = content[lang].switch;
+    }
+  </script>
+</body>
+</html>
