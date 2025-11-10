@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nowa4 - Account Deletion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 2px solid #ffc107;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .warning-box .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box h2 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .warning-box p {
+            color: #856404;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .section-title::before {
+            content: "🗑️";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #ff6b6b;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .info-card p {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-card strong {
+            color: #2c3e50;
+        }
+        
+        .steps {
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .steps h3 {
+            color: #155724;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .steps ol {
+            padding-left: 20px;
+            color: #155724;
+        }
+        
+        .steps li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border: 2px solid #2196f3;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-box h3 {
+            color: #1565c0;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .contact-box p {
+            color: #1565c0;
+            margin-bottom: 10px;
+        }
+        
+        .contact-box a {
+            color: #0d47a1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Account Deletion</h1>
+            <p>Nowa4 AI Image Generator</p>
+        </div>
+        
+        <div class="content">
+            <div class="warning-box">
+                <div class="icon">⚠️</div>
+                <h2>Important Warning</h2>
+                <p>Account deletion is permanent and irreversible. All your data will be permanently lost.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">What Gets Deleted</div>
+                <div class="info-card">
+                    <p>When you delete your Nowa4 account, the following data will be permanently removed from our servers:</p>
+                    <p><strong>• Account Information:</strong> Your name, email address, and profile picture associated with your Google account</p>
+                    <p><strong>• Prompt History:</strong> All text prompts you've entered for image generation</p>
+                    <p><strong>• Generated Images:</strong> All images created through the app (if stored on our servers)</p>
+                    <p><strong>• Token Balance:</strong> Your current credit balance and transaction history</p>
+                    <p><strong>• App Settings:</strong> Your preferences and customizations within the app</p>
+                    <p><strong>• Usage Data:</strong> Your app usage patterns and analytics data (if opted-in)</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Before You Delete</div>
+                <div class="info-card">
+                    <p><strong>Export Your Data:</strong> Before deleting your account, you can export your prompt history and transaction logs as a JSON file through the app's Settings screen.</p>
+                    <p><strong>Use Remaining Credits:</strong> Any unused credits in your account will be lost. Make sure to use them before deletion.</p>
+                    <p><strong>Save Your Images:</strong> Download any generated images you want to keep to your device's gallery.</p>
+                    <p><strong>Consider Alternatives:</strong> Instead of full account deletion, you can clear your prompt history while keeping your account active.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">How to Delete Your Account</div>
+                <div class="steps">
+                    <h3>Method 1: Through the App</h3>
+                    <ol>
+                        <li>Open the Nowa4 app on your device</li>
+                        <li>Go to <strong>Settings</strong> (gear icon)</li>
+                        <li>Click on the <strong>Account</strong> section and open the page.</li>
+                        <li>Find <strong>"Delete Account"</strong>button.</li>
+                        <li>Read the warning carefully</li>
+                        <li>Confirm your decision by typing "DELETE" when prompted</li>
+                        <li>Your account will be scheduled for deletion within 30 days</li>
+                    </ol>
+                </div>
+                
+                <div class="steps">
+                    <h3>Method 2: Email Request</h3>
+                    <ol>
+                        <li>Send an email to <strong>laphedusapp@gmail.com</strong></li>
+                        <li>Use the subject line: <strong>"Account Deletion Request"</strong></li>
+                        <li>Include your registered email address in the message</li>
+                        <li>We will process your request within 48 hours</li>
+                        <li>You will receive a confirmation email once deletion is complete</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Deletion Timeline</div>
+                <div class="info-card">
+                    <p><strong>Immediate:</strong> Your account will be deactivated and you won't be able to sign in</p>
+                    <p><strong>Within 30 days:</strong> All your personal data will be permanently deleted from our servers</p>
+                    <p><strong>Anonymized data:</strong> Some anonymized usage statistics may be retained for app improvement purposes, but these cannot be linked back to you</p>
+                    <p><strong>Backup systems:</strong> Data may persist in backup systems for up to 90 days for technical reasons, but will not be accessible or used</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">After Deletion</div>
+                <div class="info-card">
+                    <p><strong>No Recovery:</strong> Once deleted, your account and data cannot be recovered</p>
+                    <p><strong>New Account:</strong> You can create a new account anytime, but it will start fresh with no previous data</p>
+                    <p><strong>In-App Purchases:</strong> Previous purchases cannot be restored to a new account</p>
+                    <p><strong>Google Account:</strong> Your Google account remains unaffected - only your Nowa4 app data is deleted</p>
+                </div>
+            </div>
+            
+            <div class="contact-box">
+                <h3>Need Help?</h3>
+                <p>If you have questions about account deletion or need assistance:</p>
+                <p><strong>Email:</strong> <a href="mailto:laphedusapp@gmail.com">laphedusapp@gmail.com</a></p>
+                <p><strong>Website:</strong> <a href="https://laphedus.com" target="_blank">https://laphedus.com</a></p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Last updated: November 2, 2025
+        </div>
+    </div>
+</body>
+</html>
