@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "kayfe",
+    "name": "Kayfe - Yeni Fal Uygulaması",
+    "short_description": "Kahve falınıza bakın, geleceğinize göz atın.",
+    "long_description": "Kayfe, kahve falı deneyimini modern ve keyifli bir arayüzle sunar. Uygulama içi satın alma seçenekleriyle daha zengin içeriklere erişebilir, günlük yorumlarla eğlenceli bir rutin oluşturabilirsiniz.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://via.placeholder.com/256?text=Kayfe",
+    "screenshots": [
+      "https://via.placeholder.com/1024x576?text=Kayfe+Ekran+1",
+      "https://via.placeholder.com/1024x576?text=Kayfe+Ekran+2",
+      "https://via.placeholder.com/1024x576?text=Kayfe+Ekran+3"
+    ],
+    "category": "Eğlence"
+  },
+  {
+    "slug": "expensly",
+    "name": "Expensly - Masraf Takibi",
+    "short_description": "Giderlerinizi kolayca kaydedin ve takip edin.",
+    "long_description": "Expensly ile günlük harcamalarınızı basitçe kaydedebilir, kategorize edebilir ve raporlayabilirsiniz. Temiz bir arayüz ve pratik akışlarla finansal farkındalığınızı artırır.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://via.placeholder.com/256?text=Expensly",
+    "screenshots": [
+      "https://via.placeholder.com/1024x576?text=Expensly+Ekran+1",
+      "https://via.placeholder.com/1024x576?text=Expensly+Ekran+2",
+      "https://via.placeholder.com/1024x576?text=Expensly+Ekran+3"
+    ],
+    "category": "Finans"
+  },
+  {
+    "slug": "taptap",
+    "name": "TapTap - Skor",
+    "short_description": "Basit ve eğlenceli skor takibi.",
+    "long_description": "TapTap, skor tutma ve paylaşma süreçlerini basitleştirir. Hafif ve hızlı yapısıyla anlık kullanımlar için idealdir.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://via.placeholder.com/256?text=TapTap",
+    "screenshots": [
+      "https://via.placeholder.com/1024x576?text=TapTap+Ekran+1",
+      "https://via.placeholder.com/1024x576?text=TapTap+Ekran+2",
+      "https://via.placeholder.com/1024x576?text=TapTap+Ekran+3"
+    ],
+    "category": "Araçlar"
+  }
+  ,
+  {
+    "slug": "nowa4",
+    "name": "Nowa4",
+    "short_description": "Nowa4 için gizlilik ve hesap silme bağlantıları içerir.",
+    "long_description": "Nowa4 uygulamasına özel içerik yakında. Bu sayfa gizlilik politikası ve hesap silme talepleri için bağlantılar sağlar.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://via.placeholder.com/256?text=Nowa4",
+    "screenshots": [
+      "https://via.placeholder.com/1024x576?text=Nowa4+Ekran+1",
+      "https://via.placeholder.com/1024x576?text=Nowa4+Ekran+2",
+      "https://via.placeholder.com/1024x576?text=Nowa4+Ekran+3"
+    ],
+    "category": "Araçlar"
+  }
+]

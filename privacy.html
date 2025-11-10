@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gizlilik Politikası</title>
+  <meta name="description" content="LaphedusApp gizlilik politikası ve veri işleme ilkeleri." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .policy-section { padding: 24px 0 48px; }
+    .policy-card { border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: #0f172a; }
+    .policy-card h1 { margin: 0 0 8px; font-size: 26px; }
+    .policy-card h2 { margin: 16px 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">LaphedusApp</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="privacy.html" class="active">Gizlilik</a>
+        <a href="account-deletion.html">Hesap Silme</a>
+        <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play</a>
+        <a href="index.html#hakkinda">Hakkında</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="policy-section">
+      <div class="container">
+        <div class="policy-card">
+          <h1>Gizlilik Politikası</h1>
+          <p class="muted">Uygulama: <strong id="appName">Genel</strong></p>
+
+          <div id="policyContent"></div>
+
+          <div id="defaultPrivacy">
+            <h2>Veri Toplama</h2>
+            <p>Uygulamalarımız, hizmetin çalışması için gerekli asgari verileri işler. Toplanan veriler; uygulama içi tercihleri, çökme raporlarını ve anonim kullanım istatistiklerini içerebilir.</p>
+
+            <h2>Veri Kullanımı</h2>
+            <p>Toplanan veriler, uygulama deneyimini iyileştirmek, hataları gidermek ve güvenliği sağlamak amacıyla kullanılır. Veriler hiçbir koşulda üçüncü şahıslara satılmaz.</p>
+
+            <h2>Üçüncü Taraflar</h2>
+            <p>Analitik veya reklam servisleri gibi üçüncü taraf sağlayıcılar kullanılabilir. Bu sağlayıcılar yalnızca hizmet sunumu için gerekli olan sınırlı verilere erişebilir.</p>
+
+            <h2>İletişim</h2>
+            <p>Herhangi bir gizlilik sorusu için <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play geliştirici sayfamız</a> üzerinden bizimle iletişime geçebilirsiniz.</p>
+          </div>
+
+          <div class="app-actions" style="margin-top:16px;">
+            <a class="btn" id="backToApp" href="index.html">Uygulamaya Dön</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> LaphedusApp</small>
+      <div class="links">
+        <a href="index.html">Ana Sayfa</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/policy.js"></script>
+</body>
+</html>
