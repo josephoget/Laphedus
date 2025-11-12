@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "kayfe",
+    "name": "Kayfe - Yeni Fal Uygulaması",
+    "short_description": "Kahve falınıza bakın, geleceğinize göz atın.",
+    "long_description": "Kayfe, kahve falı deneyimini modern ve keyifli bir arayüzle sunar. Uygulama içi satın alma seçenekleriyle daha zengin içeriklere erişebilir, günlük yorumlarla eğlenceli bir rutin oluşturabilirsiniz.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/ASFgeBRkxQNspVgFSoQo8NFIWsWVhVONOXCO4iA1esJXMOejSaaxJkS2rMuG3D8bnA=w480-h960-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/NPpXiw4faFl4PDQKBo45sKa8r8cC4uHbrfLsfc2vc4bPMV3kQMeS80vMs56QvJtEamM=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/aLaiJHE20GL7X8lwvixLUMmNnvdzhRXrigLgD9MVH2XDWTuO0nGYTvFhUOLxBBSBtaw=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/NgnJEEngQMi20nITjcVG_-8ZeqbsiNE4JoGU7dbCMWoBbgr0JHBjyb5Zjlx9SU3zEQ=w1052-h592-rw"
+    ],
+    "category": "Eğlence"
+  },
+  {
+    "slug": "expensly",
+    "name": "Expensly - Masraf Takibi",
+    "short_description": "Giderlerinizi kolayca kaydedin ve takip edin.",
+    "long_description": "Expensly ile günlük harcamalarınızı basitçe kaydedebilir, kategorize edebilir ve raporlayabilirsiniz. Temiz bir arayüz ve pratik akışlarla finansal farkındalığınızı artırır.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/mtr4uc5I3fTIqP_slBIt2ZBOl_OlV_GOqTip3GcC4wSxb8sYTJEh_1l_U-NzS4AJUg=w480-h960-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/DtcK5l76ykOaiPCx-EXkd1pIc-YgyNdk35EfGuAWuULhQg-WGbVPp7BTYRCUaHIUvQ=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/gaCTAcyUPKO9oLYUdHrYpDyY3zimB2X1IOCx_U2GD_JAgP0eXiwAJj4tPPFrylaoVvhI=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/T-CjqiY2y4QMKl99sRd9LXwmhLa92ZWujSgZnm09BjQiqxLfzNXiN30ZfWorTFByOg=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/UimvRaTVoKai-2R7OeOMO7tspBHq27FxbsBXs_y83IR8Xb2h83C0zDNfS8io8x1_sqZL=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/CSalmHaBwRMsKfB4axCyBK4rN_G7wEWMhlVaNWEdKiQd0BWTau_zggmfd8uoWs6WXw=w1052-h592-rw"
+    ],
+    "category": "Finans"
+  },
+  {
+    "slug": "taptap",
+    "name": "TapTap - Skor",
+    "short_description": "Basit ve eğlenceli skor takibi.",
+    "long_description": "TapTap, skor tutma ve paylaşma süreçlerini basitleştirir. Hafif ve hızlı yapısıyla anlık kullanımlar için idealdir.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/D9tIUs1b36Vc3mVJ12bF60oezAcOqHylj4p1msv5IAaypv0ne4qarSnBEszqy1HMQury=s512-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/vX6gTTVLWubCOqYatBPwlsaTTVsvDxzyfbGop9SCb7Zj8RiRGJzy02WmUd3te2Vylg=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/ymKMJq9NHkarLLte8FkVbjXmZcHL4Fd83IbP-ZRbIaoyadqrNJtYyLbxlfCVwOo36Q0=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/Djo0eBn_hlDAObmILi5_2wJM78N4KCJIEZP0dkSjHRrYSs0b4dxaERfxtZvWuGeSPbyM=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/UZyK4O_caM1VGP-NzqMOrRuj5cvZfnF5dkoyW6TZ6cD2rZUiCUd0fDEyV2fRNK54CtYo=w1052-h592-rw"
+    ],
+    "category": "Araçlar"
+  }
+  ,
+  {
+    "slug": "nowa4",
+    "name": "Nowa4",
+    "short_description": "Nowa4 için gizlilik ve hesap silme bağlantıları içerir.",
+    "long_description": "Nowa4 uygulamasına özel içerik yakında. Bu sayfa gizlilik politikası ve hesap silme talepleri için bağlantılar sağlar.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/f9Kh7vKGB315dubX_lbhwlipSXdEt09NwIFY_QUx3SuSdGeYI-PVITVrOG8gn7QudaKSexPwzPGbMvMDuRM9vGw=w480-h960-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/iDIH45sTwO7nhuvThbTMrmSxLofv-RKlgIqF7lNfDRSM5pa0muwUMovIMAvLBU-tmTpyvN1OBxS37bYcrH851rk=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/HIzhSmKK0CL69GnXdsjDjzEnY-Y_8RIxJyzFD-ZknIBDBvEvLAkyml_s_a0jTVBewAGtbq8b1qBmqpR264AJ=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/s87Liu0nLpgrtMFMpOYgTdQq1opJe5ceOxDdZkvcMrWreI7kxijWG5TNXsrhsvCzb0zLFpRNlVgmz10-zHkfqQ=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/OMVR22aM6kwpobcctvmBuoDTwfFQMt1QZtWRxhbwuKqNFJqgmD4Tge_4-VlFXqRbU7UB8_NYwlFaIJ4rYS5qBh0=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/vzXroMn6z6NCJbCON2uXx6PGMY_hG_PH8IeKLYC9I9ot074ZjvSqIbiV49p8n6zL-76Q7cUn4Rt29fcwdMSfAQ=w1052-h592-rw"
+    ],
+    "category": "Araçlar"
+  }
+]
