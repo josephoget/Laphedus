@@ -1,0 +1,94 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #22c55e;
+  --primary-ink: #052e1d;
+  --border: #1f2937;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 10% 0%, #0b1224 0%, var(--bg) 70%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+.site-header {
+  position: sticky; top: 0; background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 50;
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo {
+  font-weight: 700; letter-spacing: 0.2px;
+  background: linear-gradient(90deg, #a7f3d0, #22c55e); -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-size: 20px; text-decoration: none;
+}
+.nav a { color: var(--text); text-decoration: none; margin-left: 16px; padding: 8px 10px; border-radius: 8px; }
+.nav a:hover, .nav a.active { background: var(--card); }
+
+.hero { padding: 72px 0 24px; text-align: center; }
+.hero h1 { font-size: 40px; margin: 0 0 8px 0; }
+.hero p { color: var(--muted); margin: 0 0 20px 0; }
+.hero-actions { display: inline-flex; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--border); color: var(--text); text-decoration: none; }
+.btn.primary { background: var(--primary); color: var(--primary-ink); font-weight: 600; border-color: #16a34a; }
+.btn.primary:hover { filter: brightness(1.05); }
+.btn:hover { background: var(--card); }
+
+.apps-section { padding: 32px 0 60px; }
+.apps-section h2, .about-section h2 { font-size: 24px; margin-bottom: 16px; }
+.app-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;
+}
+@media (max-width: 900px) { .app-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .app-grid { grid-template-columns: 1fr; } }
+
+.card {
+  border: 1px solid var(--border); border-radius: 14px; background: linear-gradient(180deg, #0f172a, #0f172a 60%, #10182e);
+  overflow: hidden; transition: transform .12s ease, border-color .12s ease;
+}
+.card:hover { transform: translateY(-2px); border-color: #334155; }
+.card-media { padding: 14px 14px 0 14px; }
+.card-media img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); background: #0b1324; }
+.card-body { padding: 14px; }
+.card-title { font-weight: 600; margin: 0 0 6px 0; }
+.card-desc { color: var(--muted); font-size: 14px; margin: 0 0 10px 0; }
+.card-actions { display: flex; gap: 10px; }
+.card-actions a { text-decoration: none; }
+
+.fallback { color: #fca5a5; background: #7f1d1d; padding: 10px 14px; border-radius: 10px; border: 1px solid #dc2626; }
+
+.about-section { padding: 10px 0 60px; color: var(--muted); }
+
+.site-footer { border-top: 1px solid var(--border); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+
+.app-detail-section { padding: 32px 0 60px; }
+.app-detail {
+  display: grid; grid-template-columns: 260px 1fr; gap: 24px;
+  border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: #0f172a;
+}
+@media (max-width: 800px) { .app-detail { grid-template-columns: 1fr; } }
+.app-icon { width: 100%; aspect-ratio: 1/1; border-radius: 16px; border: 1px solid var(--border); object-fit: cover; }
+.app-title { margin: 0; font-size: 26px; font-weight: 700; }
+.app-meta { color: var(--muted); margin: 6px 0 14px 0; }
+.app-actions { display: flex; gap: 10px; margin-bottom: 16px; }
+.app-section { margin-top: 16px; }
+.app-section h3 { margin: 0 0 8px 0; font-size: 18px; }
+.screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 900px) { .screens { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .screens { grid-template-columns: 1fr; } }
+.screen { width: 100%; border-radius: 12px; border: 1px solid var(--border); background: #0b1324; }
+
+/* Policy pages: preserve original text and wrap lines nicely */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
