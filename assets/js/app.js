@@ -32,11 +32,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       : app.external_url
         ? `<a class="btn primary" href="${app.external_url}">${app.external_label ?? 'Detayı Aç'}</a>`
         : '';
+    const isAccountless = app.has_account === false;
+    const backAction = app.slug === 'dinamik-ada'
+      ? ''
+      : `<a class="btn" href="index.html">Diğer Uygulamalar</a>`;
     const legalActions = [
       `<a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Gizlilik Politikası</a>`,
       app.has_terms ? `<a class="btn" href="terms.html?app=${encodeURIComponent(app.slug)}">Kullanım Koşulları</a>` : '',
       app.has_support ? `<a class="btn" href="support.html?app=${encodeURIComponent(app.slug)}">Destek</a>` : '',
-      app.has_account === false ? '' : `<a class="btn" href="account-deletion.html?app=${encodeURIComponent(app.slug)}">Hesap Silme</a>`
+      isAccountless ? '' : `<a class="btn" href="account-deletion.html?app=${encodeURIComponent(app.slug)}">Hesap Silme</a>`
     ].filter(Boolean).join('');
 
     container.innerHTML = `
@@ -49,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         <div class="app-actions">
           ${primaryAction}
-          <a class="btn" href="index.html">Diğer Uygulamalar</a>
+          ${backAction}
           ${legalActions}
         </div>
 
