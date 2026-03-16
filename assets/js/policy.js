@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const appNameEl = document.getElementById('appName');
   const backEl = document.getElementById('backToApp');
   const isPrivacy = /privacy\.html$/.test(window.location.pathname);
+  const isTerms = /terms\.html$/.test(window.location.pathname);
+  const isSupport = /support\.html$/.test(window.location.pathname);
   const isDeletion = /account-deletion\.html$/.test(window.location.pathname);
   const contentEl = document.getElementById('policyContent');
 
@@ -256,11 +258,15 @@ After Deletion
 
   if (app === 'dinamik-ada' && contentEl) {
     if (isPrivacy) {
-      const dynamicPillPrivacy = `Son guncelleme: 2026-03-16
+      const dynamicPillPrivacy = `Gizlilik Politikasi
+
+Dinamik Ada Gizlilik Politikasi
+
+Son guncelleme: 03.15.2026
 
 Dinamik Ada, Android cihazlarda secili sistem olaylarini ekranin ust kismina tasiyan yardimci bir overlay uygulamasidir. Bu metin, uygulamanin hangi verilere eristigini ve bunlari nasil kullandigini aciklar.
 
-Islenen bilgiler
+1. Toplanan ve Islenen Bilgiler
 
     Erisilebilirlik servis durumu
     Overlay izni durumu
@@ -271,28 +277,160 @@ Islenen bilgiler
 
 Bu bilgiler, kapsul arayuzunu guncellemek, secili modulleri calistirmak ve kullanici tercihlerini korumak amaciyla cihaz icinde islenir.
 
-Toplanmayan bilgiler
+2. Toplanmayan Bilgiler
 
     Zorunlu kullanici hesabi
+    Sunucuya kisisel veri gonderme
     Reklam profili olusturma
     Konum gecmisi
     Kisi listesi, fotograf galerisi veya mesaj icerigi
 
-Veri saklama
+3. Veriler Nasil Kullanilir
+
+    Dinamik kapsul arayuzunu gostermek
+    Medya ve sistem olaylarini canli olarak yansitmak
+    Baglanti durumlarina gore kapsul icerigini guncellemek
+    Kullanici ayarlarini cihaz uzerinde saklamak
+    Uygulamanin calisma kararliligini korumak
+
+4. Veriler Nerede Saklanir
 
 Uygulama ayarlari ve tercihleri mumkun oldugunca cihaz uzerinde saklanir. Mevcut yapida kullanici verilerinin uzak sunucuya aktarilmasi hedeflenmez.
 
-Izinler neden gerekli?
+Gelecekte bulut yedekleme, hesap senkronizasyonu, analitik veya uzaktan hata kaydi gibi ozellikler eklenirse bu politika guncellenecektir.
+
+5. Izinler ve Gerekceleri
 
     Erisilebilirlik: kapsul servisinin olaylara tepki verebilmesi icin
     Ustte goster: kapsulun diger uygulamalarin ustunde gorunebilmesi icin
     Bildirim erisimi: sadece ilgili ozellikler acik oldugunda
     Pil optimizasyonu istisnasi: bazi cihazlarda arka plan kararliligi icin onerilebilir
 
-Iletisim
+6. Ucuncu Taraflarla Paylasim
 
-Resmi destek e-postasi yayin surecinde eklenecektir. Guncel bilgi icin Laphedus gelistirici sayfasini kontrol edebilirsiniz.`;
+Mevcut yapida kullanici verileri ucuncu taraflarla satilmaz, kiralanmaz veya reklam amaciyla paylasilmaz.
+
+7. Veri Guvenligi
+
+Uygulama, isledigi tercih ve durum bilgisini cihaz uzerinde tutmaya oncelik verir. Hicbir depolama yontemi yuzde yuz guvenlik garantisi vermez.
+
+8. Cocuklarin Gizliligi
+
+Uygulama cocuklara yonelik ozel bir hizmet olarak tasarlanmamistir.
+
+9. Degisiklikler
+
+Bu gizlilik politikasi zaman zaman guncellenebilir. Onemli degisiklikler oldugunda uygulama ici bilgilendirme, surum notu veya guncel baglanti uzerinden duyuru yapilabilir.
+
+10. Iletisim
+
+Gelistirici: Laphedus
+E-posta: laphedusapp@gmail.com`;
       setPreContent(contentEl, dynamicPillPrivacy, 'defaultPrivacy');
+      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+    }
+
+    if (isTerms) {
+      const dynamicPillTerms = `Kullanim Kosullari
+
+Dinamik Ada Kullanim Kosullari
+
+Son guncelleme: 03.15.2026
+
+Bu uygulamayi indirerek, kurarak veya kullanarak asagidaki kosullari kabul etmis sayilirsiniz.
+
+1. Hizmetin Kapsami
+
+Dinamik Ada, Android cihazlarda secili sistem olaylarini ve belirli yardimci kontrolleri ust kapsul arayuzunde gostermek icin tasarlanmis yardimci bir uygulamadir.
+
+Uygulama; cihaz modeli, Android surumu, uretici arayuzu ve izin durumuna gore farkli sekilde davranabilir.
+
+2. Uygun Kullanim
+
+    cihazin sistem guvenligini asmamak
+    uygulamayi kotuye kullanmamak
+    ucuncu taraf haklarini ihlal etmemek
+    uygulamayi yasalara aykiri amaclarla kullanmamak
+
+3. Izinler ve Sistem Davranisi
+
+Erisilebilirlik, bildirim erisimi veya ustte goster gibi izinler verilmezse bazi moduller kisitli calisabilir veya hic calismayabilir.
+
+4. Uyumluluk ve Garanti Siniri
+
+    tum cihazlarda ayni gorunum garanti edilmez
+    tum uretici arayuzleriyle tam uyum garanti edilmez
+    arka plan davranisinin her cihazda ayni olacagi garanti edilmez
+    sistem guncellemelerinden kaynakli degisiklikler olabilir
+
+5. Kesintiler ve Degisiklikler
+
+Gelistirici, uygulamanin ozelliklerinde degisiklik yapabilir, bazi modulleri kaldirabilir, yeni moduller ekleyebilir veya uygulamayi belirli cihazlarda farkli sekilde optimize edebilir.
+
+6. Sorumlulugun Sinirlandirilmasi
+
+Uygulama oldugu gibi sunulur. Kesintisiz veya hatasiz calisma garantisi verilmez.
+
+7. Fikri Mulkiyet
+
+Uygulamanin tasarimi, markasi, metinleri ve ilgili icerikleri gelistiriciye veya ilgili hak sahiplerine aittir.
+
+8. Ucuncu Taraf Bilesenler
+
+Uygulama, Flutter, Android sistem API'leri ve acik kaynak kutuphaneler kullanabilir. Bu bilesenler kendi lisans ve kosullarina tabi olabilir.
+
+9. Hesap ve Odeme Ozellikleri
+
+Mevcut yapida uygulama zorunlu bir kullanici hesabi gerektirmez.
+
+10. Kullanimin Sonlandirilmasi
+
+Kullanici uygulamayi istedigi zaman kaldirabilir veya kullanmayi durdurabilir.
+
+11. Degisiklikler
+
+Bu kullanim kosullari zaman zaman guncellenebilir.
+
+12. Iletisim
+
+Gelistirici: Laphedus
+E-posta: laphedusapp@gmail.com`;
+      setPreContent(contentEl, dynamicPillTerms, 'defaultTerms');
+      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+    }
+
+    if (isSupport) {
+      const dynamicPillSupport = `Destek ve Iletisim
+
+Dinamik Ada ile ilgili soru, geri bildirim veya hata bildirimleri icin bu kanal kullanilabilir.
+
+1. Resmi Iletisim Bilgileri
+
+    gelistirici: Laphedus
+    destek e-postasi: laphedusapp@gmail.com
+    son guncelleme tarihi: 03.15.2026
+
+2. Hangi Durumlarda Yazilmali
+
+    ada gorunmuyor veya gec aciliyor
+    izinler acik oldugu halde ozellik calismiyor
+    belirli bir cihazda hizalama sorunu yasaniyor
+    premium veya satin alma davranisi beklenenden farkli
+    geri bildirim veya ozellik onerisi iletmek isteniyor
+
+3. Hata Bildirirken Neler Eklenmeli
+
+    cihaz modeli
+    Android surumu
+    uygulama surumu
+    sorunun kisa aciklamasi
+    sorunun hangi ekranda veya hangi ozellikte oldugu
+    mumkunse tekrar etme adimlari
+
+4. Kisa Destek Ozeti
+
+Dinamik Ada ile ilgili destek talepleri, geri bildirimler ve hata bildirimleri icin resmi iletisim kanali olarak laphedusapp@gmail.com kullanilabilir.`;
+      setPreContent(contentEl, dynamicPillSupport, 'defaultSupport');
       if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
     }
 
