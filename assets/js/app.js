@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     document.title = `${app.name} - LaphedusApp`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', app.short_description);
+    const primaryAction = app.play_store_url
+      ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Google Play'de Aç</a>`
+      : app.external_url
+        ? `<a class="btn primary" href="${app.external_url}">${app.external_label ?? 'Detayı Aç'}</a>`
+        : '';
 
     container.innerHTML = `
       <div>
@@ -37,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="app-meta">${app.category ?? ''}</div>
 
         <div class="app-actions">
-          <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Google Play'de Aç</a>
+          ${primaryAction}
           <a class="btn" href="index.html">Diğer Uygulamalar</a>
           <a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Gizlilik Politikası</a>
           <a class="btn" href="account-deletion.html?app=${encodeURIComponent(app.slug)}">Hesap Silme</a>

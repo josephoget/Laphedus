@@ -254,6 +254,67 @@ After Deletion
     }
   }
 
+  if (app === 'dinamik-ada' && contentEl) {
+    if (isPrivacy) {
+      const dynamicPillPrivacy = `Son guncelleme: 2026-03-16
+
+Dinamik Ada, Android cihazlarda secili sistem olaylarini ekranin ust kismina tasiyan yardimci bir overlay uygulamasidir. Bu metin, uygulamanin hangi verilere eristigini ve bunlari nasil kullandigini aciklar.
+
+Islenen bilgiler
+
+    Erisilebilirlik servis durumu
+    Overlay izni durumu
+    Bildirim erisimi durumu
+    Medya oturumu ve oynatma bilgileri
+    Pil, sarj, Bluetooth ve Wi-Fi gibi cihaz ici durumlar
+    Dil, tema, gorunum ve uygulama tercihleri
+
+Bu bilgiler, kapsul arayuzunu guncellemek, secili modulleri calistirmak ve kullanici tercihlerini korumak amaciyla cihaz icinde islenir.
+
+Toplanmayan bilgiler
+
+    Zorunlu kullanici hesabi
+    Reklam profili olusturma
+    Konum gecmisi
+    Kisi listesi, fotograf galerisi veya mesaj icerigi
+
+Veri saklama
+
+Uygulama ayarlari ve tercihleri mumkun oldugunca cihaz uzerinde saklanir. Mevcut yapida kullanici verilerinin uzak sunucuya aktarilmasi hedeflenmez.
+
+Izinler neden gerekli?
+
+    Erisilebilirlik: kapsul servisinin olaylara tepki verebilmesi icin
+    Ustte goster: kapsulun diger uygulamalarin ustunde gorunebilmesi icin
+    Bildirim erisimi: sadece ilgili ozellikler acik oldugunda
+    Pil optimizasyonu istisnasi: bazi cihazlarda arka plan kararliligi icin onerilebilir
+
+Iletisim
+
+Resmi destek e-postasi yayin surecinde eklenecektir. Guncel bilgi icin Laphedus gelistirici sayfasini kontrol edebilirsiniz.`;
+      setPreContent(contentEl, dynamicPillPrivacy, 'defaultPrivacy');
+      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+    }
+
+    if (isDeletion) {
+      const dynamicPillDeletion = `Dinamik Ada mevcut yapisinda zorunlu bir kullanici hesabi gerektirmez.
+
+Bu nedenle uygulama icin ayrica sunucu tarafli bir hesap silme akisi bulunmaz.
+
+Uygulamayi kaldirmak icin:
+
+    Cihazinda Ayarlar > Uygulamalar > Dinamik Ada yolunu ac
+    Kaldir secenegini kullan
+    Istersen uygulama verilerini de ayni ekrandan temizle
+
+Uygulama tercihleri cihaz uzerinde tutuldugundan, uygulamayi kaldirman veya verilerini temizlemen yerel verileri de kaldirir.
+
+Eger gelecekte hesap veya bulut senkronizasyonu eklenirse bu sayfa guncellenecektir.`;
+      setPreContent(contentEl, dynamicPillDeletion, 'defaultDeletion');
+      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+    }
+  }
+
   if (app === 'expensly' && contentEl) {
     if (isPrivacy) {
       const expenslyPrivacy = `Son güncelleme: 2025-04-11

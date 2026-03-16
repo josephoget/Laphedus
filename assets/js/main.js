@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', async () => {
           <p class="card-desc">${app.short_description}</p>
           <div class="card-actions">
             <a class="btn primary" href="app.html?slug=${encodeURIComponent(app.slug)}">Detay</a>
-            <a class="btn" href="${app.play_store_url}" target="_blank" rel="noopener">Mağaza</a>
+            ${app.play_store_url
+              ? `<a class="btn" href="${app.play_store_url}" target="_blank" rel="noopener">Mağaza</a>`
+              : app.external_url
+                ? `<a class="btn" href="${app.external_url}">${app.external_label ?? 'Aç'}</a>`
+                : ''}
           </div>
         </div>
       </article>

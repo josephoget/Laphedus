@@ -14,6 +14,19 @@
     "category": "Eğlence"
   },
   {
+    "slug": "dinamik-ada",
+    "name": "Dinamik Ada",
+    "short_description": "Android'de medya, bağlantı ve sistem olaylarını üst kapsülde gösteren özelleştirilebilir overlay deneyimi.",
+    "long_description": "Dinamik Ada; medya oynatma, pil ve bağlantı olaylarını ekranın üst kısmındaki kapsül arayüzünde toplar. Görünüm, konum, tema, jestler ve bazı yardımcı modüller cihaz bazlı olarak özelleştirilebilir. Flutter arayüzü ile Android servis katmanını birleştiren hibrit yapısı sayesinde hem ayar ekranlarını hem de sistem üstü kapsül deneyimini aynı ürün içinde sunar.",
+    "play_store_url": "",
+    "icon_url": "assets/image/dinamik-ada-icon.svg",
+    "screenshots": [
+      "assets/image/dinamik-ada-screen-1.svg",
+      "assets/image/dinamik-ada-screen-2.svg"
+    ],
+    "category": "Araçlar"
+  },
+  {
     "slug": "expensly",
     "name": "Expensly - Masraf Takibi",
     "short_description": "Giderlerinizi kolayca kaydedin ve takip edin.",
