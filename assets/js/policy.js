@@ -260,80 +260,77 @@ After Deletion
     if (isPrivacy) {
       const dynamicPillPrivacy = `Gizlilik Politikasi
 
-Dinamik Ada Gizlilik Politikasi
+Dynamic Pill Gizlilik Politikasi
 
 Son guncelleme: 03.15.2026
 
-Dinamik Ada, Android cihazlarda secili sistem olaylarini ekranin ust kismina tasiyan yardimci bir overlay uygulamasidir. Bu metin, uygulamanin hangi verilere eristigini ve bunlari nasil kullandigini aciklar.
+Dynamic Pill, Android cihazlarda secili sistem olaylarini kapsul arayuzunde gosteren yardimci bir uygulamadir. Bu politika; hangi verilerin islenebildigini, bunlarin nasil kullanildigini, hangi verilerin cihazda kaldigini ve veri silme taleplerinin nasil yonetilecegini aciklar.
 
-1. Toplanan ve Islenen Bilgiler
+1. Islenebilen Bilgiler
 
     Erisilebilirlik servis durumu
     Overlay izni durumu
     Bildirim erisimi durumu
-    Medya oturumu ve oynatma bilgileri
+    Medya oturumu bilgileri ve oynatma metaverileri
     Pil, sarj, Bluetooth ve Wi-Fi gibi cihaz ici durumlar
-    Dil, tema, gorunum ve uygulama tercihleri
+    Dil, tema, gorunum, jest ve modul tercihleri
+    Premium satin alma veya geri yukleme kullanildiginda satin alma/entitlement ile ilgili sinirli teknik bilgiler
 
-Bu bilgiler, kapsul arayuzunu guncellemek, secili modulleri calistirmak ve kullanici tercihlerini korumak amaciyla cihaz icinde islenir.
-
-2. Toplanmayan Bilgiler
+2. Toplanmayan veya Hedeflenmeyen Bilgiler
 
     Zorunlu kullanici hesabi
-    Sunucuya kisisel veri gonderme
     Reklam profili olusturma
     Konum gecmisi
     Kisi listesi, fotograf galerisi veya mesaj icerigi
+    Yazilan metinlerin veya kisisel icerigin reklam/pazarlama amaciyla kullanimi
 
 3. Veriler Nasil Kullanilir
 
-    Dinamik kapsul arayuzunu gostermek
-    Medya ve sistem olaylarini canli olarak yansitmak
-    Baglanti durumlarina gore kapsul icerigini guncellemek
-    Kullanici ayarlarini cihaz uzerinde saklamak
-    Uygulamanin calisma kararliligini korumak
+    Kapsul arayuzunu gostermek
+    Medya, baglanti ve sistem olaylarini canli olarak guncellemek
+    Kullanici ayarlarini cihaz uzerinde korumak
+    Uygulamanin kararliligini ve izin baglantilarini yonetmek
+    Premium satin alma, geri yukleme ve entitlement kontrolunu yurutmek
 
 4. Veriler Nerede Saklanir
 
-Uygulama ayarlari ve tercihleri mumkun oldugunca cihaz uzerinde saklanir. Mevcut yapida kullanici verilerinin uzak sunucuya aktarilmasi hedeflenmez.
+Uygulama ayarlari ve tercihleri agirlikli olarak cihaz uzerinde saklanir. Premium satin alma veya geri yukleme gibi durumlarda Google Play ve RevenueCat benzeri altyapilar sinirli teknik verileri isleyebilir.
 
-Gelecekte bulut yedekleme, hesap senkronizasyonu, analitik veya uzaktan hata kaydi gibi ozellikler eklenirse bu politika guncellenecektir.
+5. Veri Paylasimi
 
-5. Izinler ve Gerekceleri
+Kullanici verileri reklam amaciyla satilmaz, kiralanmaz veya paylasilmaz.
 
-    Erisilebilirlik: kapsul servisinin olaylara tepki verebilmesi icin
-    Ustte goster: kapsulun diger uygulamalarin ustunde gorunebilmesi icin
-    Bildirim erisimi: sadece ilgili ozellikler acik oldugunda
-    Pil optimizasyonu istisnasi: bazi cihazlarda arka plan kararliligi icin onerilebilir
+Premium altyapisi, satin alma akisinin calismasi icin gerekli sinirli teknik bilgileri ilgili odeme veya abonelik saglayicilarla isleyebilir.
 
-6. Ucuncu Taraflarla Paylasim
+6. Veri Guvenligi
 
-Mevcut yapida kullanici verileri ucuncu taraflarla satilmaz, kiralanmaz veya reklam amaciyla paylasilmaz.
+Veri isleme agirlikli olarak cihaz uzerinde tutulur. Izinler yalnizca ilgili ozellikler icin istenir. Hicbir depolama veya iletim yontemi yuzde yuz guvenlik garantisi vermez; buna ragmen makul teknik ve operasyonel onlemler uygulanir.
 
-7. Veri Guvenligi
+7. Hesap Silme ve Veri Silme
 
-Uygulama, isledigi tercih ve durum bilgisini cihaz uzerinde tutmaya oncelik verir. Hicbir depolama yontemi yuzde yuz guvenlik garantisi vermez.
+Dynamic Pill mevcut halinde zorunlu bir kullanici hesabi kullanmaz. Bu nedenle uygulama ici klasik hesap silme akisi bulunmaz.
 
-8. Cocuklarin Gizliligi
+    Yerel verileri silmek icin uygulamayi kaldirabilir veya uygulama verilerini temizleyebilirsin
+    Premium satin alma kayitlari ilgili magaza veya abonelik altyapisinda tutulabilir
+    Veri silme veya gizlilik talebi icin laphedusapp@gmail.com adresine yazabilirsin
 
-Uygulama cocuklara yonelik ozel bir hizmet olarak tasarlanmamistir.
+8. Degisiklikler
 
-9. Degisiklikler
+Bu gizlilik politikasi yeni ozellikler, premium akislar veya yayin gerekliliklerine gore guncellenebilir.
 
-Bu gizlilik politikasi zaman zaman guncellenebilir. Onemli degisiklikler oldugunda uygulama ici bilgilendirme, surum notu veya guncel baglanti uzerinden duyuru yapilabilir.
+9. Iletisim
 
-10. Iletisim
-
+Marka: LaphedusApp
 Gelistirici: Laphedus
 E-posta: laphedusapp@gmail.com`;
       setPreContent(contentEl, dynamicPillPrivacy, 'defaultPrivacy');
-      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+      if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
 
     if (isTerms) {
       const dynamicPillTerms = `Kullanim Kosullari
 
-Dinamik Ada Kullanim Kosullari
+Dynamic Pill Kullanim Kosullari
 
 Son guncelleme: 03.15.2026
 
@@ -341,71 +338,68 @@ Bu uygulamayi indirerek, kurarak veya kullanarak asagidaki kosullari kabul etmis
 
 1. Hizmetin Kapsami
 
-Dinamik Ada, Android cihazlarda secili sistem olaylarini ve belirli yardimci kontrolleri ust kapsul arayuzunde gostermek icin tasarlanmis yardimci bir uygulamadir.
+Dynamic Pill, Android cihazlarda secili sistem olaylarini ve yardimci kontrolleri ust kapsul arayuzunde gosteren bir uygulamadir.
 
 Uygulama; cihaz modeli, Android surumu, uretici arayuzu ve izin durumuna gore farkli sekilde davranabilir.
 
-2. Uygun Kullanim
+2. Izinler ve Sistem Bagimliligi
+
+Erisilebilirlik, bildirim erisimi veya ustte goster gibi izinler verilmezse bazi moduller kisitli calisabilir veya hic calismayabilir.
+
+3. Premium ve Odeme Akislari
+
+Uygulama zorunlu kullanici hesabi gerektirmez. Premium satin alma, geri yukleme veya abonelik durumunu yenileme gibi akislarda Google Play ve RevenueCat benzeri altyapilar kullanilabilir.
+
+    fiyatlandirma ve satin alma kosullari ilgili magaza altyapisina tabidir
+    premium erisimi teknik olarak ucuncu taraf abonelik hizmetleriyle dogrulanabilir
+    satin alma ozellikleri her cihazda veya her ulkede ayni sekilde sunulmayabilir
+
+4. Uygun Kullanim
 
     cihazin sistem guvenligini asmamak
     uygulamayi kotuye kullanmamak
     ucuncu taraf haklarini ihlal etmemek
     uygulamayi yasalara aykiri amaclarla kullanmamak
 
-3. Izinler ve Sistem Davranisi
-
-Erisilebilirlik, bildirim erisimi veya ustte goster gibi izinler verilmezse bazi moduller kisitli calisabilir veya hic calismayabilir.
-
-4. Uyumluluk ve Garanti Siniri
+5. Uyumluluk ve Garanti Siniri
 
     tum cihazlarda ayni gorunum garanti edilmez
-    tum uretici arayuzleriyle tam uyum garanti edilmez
+    OEM arayuzleri ve Android guncellemeleri davranisi etkileyebilir
     arka plan davranisinin her cihazda ayni olacagi garanti edilmez
-    sistem guncellemelerinden kaynakli degisiklikler olabilir
-
-5. Kesintiler ve Degisiklikler
-
-Gelistirici, uygulamanin ozelliklerinde degisiklik yapabilir, bazi modulleri kaldirabilir, yeni moduller ekleyebilir veya uygulamayi belirli cihazlarda farkli sekilde optimize edebilir.
 
 6. Sorumlulugun Sinirlandirilmasi
 
 Uygulama oldugu gibi sunulur. Kesintisiz veya hatasiz calisma garantisi verilmez.
 
-7. Fikri Mulkiyet
+7. Hesap ve Veri Silme
 
-Uygulamanin tasarimi, markasi, metinleri ve ilgili icerikleri gelistiriciye veya ilgili hak sahiplerine aittir.
+Uygulamada zorunlu kullanici hesabi olmadigindan klasik hesap kapatma akisi yoktur. Kullanici uygulamayi kaldirabilir, uygulama verilerini silebilir veya laphedusapp@gmail.com adresi uzerinden veri silme talebinde bulunabilir.
 
 8. Ucuncu Taraf Bilesenler
 
-Uygulama, Flutter, Android sistem API'leri ve acik kaynak kutuphaneler kullanabilir. Bu bilesenler kendi lisans ve kosullarina tabi olabilir.
+Uygulama, Flutter, Android sistem API'leri, Google Play, RevenueCat ve acik kaynak kutuphaneler kullanabilir. Bu bilesenler kendi lisans, gizlilik ve kullanim kosullarina tabi olabilir.
 
-9. Hesap ve Odeme Ozellikleri
-
-Mevcut yapida uygulama zorunlu bir kullanici hesabi gerektirmez.
-
-10. Kullanimin Sonlandirilmasi
-
-Kullanici uygulamayi istedigi zaman kaldirabilir veya kullanmayi durdurabilir.
-
-11. Degisiklikler
+9. Degisiklikler
 
 Bu kullanim kosullari zaman zaman guncellenebilir.
 
-12. Iletisim
+10. Iletisim
 
+Marka: LaphedusApp
 Gelistirici: Laphedus
 E-posta: laphedusapp@gmail.com`;
       setPreContent(contentEl, dynamicPillTerms, 'defaultTerms');
-      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+      if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
 
     if (isSupport) {
       const dynamicPillSupport = `Destek ve Iletisim
 
-Dinamik Ada ile ilgili soru, geri bildirim veya hata bildirimleri icin bu kanal kullanilabilir.
+Dynamic Pill ile ilgili soru, geri bildirim veya hata bildirimleri icin bu kanal kullanilabilir.
 
 1. Resmi Iletisim Bilgileri
 
+    marka: LaphedusApp
     gelistirici: Laphedus
     destek e-postasi: laphedusapp@gmail.com
     son guncelleme tarihi: 03.15.2026
@@ -427,21 +421,29 @@ Dinamik Ada ile ilgili soru, geri bildirim veya hata bildirimleri icin bu kanal 
     sorunun hangi ekranda veya hangi ozellikte oldugu
     mumkunse tekrar etme adimlari
 
-4. Kisa Destek Ozeti
+4. Veri Silme ve Hesap Silme
 
-Dinamik Ada ile ilgili destek talepleri, geri bildirimler ve hata bildirimleri icin resmi iletisim kanali olarak laphedusapp@gmail.com kullanilabilir.`;
+Dynamic Pill mevcut halinde zorunlu bir kullanici hesabi kullanmaz.
+
+    uygulamayi silmek veya uygulama verilerini temizlemek yerel verileri kaldirir
+    premium satin alma kayitlari ilgili magaza altyapisinda tutulabilir
+    veri silme veya gizlilik talebi icin laphedusapp@gmail.com adresine yazilabilir
+
+5. Kisa Destek Ozeti
+
+Dynamic Pill ile ilgili destek talepleri, geri bildirimler ve hata bildirimleri icin resmi iletisim kanali olarak laphedusapp@gmail.com kullanilabilir.`;
       setPreContent(contentEl, dynamicPillSupport, 'defaultSupport');
-      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+      if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
 
     if (isDeletion) {
-      const dynamicPillDeletion = `Dinamik Ada mevcut yapisinda zorunlu bir kullanici hesabi gerektirmez.
+      const dynamicPillDeletion = `Dynamic Pill mevcut yapisinda zorunlu bir kullanici hesabi gerektirmez.
 
 Bu nedenle uygulama icin ayrica sunucu tarafli bir hesap silme akisi bulunmaz.
 
 Uygulamayi kaldirmak icin:
 
-    Cihazinda Ayarlar > Uygulamalar > Dinamik Ada yolunu ac
+    Cihazinda Ayarlar > Uygulamalar > Dynamic Pill yolunu ac
     Kaldir secenegini kullan
     Istersen uygulama verilerini de ayni ekrandan temizle
 
@@ -449,7 +451,7 @@ Uygulama tercihleri cihaz uzerinde tutuldugundan, uygulamayi kaldirman veya veri
 
 Eger gelecekte hesap veya bulut senkronizasyonu eklenirse bu sayfa guncellenecektir.`;
       setPreContent(contentEl, dynamicPillDeletion, 'defaultDeletion');
-      if (appNameEl) appNameEl.textContent = 'Dinamik Ada';
+      if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
   }
 

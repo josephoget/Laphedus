@@ -15,9 +15,9 @@
   },
   {
     "slug": "dinamik-ada",
-    "name": "Dinamik Ada",
+    "name": "Dynamic Pill",
     "short_description": "Android'de medya, bağlantı ve sistem olaylarını üst kapsülde gösteren özelleştirilebilir overlay deneyimi.",
-    "long_description": "Dinamik Ada; medya oynatma, pil ve bağlantı olaylarını ekranın üst kısmındaki kapsül arayüzünde toplar. Görünüm, konum, tema, jestler ve bazı yardımcı modüller cihaz bazlı olarak özelleştirilebilir. Flutter arayüzü ile Android servis katmanını birleştiren hibrit yapısı sayesinde hem ayar ekranlarını hem de sistem üstü kapsül deneyimini aynı ürün içinde sunar.",
+    "long_description": "Dynamic Pill; medya oynatma, pil ve bağlantı olaylarını ekranın üst kısmındaki kapsül arayüzünde toplar. Görünüm, konum, tema, jestler ve bazı yardımcı modüller cihaz bazlı olarak özelleştirilebilir. Flutter arayüzü ile Android servis katmanını birleştiren hibrit yapısı sayesinde hem ayar ekranlarını hem de sistem üstü kapsül deneyimini aynı ürün içinde sunar.",
     "play_store_url": "",
     "has_account": false,
     "has_terms": true,
