@@ -258,199 +258,113 @@ After Deletion
 
   if (app === 'dinamik-ada' && contentEl) {
     if (isPrivacy) {
-      const dynamicPillPrivacy = `Gizlilik Politikasi
+      document.title = 'Gizlilik Politikasi | Dynamic Pill';
+      const dynamicPillPrivacy = `Dynamic Pill Gizlilik Politikasi
+Son guncelleme: 04.08.2026
 
-Dynamic Pill Gizlilik Politikasi
-
-Son guncelleme: 03.15.2026
-
-Dynamic Pill, Android cihazlarda secili sistem olaylarini kapsul arayuzunde gosteren yardimci bir uygulamadir. Bu politika; hangi verilerin islenebildigini, bunlarin nasil kullanildigini, hangi verilerin cihazda kaldigini ve veri silme taleplerinin nasil yonetilecegini aciklar.
+Dynamic Pill, Android cihazlarda ekranin ust kismina kapsul benzeri bir arayuz yerlestiren ve medya, bildirim, baglanti, pil, kilit durumu, jestler ve secili hizli kontroller gibi ozellikleri gosteren yardimci bir uygulamadir. Bu politika, uygulamanin gercek calisma bicimine gore hangi verileri cihaz icinde isleyebildigini, hangi verilerin yerelde kaldigini ve hangi sinirli durumlarda ucuncu taraf odeme altyapilariyla iletisim kuruldugunu aciklar.
 
 1. Islenebilen Bilgiler
 
-    Erisilebilirlik servis durumu
-    Overlay izni durumu
-    Bildirim erisimi durumu
-    Medya oturumu bilgileri ve oynatma metaverileri
-    Pil, sarj, Bluetooth ve Wi-Fi gibi cihaz ici durumlar
-    Dil, tema, gorunum, jest ve modul tercihleri
-    Premium satin alma veya geri yukleme kullanildiginda satin alma/entitlement ile ilgili sinirli teknik bilgiler
+- erisilebilirlik servis durumu, overlay izni durumu ve bildirim erisimi durumu
+- medya oturumu bilgileri, oynatma durumu, uygulama paketi, medya basligi ve album kapagi gibi medya metaverileri
+- pil, sarj, Bluetooth, Wi-Fi, hotspot, ucak modu ve ses modu gibi cihaz ici durumlar
+- kilit ekrani ve cihaz kilidinin acilmasi ile ilgili durum bilgileri
+- kullanicinin sectigi dil, tema, gorunum, kalibrasyon, jest, moduller ve premium tercihleri
+- bildirim tabanli ozellikler acikken secili bildirimlerden paket adi, baslik, metin ve zaman bilgisi gibi alanlar
+- jestler, kisayollar ve bildirim filtreleri icin cihazdaki yuklu uygulamalarin adlari, paket adlari ve ikonlari
+- premium satin alma, geri yukleme ve entitlement dogrulama akislarinda gerekli sinirli teknik bilgiler
 
-2. Toplanmayan veya Hedeflenmeyen Bilgiler
+2. Toplanmayan veya Hedeflenmeyen Veriler
 
-    Zorunlu kullanici hesabi
-    Reklam profili olusturma
-    Konum gecmisi
-    Kisi listesi, fotograf galerisi veya mesaj icerigi
-    Yazilan metinlerin veya kisisel icerigin reklam/pazarlama amaciyla kullanimi
+- zorunlu kullanici hesabi olusturmaz
+- reklam profili olusturmaz
+- ucuncu taraf reklam aglariyla veri paylasmaz
+- konum gecmisi tutmaz
+- kisi listesi, fotograf galerisi veya mesajlasma veritabani toplamaz
+- kamera iznini fotograf veya video cekmek icin kullanmaz; fener kontrolu yalnizca cihazin torch donanimi icindir
+- erisilebilirlik verilerini reklam, analiz veya pazarlama amaciyla kullanmaz
+- yazilan metinleri kaydetmeyi veya mesaj iceriklerini harici sunuculara aktarmayi hedeflemez
 
 3. Veriler Nasil Kullanilir
 
-    Kapsul arayuzunu gostermek
-    Medya, baglanti ve sistem olaylarini canli olarak guncellemek
-    Kullanici ayarlarini cihaz uzerinde korumak
-    Uygulamanin kararliligini ve izin baglantilarini yonetmek
-    Premium satin alma, geri yukleme ve entitlement kontrolunu yurutmek
+- ekran ustu kapsul arayuzunu gostermek ve konumlandirmak
+- medya, bildirim, zamanlayici, ses kaydi, baglanti ve pil olaylarini ayirt etmek
+- secili bildirimleri veya zaman bazli durumlari kapsulde gorsellestirmek
+- jestler ve kisayollar icin kullanicinin sectigi uygulama ve eylemleri calistirmak
+- ses, parlaklik ve fener gibi yardimci sistem kontrollerini yonetmek
+- ayarlari ve premium erisim durumunu cihaz uzerinde korumak
+- satin alma, geri yukleme ve entitlement kontrolunu yurutmek
 
 4. Veriler Nerede Saklanir
 
-Uygulama ayarlari ve tercihleri agirlikli olarak cihaz uzerinde saklanir. Premium satin alma veya geri yukleme gibi durumlarda Google Play ve RevenueCat benzeri altyapilar sinirli teknik verileri isleyebilir.
+Uygulama ayarlari, moduller, filtreler ve cogu durum bilgisi agirlikli olarak cihaz uzerinde saklanir. Bildirim basligi/metni, uygulama listesi ve ikonlar gibi veriler ozellik calisirken yerelde islenir; varsayilan akista uygulama tarafindan ayri bir bulut hesabi altinda saklanmaz.
 
-5. Veri Paylasimi
+Premium satin alma veya geri yukleme kullanildiginda Google Play Billing ve RevenueCat gibi ucuncu taraf altyapilar, satin alma akisinin calismasi icin gerekli sinirli teknik verileri isleyebilir.
 
-Kullanici verileri reklam amaciyla satilmaz, kiralanmaz veya paylasilmaz.
+5. Izinler ve Gerekceleri
 
-Premium altyapisi, satin alma akisinin calismasi icin gerekli sinirli teknik bilgileri ilgili odeme veya abonelik saglayicilarla isleyebilir.
+- Erisilebilirlik izni: kapsulun diger uygulamalarin uzerinde stabil kalmasi, bazi pencere ve foreground degisimlerine tepki vermesi, secili jest veya yardimci sistem eylemlerinin calismasi icin kullanilir.
+- Ustte goster izni: kapsul arayuzunun diger uygulamalarin uzerinde gorunebilmesi icin gereklidir.
+- Bildirim erisimi: medya kontrolu, secili bildirim gosterimi, zamanlayici ve ses kaydi gibi bildirim tabanli moduller acikken kullanilir.
+- Bluetooth ve baglanti ile ilgili izinler: Bluetooth baglanti olaylarini gosteren ozellikler icin gerekli olabilir.
+- Sistem ayarlarini degistirme izni: parlaklik gibi sistem kontrollerinin Dynamic Pill icinden yonetilebilmesi icin kullanilir.
+- Kamera / torch donanimi erisimi: feneri kapsul uzerinden acip kapatmak veya guc seviyesini ayarlamak icin gerekebilir. Bu erisim fotograf ya da video cekimi amaciyla kullanilmaz.
 
-6. Veri Guvenligi
+6. Ucuncu Taraflarla Paylasim
 
-Veri isleme agirlikli olarak cihaz uzerinde tutulur. Izinler yalnizca ilgili ozellikler icin istenir. Hicbir depolama veya iletim yontemi yuzde yuz guvenlik garantisi vermez; buna ragmen makul teknik ve operasyonel onlemler uygulanir.
+Uygulama, kullanici verilerini satmaz, kiralamaz veya reklam amaciyla paylasmaz. Premium satin alma ve entitlement kontrolu icin Google Play Billing, RevenueCat veya benzeri hizmet saglayicilar kullanilabilir.
 
-7. Hesap Silme ve Veri Silme
+7. Veri Silme ve Iletisim
 
-Dynamic Pill mevcut halinde zorunlu bir kullanici hesabi kullanmaz. Bu nedenle uygulama ici klasik hesap silme akisi bulunmaz.
-
-    Yerel verileri silmek icin uygulamayi kaldirabilir veya uygulama verilerini temizleyebilirsin
-    Premium satin alma kayitlari ilgili magaza veya abonelik altyapisinda tutulabilir
-    Veri silme veya gizlilik talebi icin laphedusapp@gmail.com adresine yazabilirsin
-
-8. Degisiklikler
-
-Bu gizlilik politikasi yeni ozellikler, premium akislar veya yayin gerekliliklerine gore guncellenebilir.
-
-9. Iletisim
-
-Marka: LaphedusApp
-Gelistirici: Laphedus
-E-posta: laphedusapp@gmail.com`;
+Yerel verileri silmek icin uygulamayi cihazdan kaldirabilir veya uygulama verilerini temizleyebilirsin. Veri silme veya gizlilik talepleri icin: laphedusapp@gmail.com`;
       setPreContent(contentEl, dynamicPillPrivacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
 
     if (isTerms) {
-      const dynamicPillTerms = `Kullanim Kosullari
-
-Dynamic Pill Kullanim Kosullari
-
-Son guncelleme: 03.15.2026
+      document.title = 'Kullanim Kosullari | Dynamic Pill';
+      const dynamicPillTerms = `Dynamic Pill Kullanim Kosullari
+Son guncelleme: 04.08.2026
 
 Bu uygulamayi indirerek, kurarak veya kullanarak asagidaki kosullari kabul etmis sayilirsiniz.
 
 1. Hizmetin Kapsami
 
-Dynamic Pill, Android cihazlarda secili sistem olaylarini ve yardimci kontrolleri ust kapsul arayuzunde gosteren bir uygulamadir.
+Dynamic Pill, Android cihazlarda medya, secili bildirimler, baglanti olaylari, pil durumu, jestler ve belirli yardimci sistem kontrollerini ust kapsul arayuzunde gostermek icin tasarlanmis yardimci bir uygulamadir.
 
-Uygulama; cihaz modeli, Android surumu, uretici arayuzu ve izin durumuna gore farkli sekilde davranabilir.
+2. Izinler ve Sistem Davranisi
 
-2. Izinler ve Sistem Bagimliligi
+Erisilebilirlik, ustte goster, bildirim erisimi, Bluetooth veya sistem ayarlarini degistirme gibi izinler verilmezse bazi moduller kisitli calisabilir veya hic calismayabilir.
 
-Erisilebilirlik, bildirim erisimi veya ustte goster gibi izinler verilmezse bazi moduller kisitli calisabilir veya hic calismayabilir.
+Bildirim tabanli moduller, secili bildirim alanlarini cihaz icinde yorumlayabilir. Jestler ve uygulama secimiyle ilgili ozellikler, cihazdaki yuklu uygulamalari yerelde listeleyebilir. Premium, satin alma veya geri yukleme gibi ozellikler kullanildiginda uygulama, ilgili odeme ve abonelik altyapisiyla iletisim kurabilir.
 
-3. Premium ve Odeme Akislari
+3. Uygun Kullanim
 
-Uygulama zorunlu kullanici hesabi gerektirmez. Premium satin alma, geri yukleme veya abonelik durumunu yenileme gibi akislarda Google Play ve RevenueCat benzeri altyapilar kullanilabilir.
+- cihazin sistem guvenligini asmamak
+- uygulamayi kotuye kullanmamak
+- sistem jestleri, kisayollar, hizli ayarlar ve benzeri kontrolleri yetkisiz veya zarar verici sekilde kullanmamak
+- ucuncu taraf haklarini ihlal etmemek
+- uygulamayi yasalara aykiri amaclarla kullanmamak
 
-    fiyatlandirma ve satin alma kosullari ilgili magaza altyapisina tabidir
-    premium erisimi teknik olarak ucuncu taraf abonelik hizmetleriyle dogrulanabilir
-    satin alma ozellikleri her cihazda veya her ulkede ayni sekilde sunulmayabilir
+4. Uyumluluk ve Garanti Siniri
 
-4. Uygun Kullanim
+- tum cihazlarda ayni gorunum garanti edilmez
+- tum uretici arayuzleriyle tam uyum garanti edilmez
+- arka plan davranisinin her cihazda ayni olacagi garanti edilmez
+- kilit ekrani, cutout, medya, bildirim ve torch davranisi cihaz bazinda farkli olabilir
+- sistem guncellemelerinden kaynakli degisiklikler olabilir
 
-    cihazin sistem guvenligini asmamak
-    uygulamayi kotuye kullanmamak
-    ucuncu taraf haklarini ihlal etmemek
-    uygulamayi yasalara aykiri amaclarla kullanmamak
+5. Ucuncu Taraf Bilesenler ve Odeme
 
-5. Uyumluluk ve Garanti Siniri
+Uygulama, Flutter, Android sistem API'leri, Google Play Billing, RevenueCat ve diger acik kaynak kutuphaneler gibi ucuncu taraf bilesenler kullanabilir.
 
-    tum cihazlarda ayni gorunum garanti edilmez
-    OEM arayuzleri ve Android guncellemeleri davranisi etkileyebilir
-    arka plan davranisinin her cihazda ayni olacagi garanti edilmez
+Premium ozellikler, satin alma, geri yukleme veya abonelik durumu kontrolu gibi odeme akislarinda fiyatlandirma ve satin alma kosullari ilgili magaza altyapisina tabidir.
 
-6. Sorumlulugun Sinirlandirilmasi
+6. Veri Silme ve Iletisim
 
-Uygulama oldugu gibi sunulur. Kesintisiz veya hatasiz calisma garantisi verilmez.
-
-7. Hesap ve Veri Silme
-
-Uygulamada zorunlu kullanici hesabi olmadigindan klasik hesap kapatma akisi yoktur. Kullanici uygulamayi kaldirabilir, uygulama verilerini silebilir veya laphedusapp@gmail.com adresi uzerinden veri silme talebinde bulunabilir.
-
-8. Ucuncu Taraf Bilesenler
-
-Uygulama, Flutter, Android sistem API'leri, Google Play, RevenueCat ve acik kaynak kutuphaneler kullanabilir. Bu bilesenler kendi lisans, gizlilik ve kullanim kosullarina tabi olabilir.
-
-9. Degisiklikler
-
-Bu kullanim kosullari zaman zaman guncellenebilir.
-
-10. Iletisim
-
-Marka: LaphedusApp
-Gelistirici: Laphedus
-E-posta: laphedusapp@gmail.com`;
+Uygulamada zorunlu kullanici hesabi olmadigindan klasik hesap kapatma akisi yoktur. Kullanici uygulamayi kaldirabilir, uygulama verilerini silebilir veya laphedusapp@gmail.com adresi uzerinden veri silme talebinde bulunabilir.`;
       setPreContent(contentEl, dynamicPillTerms, 'defaultTerms');
-      if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
-    }
-
-    if (isSupport) {
-      const dynamicPillSupport = `Destek ve Iletisim
-
-Dynamic Pill ile ilgili soru, geri bildirim veya hata bildirimleri icin bu kanal kullanilabilir.
-
-1. Resmi Iletisim Bilgileri
-
-    marka: LaphedusApp
-    gelistirici: Laphedus
-    destek e-postasi: laphedusapp@gmail.com
-    son guncelleme tarihi: 03.15.2026
-
-2. Hangi Durumlarda Yazilmali
-
-    ada gorunmuyor veya gec aciliyor
-    izinler acik oldugu halde ozellik calismiyor
-    belirli bir cihazda hizalama sorunu yasaniyor
-    premium veya satin alma davranisi beklenenden farkli
-    geri bildirim veya ozellik onerisi iletmek isteniyor
-
-3. Hata Bildirirken Neler Eklenmeli
-
-    cihaz modeli
-    Android surumu
-    uygulama surumu
-    sorunun kisa aciklamasi
-    sorunun hangi ekranda veya hangi ozellikte oldugu
-    mumkunse tekrar etme adimlari
-
-4. Veri Silme ve Hesap Silme
-
-Dynamic Pill mevcut halinde zorunlu bir kullanici hesabi kullanmaz.
-
-    uygulamayi silmek veya uygulama verilerini temizlemek yerel verileri kaldirir
-    premium satin alma kayitlari ilgili magaza altyapisinda tutulabilir
-    veri silme veya gizlilik talebi icin laphedusapp@gmail.com adresine yazilabilir
-
-5. Kisa Destek Ozeti
-
-Dynamic Pill ile ilgili destek talepleri, geri bildirimler ve hata bildirimleri icin resmi iletisim kanali olarak laphedusapp@gmail.com kullanilabilir.`;
-      setPreContent(contentEl, dynamicPillSupport, 'defaultSupport');
-      if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
-    }
-
-    if (isDeletion) {
-      const dynamicPillDeletion = `Dynamic Pill mevcut yapisinda zorunlu bir kullanici hesabi gerektirmez.
-
-Bu nedenle uygulama icin ayrica sunucu tarafli bir hesap silme akisi bulunmaz.
-
-Uygulamayi kaldirmak icin:
-
-    Cihazinda Ayarlar > Uygulamalar > Dynamic Pill yolunu ac
-    Kaldir secenegini kullan
-    Istersen uygulama verilerini de ayni ekrandan temizle
-
-Uygulama tercihleri cihaz uzerinde tutuldugundan, uygulamayi kaldirman veya verilerini temizlemen yerel verileri de kaldirir.
-
-Eger gelecekte hesap veya bulut senkronizasyonu eklenirse bu sayfa guncellenecektir.`;
-      setPreContent(contentEl, dynamicPillDeletion, 'defaultDeletion');
       if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
   }
