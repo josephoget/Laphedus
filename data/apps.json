@@ -30,6 +30,19 @@
     "category": "Araçlar"
   },
   {
+    "slug": "stamper",
+    "name": "Stamper - My Stamp Album",
+    "short_description": "Fotograflarindan kisisel dijital pullar olustur, albumlerinde sakla ve yerel olarak yedekle.",
+    "long_description": "Stamper; kameradan veya galeriden sectigin fotograflari pul tarzinda dijital hatiralara donusturen, bunlari albumlerde duzenlemeni saglayan local-first bir Android uygulamasidir. Uygulama hesap gerektirmez, iceriklerini cihazinda saklar ve premium ozellikler icin Google Play Billing ile RevenueCat altyapisini kullanir.",
+    "play_store_url": "",
+    "has_account": false,
+    "icon_url": "assets/image/stamper-icon.svg",
+    "screenshots": [
+      "assets/image/stamper-screen-1.svg"
+    ],
+    "category": "Fotoğraf ve Anılar"
+  },
+  {
     "slug": "expensly",
     "name": "Expensly - Masraf Takibi",
     "short_description": "Giderlerinizi kolayca kaydedin ve takip edin.",

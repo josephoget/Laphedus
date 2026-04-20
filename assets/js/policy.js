@@ -448,6 +448,109 @@ Kullanim kosullariyla ilgili sorular icin:
     }
   }
 
+  if (app === 'stamper' && contentEl) {
+    if (isPrivacy) {
+      document.title = 'Gizlilik Politikasi | Stamper';
+      const stamperPrivacy = `Stamper Gizlilik Politikasi
+Son guncelleme: 20.04.2026
+
+Stamper - My Stamp Album, kullanicilarin fotograflarindan kisisel dijital pullar olusturup bunlari albumlerde duzenlemesine imkan veren local-first bir Android uygulamasidir. Bu politika, uygulamanin hangi verileri isledigini, bu verilerin nasil kullanildigini ve hangi durumlarda ucuncu taraf hizmetlerle sinirli teknik bilgi paylasimi olabilecegini aciklar.
+
+1. Islenebilen Bilgiler
+
+Uygulama, kullanim senaryosuna bagli olarak cihaz uzerinde su bilgi kategorilerini isleyebilir:
+
+- kameradan cekilen veya galeriden secilen fotograflar
+- pul basligi, not, album atamasi, olusturma zamani ve secili stil tercihleri gibi pul metaverileri
+- kullanicinin olusturdugu album bilgileri
+- yerel olarak olusturulan yedek dosyalari ve geri yukleme sirasinda secilen arsiv dosyalari
+- premium satin alma, geri yukleme ve entitlement dogrulama akislarinda gerekli sinirli teknik bilgiler
+- istege bagli konum ozelligi etkinlestirilirse konumla ilgili etiket veya metaveriler
+
+2. Veriler Nasil Kullanilir
+
+Bu bilgiler su amaclarla kullanilir:
+
+- fotografi pul formatinda duzenlemek ve kaydetmek
+- pullari albumlerde duzenlemek
+- not, baslik ve diger yerel metaverileri saklamak
+- yedek olusturmak ve geri yuklemek
+- kullanicinin premium ozelliklere erisimi olup olmadigini belirlemek
+
+3. Veriler Nerede Saklanir
+
+Stamper, iceriklerini agirlikli olarak cihaz uzerinde saklar.
+
+- pul gorselleri uygulamanin yerel depolama alaninda tutulur
+- album ve pul metaverileri cihaz icindeki yerel dosyalarda saklanir
+- yedekler kullanicinin sectigi veya uygulamanin olusturdugu yerel klasorlere yazilabilir
+
+Uygulamayi kullanmak icin zorunlu bir hesap olusturman gerekmez.
+
+4. Satin Alma ve Premium Ozellikler
+
+Stamper, premium ozelliklerin yonetimi icin Google Play Billing ve RevenueCat gibi ucuncu taraf altyapilar kullanabilir. Bu hizmetler satin alma akisinin calismasi, satin alimlarin geri yuklenmesi ve premium haklarin dogrulanmasi icin gerekli sinirli teknik verileri isleyebilir.
+
+Bu kapsamda su tur teknik veriler islenebilir:
+
+- satin alma durumu
+- islem veya urun tanimlayicilari
+- entitlement dogrulamasi icin gerekli uygulama ve cihaz baglam bilgileri
+
+Stamper, odeme karti bilgilerini dogrudan toplamaz veya saklamaz. Odeme islemleri ilgili magaza ve odeme altyapilari uzerinden yurutulur.
+
+5. Izinler ve Gerekceleri
+
+- Kamera izni: yeni bir fotograf cekerek pul olusturmak icin kullanilir
+- Fotograf veya medya erisimi: galeriden gorsel secmek, disa aktarma veya dosya islemleri icin kullanilir
+- Konum izni: yalnizca ilgili ozellik etkinlestirilirse konum tabanli metaveri eklemek icin kullanilabilir
+
+Izinler, yalnizca ilgili ozellik kullanildiginda istenir.
+
+6. Veri Paylasimi
+
+Stamper, kullanicinin fotograf ve album iceriklerini varsayilan kullanim akisi icinde gelistiricinin kendi sunucularina gondermez.
+
+Kisisel veriler reklam amaciyla satilmaz veya kiralanmaz.
+
+Ancak premium satin alma veya geri yukleme gibi durumlarda Google Play Billing, RevenueCat veya benzeri hizmet saglayicilar gerekli teknik verileri isleyebilir. Ayrica yasal zorunluluk durumunda sinirli veri paylasimi gerekebilir.
+
+7. Yedekleme ve Kullanici Kontrollu Paylasim
+
+Kullanici bir yedek dosyasi olusturdugunda, disa aktardiginda veya paylastiginda bu islem kullanici tarafindan baslatilir. Disa aktarilan dosyalarin daha sonra nasil saklanacagi veya paylasilacagi kullanicinin sorumlulugundadir.
+
+8. Veri Saklama ve Silme
+
+Yerel veriler, sen silene kadar veya uygulamayi kaldirana kadar cihazinda kalabilir.
+
+- pullari ve albumleri uygulama icinde silebilirsin
+- uygulamayi kaldirarak veya uygulama verilerini temizleyerek yerel verileri kaldirabilirsin
+- satin alma kayitlari ilgili magaza veya abonelik saglayicisinda kendi politikalarina gore tutulabilir
+
+9. Cocuklarin Gizliligi
+
+Stamper, cocuklara yonelik ozel bir hizmet olarak tasarlanmamistir. Bilerek cocuklardan kisisel veri toplama amaci yoktur.
+
+10. Guvenlik
+
+Uygulama local-first bir yapida tasarlanmistir ve verileri mumkun oldugunca cihaz uzerinde tutmayi hedefler. Bununla birlikte hicbir depolama veya iletim yontemi yuzde yuz guvenli oldugu garantisini vermez.
+
+11. Degisiklikler
+
+Bu gizlilik politikasi zaman zaman guncellenebilir. Guncel surum bu sayfada yayinlanir.
+
+12. Iletisim
+
+Gizlilik veya veri taleplerin icin:
+
+- Marka: LaphedusApp
+- Gelistirici: Laphedus
+- E-posta: laphedusapp@gmail.com`;
+      setPreContent(contentEl, stamperPrivacy, 'defaultPrivacy');
+      if (appNameEl) appNameEl.textContent = 'Stamper';
+    }
+  }
+
   if (app === 'expensly' && contentEl) {
     if (isPrivacy) {
       const expenslyPrivacy = `Son güncelleme: 2025-04-11
