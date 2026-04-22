@@ -29,53 +29,53 @@ document.addEventListener('DOMContentLoaded', () => {
   const isDeletion = /account-deletion\.html$/.test(window.location.pathname);
   const contentEl = document.getElementById('policyContent');
 
-  if (appNameEl) appNameEl.textContent = app ? app : 'Genel';
+  if (appNameEl) appNameEl.textContent = app ? app : 'General';
   if (backEl) {
     backEl.href = app ? `app.html?slug=${encodeURIComponent(app)}` : 'index.html';
   }
 
   if (app === 'kayfe' && contentEl) {
     if (isPrivacy) {
-      const kayfePrivacy = `Giriş
-Kayfe'ye hoş geldiniz. Gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz. Bu gizlilik politikası, uygulamamızı kullandığınızda kişisel verilerinize nasıl baktığımız ve gizlilik haklarınız hakkında sizi bilgilendirecektir.
+      const kayfePrivacy = `Introduction
+Welcome to Kayfe. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your personal data when you use our app and informs you about your privacy rights.
 
-Topladığımız Veriler
-Sizinle ilgili farklı türde kişisel verileri toplayabilir, kullanabilir, saklayabilir ve aktarabiliriz:
+Data We Collect
+We may collect, use, store, and transfer different kinds of personal data about you:
 
-    Kimlik Verileri: kullanıcı adı, şifre ve profil bilgilerini içerir.
-    İletişim Verileri: e-posta adresini içerir.
-    Teknik Veriler: cihaz bilgileri, IP adresi, giriş verileri ve uygulamamıza erişmek için kullandığınız cihazlardaki diğer teknoloji tanımlayıcılarını içerir.
-    Kullanım Verileri: uygulamamızı nasıl kullandığınıza dair bilgileri içerir.
+    Identity Data: includes username, password, and profile information.
+    Contact Data: includes email address.
+    Technical Data: includes device information, IP address, login data, and other technology identifiers on the devices you use to access our app.
+    Usage Data: includes information about how you use our app.
 
-Verilerinizi Nasıl Kullanıyoruz
-Verilerinizi şu amaçlarla kullanıyoruz:
+How We Use Your Data
+We use your data for the following purposes:
 
-    Hesabınızı sağlamak ve yönetmek
-    Fal hizmetlerimizi sunmak
-    Uygulamamızı ve hizmetlerimizi geliştirmek
-    Güncellemeler veya değişiklikler hakkında sizinle iletişim kurmak
-    Uygulamamızın güvenliğini sağlamak
+    To provide and manage your account
+    To provide our fortune reading services
+    To improve our app and services
+    To communicate with you about updates or changes
+    To maintain the security of our app
 
-Veri Güvenliği
-Kişisel verilerinizin kazara kaybolmasını, kullanılmasını veya yetkisiz bir şekilde erişilmesini önlemek için uygun güvenlik önlemlerini uyguladık. Kişisel verilerinize erişimi, bilmesi gereken çalışanlar, acenteler, yükleniciler ve diğer üçüncü taraflarla sınırlıyoruz.
+Data Security
+We apply appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed without authorization. Access to personal data is limited to employees, agents, contractors, and third parties who need to know it.
 
-Haklarınız
-Belirli koşullar altında, veri koruma yasaları kapsamında kişisel verilerinizle ilgili haklarınız vardır:
+Your Rights
+Under certain circumstances, you may have rights under data protection laws regarding your personal data:
 
-    Kişisel verilerinize erişim talep etme
-    Kişisel verilerinizin düzeltilmesini talep etme
-    Kişisel verilerinizin silinmesini talep etme
-    Kişisel verilerinizin işlenmesine itiraz etme
-    Kişisel verilerinizin işlenmesinin kısıtlanmasını talep etme
-    Kişisel verilerinizin aktarılmasını talep etme
-    Onayınızı geri çekme hakkı
+    Request access to your personal data
+    Request correction of your personal data
+    Request deletion of your personal data
+    Object to processing of your personal data
+    Request restriction of processing
+    Request transfer of your personal data
+    Withdraw your consent
 
-Bu Gizlilik Politikasındaki Değişiklikler
-Gizlilik politikamızı zaman zaman güncelleyebiliriz. Herhangi bir değişikliği, yeni gizlilik politikasını bu sayfada yayınlayarak ve "Son Güncelleme" tarihini güncelleyerek size bildireceğiz.
+Changes to This Privacy Policy
+We may update this privacy policy from time to time. We will notify you of changes by publishing the new privacy policy on this page and updating the "Last Updated" date.
 
-Bize Ulaşın
-Bu gizlilik politikası veya gizlilik uygulamalarımız hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin:
- E-posta: laphedusapp@gmail.com`;
+Contact Us
+If you have questions about this privacy policy or our privacy practices, please contact us:
+Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, kayfePrivacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Kayfe';
     }
@@ -104,34 +104,7 @@ Note:
     If you just want to stop using the app, you can simply uninstall it from your device instead of deleting your account.
 
 Need help?
-If you have any questions or issues with the account deletion process, please email us at laphedusapp@gmail.com.
-
-Kayfe Uygulaması Hesap Silme Talimatları
-
-Bu sayfa, Kayfe uygulamasında hesabınızı nasıl sileceğinizi açıklamaktadır.
-
-Hesabınızı silmek için aşağıdaki adımları izleyin:
-
-    Kayfe uygulamasını açın ve hesabınıza giriş yapın
-    Profil sayfasına gidin (sağ alt köşedeki profil simgesine tıklayın)
-    "Ayarlar" seçeneğine tıklayın
-    Sayfanın alt kısmında bulunan "Hesabı Sil" butonuna tıklayın
-    Onay iletişim kutusunda "Evet, Hesabımı Sil" seçeneğini onaylayın
-
-Hesabınız silindiğinde:
-
-    Tüm kişisel verileriniz sistemden kaldırılacaktır
-    Profil bilgileriniz anonimleştirilecektir
-    Uygulamaya tekrar giriş yapamayacaksınız
-    Kayıtlı fal geçmişiniz ve diğer içerikleriniz silinecektir
-
-Not:
-
-    Hesabınızı silmek geri alınamaz bir işlemdir. Hesabınızı sildikten sonra verilerinize erişemezsiniz.
-    Eğer sadece uygulamayı kullanmayı bırakmak istiyorsanız, hesabınızı silmek yerine uygulamayı cihazınızdan kaldırabilirsiniz.
-
-Yardıma mı ihtiyacınız var?
-Hesap silme işlemiyle ilgili herhangi bir sorunuz veya sorununuz varsa, lütfen laphedusapp@gmail.com adresine e-posta gönderin.`;
+If you have any questions or issues with the account deletion process, please email us at laphedusapp@gmail.com.`;
       setPreContent(contentEl, kayfeDeletion, 'defaultDeletion');
       if (appNameEl) appNameEl.textContent = 'Kayfe';
     }
@@ -258,191 +231,191 @@ After Deletion
 
   if (app === 'dinamik-ada' && contentEl) {
     if (isPrivacy) {
-      document.title = 'Gizlilik Politikasi | Dynamic Pill';
-      const dynamicPillPrivacy = `Dynamic Pill Gizlilik Politikasi
-Son guncelleme: 04.08.2026
+      document.title = 'Privacy Policy | Dynamic Pill';
+      const dynamicPillPrivacy = `Dynamic Pill Privacy Policy
+Last updated: 04.08.2026
 
-Dynamic Pill, Android cihazlarda ekranin ust kismina kapsul benzeri bir arayuz yerlestiren ve medya, bildirim, baglanti, pil, kilit durumu, jestler ve secili hizli kontroller gibi ozellikleri gosteren yardimci bir uygulamadir. Bu politika, uygulamanin gercek calisma bicimine gore hangi verileri cihaz icinde isleyebildigini, hangi verilerin yerelde kaldigini ve hangi sinirli durumlarda ucuncu taraf odeme altyapilariyla iletisim kuruldugunu aciklar.
+Dynamic Pill is a helper app that places a capsule-like interface at the top of Android devices and shows features such as media, notifications, connection status, battery, lock state, gestures, and selected quick controls. This policy explains which data the app may process on-device, which data stays local, and in which limited cases third-party payment infrastructure may be contacted.
 
-1. Islenebilen Bilgiler
+1. Information That May Be Processed
 
-Uygulama, ozelliklerin calismasi icin asagidaki bilgi kategorilerini cihaz uzerinde isleyebilir:
+The app may process the following categories of information on your device so its features can work:
 
-- erisilebilirlik servis durumu, overlay izni durumu ve bildirim erisimi durumu
-- medya oturumu bilgileri, oynatma durumu, uygulama paketi, medya basligi ve album kapagi gibi medya metaverileri
-- pil, sarj, Bluetooth, Wi-Fi, hotspot, ucak modu ve ses modu gibi cihaz ici durumlar
-- kilit ekrani ve cihaz kilidinin acilmasi ile ilgili durum bilgileri
-- kullanicinin sectigi dil, tema, gorunum, kalibrasyon, jest, moduller ve premium tercihleri
-- bildirim tabanli ozellikler acikken secili bildirimlerden paket adi, baslik, metin ve zaman bilgisi gibi alanlar
-- jestler, kisayollar ve bildirim filtreleri icin cihazdaki yuklu uygulamalarin adlari, paket adlari ve ikonlari
-- premium satin alma, geri yukleme ve entitlement dogrulama akislarinda gerekli sinirli teknik bilgiler
+- accessibility service status, overlay permission status, and notification access status
+- media session details such as playback state, app package, media title, and album artwork
+- on-device states such as battery, charging, Bluetooth, Wi-Fi, hotspot, airplane mode, and sound mode
+- lock screen and device unlock state information
+- language, theme, appearance, calibration, gesture, module, and premium preferences selected by the user
+- when notification-based features are enabled, selected notification fields such as package name, title, text, and time
+- app names, package names, and icons of installed apps for gestures, shortcuts, and notification filters
+- limited technical information required for premium purchase, restore, and entitlement verification flows
 
-Bu veriler; kapsul arayuzunu guncellemek, secili olayi dogru sekilde gostermek, kullanici ayarlarini korumak ve premium durumunu belirlemek icin kullanilir.
+This data is used to update the capsule interface, show selected events correctly, preserve user settings, and determine premium status.
 
-2. Toplanmayan veya Hedeflenmeyen Veriler
+2. Data Not Collected or Targeted
 
-- zorunlu kullanici hesabi olusturmaz
-- reklam profili olusturmaz
-- ucuncu taraf reklam aglariyla veri paylasmaz
-- konum gecmisi tutmaz
-- kisi listesi, fotograf galerisi veya mesajlasma veritabani toplamaz
-- kamera iznini fotograf veya video cekmek icin kullanmaz; fener kontrolu yalnizca cihazin torch donanimi icindir
-- erisilebilirlik verilerini reklam, analiz veya pazarlama amaciyla kullanmaz
-- yazilan metinleri kaydetmeyi veya mesaj iceriklerini harici sunuculara aktarmayi hedeflemez
+- the app does not require a user account
+- it does not create advertising profiles
+- it does not share data with third-party ad networks
+- it does not keep location history
+- it does not collect contact lists, photo galleries, or messaging databases
+- camera permission is not used to take photos or videos; flashlight control is only for the device torch hardware
+- accessibility data is not used for advertising, analytics, or marketing
+- it is not designed to record typed text or transfer message contents to external servers
 
-3. Veriler Nasil Kullanilir
+3. How Data Is Used
 
-- ekran ustu kapsul arayuzunu gostermek ve konumlandirmak
-- medya, bildirim, zamanlayici, ses kaydi, baglanti ve pil olaylarini ayirt etmek
-- secili bildirimleri veya zaman bazli durumlari kapsulde gorsellestirmek
-- jestler ve kisayollar icin kullanicinin sectigi uygulama ve eylemleri calistirmak
-- ses, parlaklik ve fener gibi yardimci sistem kontrollerini yonetmek
-- ayarlari ve premium erisim durumunu cihaz uzerinde korumak
-- satin alma, geri yukleme ve entitlement kontrolunu yurutmek
+- to show and position the top capsule interface
+- to distinguish media, notification, timer, voice recording, connection, and battery events
+- to visualize selected notifications or time-based states in the capsule
+- to run user-selected apps and actions for gestures and shortcuts
+- to manage helper system controls such as volume, brightness, and flashlight
+- to keep settings and premium access status on the device
+- to perform purchase, restore, and entitlement checks
 
-4. Veriler Nerede Saklanir
+4. Where Data Is Stored
 
-Uygulama ayarlari, moduller, filtreler ve cogu durum bilgisi agirlikli olarak cihaz uzerinde saklanir. Bildirim basligi/metni, uygulama listesi ve ikonlar gibi veriler ozellik calisirken yerelde islenir; varsayilan akista uygulama tarafindan ayri bir bulut hesabi altinda saklanmaz.
+App settings, modules, filters, and most status information are mainly stored on the device. Data such as notification title/text, app list, and icons is processed locally while the feature runs and is not stored under a separate cloud account by default.
 
-Premium satin alma veya geri yukleme kullanildiginda Google Play Billing ve RevenueCat gibi ucuncu taraf altyapilar, satin alma akisinin calismasi icin gerekli sinirli teknik verileri isleyebilir. Eger gelecekte analitik, uzaktan hata kaydi, hesap senkronizasyonu veya bulut yedekleme eklenirse bu politika guncellenecektir.
+When premium purchase or restore is used, third-party infrastructure such as Google Play Billing and RevenueCat may process limited technical data required for the purchase flow. If analytics, remote crash reporting, account sync, or cloud backup is added in the future, this policy will be updated.
 
-5. Izinler ve Gerekceleri
+5. Permissions and Reasons
 
-- Erisilebilirlik izni: kapsulun diger uygulamalarin uzerinde stabil kalmasi, bazi pencere ve foreground degisimlerine tepki vermesi, secili jest veya yardimci sistem eylemlerinin calismasi icin kullanilir.
-- Ustte goster izni: kapsul arayuzunun diger uygulamalarin uzerinde gorunebilmesi icin gereklidir.
-- Bildirim erisimi: medya kontrolu, secili bildirim gosterimi, zamanlayici ve ses kaydi gibi bildirim tabanli moduller acikken kullanilir. Bu erisim, ilgili bildirimin paket adini, baslik veya metin gibi alanlarini cihaz icinde yorumlamak icin gerekebilir.
-- Bluetooth ve baglanti ile ilgili izinler: Bluetooth baglanti olaylarini gosteren ozellikler icin gerekli olabilir.
-- Sistem ayarlarini degistirme izni: parlaklik gibi sistem kontrollerinin Dynamic Pill icinden yonetilebilmesi icin kullanilir. Temel kullanim icin zorunlu degildir.
-- Kamera / torch donanimi erisimi: feneri kapsul uzerinden acip kapatmak veya guc seviyesini ayarlamak icin gerekebilir. Bu erisim fotograf ya da video cekimi amaciyla kullanilmaz.
-- Pil optimizasyonu ayari: zorunlu degildir. Bazi cihazlarda uygulamanin arka planda daha kararli calismasi icin onerilebilir.
-- Satin alma ve premium altyapisi: premium satin alma, geri yukleme veya premium durumunu yenileme kullanildiginda uygulama, satin alma ve entitlement kontrolunu saglamak icin RevenueCat ve ilgili uygulama ici satin alma altyapisiyla iletisim kurabilir.
+- Accessibility permission: used to keep the capsule stable above other apps, react to certain window and foreground changes, and enable selected gestures or helper system actions.
+- Display over other apps permission: required so the capsule interface can appear above other apps.
+- Notification access: used when notification-based modules such as media controls, selected notification display, timer, and voice recording are enabled. This access may be needed to interpret the relevant notification package name, title, or text on the device.
+- Bluetooth and connection-related permissions: may be required for features that show Bluetooth connection events.
+- Modify system settings permission: used to manage system controls such as brightness from Dynamic Pill. It is not required for basic use.
+- Camera / torch hardware access: may be required to turn the flashlight on/off or adjust its level from the capsule. This access is not used to take photos or videos.
+- Battery optimization setting: not required, but may be suggested on some devices so the app can work more reliably in the background.
+- Purchase and premium infrastructure: when premium purchase, restore, or premium status refresh is used, the app may contact RevenueCat and the related in-app purchase infrastructure to verify purchases and entitlements.
 
-6. Ucuncu Taraflarla Paylasim
+6. Sharing With Third Parties
 
-Uygulama, kullanici verilerini ucuncu taraflarla satmaz, kiralamaz veya reklam amaciyla paylasmaz.
+The app does not sell, rent, or share user data with third parties for advertising purposes.
 
-Bununla birlikte uygulama, premium satin alma ve entitlement kontrolu icin Google Play Billing, RevenueCat veya benzeri hizmet saglayicilar kullanabilir. Bu hizmetler, satin alma akisinin calismasi icin gerekli sinirli teknik verileri isleyebilir.
+However, the app may use Google Play Billing, RevenueCat, or similar providers for premium purchases and entitlement checks. These services may process limited technical data required for the purchase flow.
 
-Yasal zorunluluk, mahkeme karari veya resmi makam talebi gibi durumlar disinda veri paylasimi yapilmaz. Boyle bir durumda yalnizca gerekli oldugu kadar bilgi saglanir.
+Data is not shared except for legal obligations, court orders, or official authority requests. In such cases, only the necessary information is provided.
 
-7. Veri Guvenligi
+7. Data Security
 
-Uygulama, isledigi tercih ve durum bilgisini mumkun oldugunca cihaz uzerinde tutmaya oncelik verir. Izinler yalnizca ilgili ozellikler icin istenir ve her modul kullanici tarafindan acilip kapatilabilir. Bununla birlikte hicbir yazilim, depolama veya iletim yontemi yuzde yuz guvenlik garantisi vermez.
+The app prioritizes keeping processed preference and status data on the device whenever possible. Permissions are requested only for relevant features, and each module can be enabled or disabled by the user. However, no software, storage, or transmission method can guarantee one hundred percent security.
 
-8. Hesap Silme ve Veri Silme
+8. Account Deletion and Data Deletion
 
-Dynamic Pill mevcut halinde zorunlu bir kullanici hesabi kullanmaz. Bu nedenle uygulama ici klasik bir hesap silme ekrani bulunmaz.
+Dynamic Pill does not currently require a user account. For this reason, there is no classic in-app account deletion screen.
 
-- yerel verileri silmek icin uygulamayi cihazindan kaldirabilir veya uygulama verilerini temizleyebilirsin
-- premium satin alma kayitlari ilgili magaza veya abonelik altyapisinda tutulabilir
-- veri silme veya gizlilik talebi icin laphedusapp@gmail.com adresine yazabilirsin
+- to delete local data, you can uninstall the app from your device or clear the app data
+- premium purchase records may be retained by the relevant store or subscription infrastructure
+- for data deletion or privacy requests, you can write to laphedusapp@gmail.com
 
-9. Cocuklarin Gizliligi
+9. Children's Privacy
 
-Uygulama cocuklara yonelik ozel bir hizmet olarak tasarlanmamistir. Bilerek cocuklardan kisisel veri toplama amaci yoktur.
+The app is not designed as a service directed specifically to children. It does not knowingly aim to collect personal data from children.
 
-10. Degisiklikler
+10. Changes
 
-Bu gizlilik politikasi zaman zaman guncellenebilir. Onemli degisiklikler oldugunda uygulama ici bilgilendirme, surum notu veya guncel baglanti uzerinden duyuru yapilabilir.
+This privacy policy may be updated from time to time. Important changes may be announced through in-app information, release notes, or the current link.
 
-11. Iletisim
+11. Contact
 
-Gizlilik veya veri silme talepleri icin:
+For privacy or data deletion requests:
 
-- Marka: LaphedusApp
-- Gelistirici: Laphedus
-- E-posta: laphedusapp@gmail.com`;
+- Brand: LaphedusApp
+- Developer: Laphedus
+- Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, dynamicPillPrivacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
 
     if (isTerms) {
-      document.title = 'Kullanim Kosullari | Dynamic Pill';
-      const dynamicPillTerms = `Dynamic Pill Kullanim Kosullari
-Son guncelleme: 04.08.2026
+      document.title = 'Terms of Use | Dynamic Pill';
+      const dynamicPillTerms = `Dynamic Pill Terms of Use
+Last updated: 04.08.2026
 
-Bu uygulamayi indirerek, kurarak veya kullanarak asagidaki kosullari kabul etmis sayilirsiniz.
+By downloading, installing, or using this app, you are deemed to accept the following terms.
 
-1. Hizmetin Kapsami
+1. Scope of the Service
 
-Dynamic Pill, Android cihazlarda medya, secili bildirimler, baglanti olaylari, pil durumu, jestler ve belirli yardimci sistem kontrollerini ust kapsul arayuzunde gostermek icin tasarlanmis yardimci bir uygulamadir.
+Dynamic Pill is a helper app designed to show media, selected notifications, connection events, battery status, gestures, and certain helper system controls in a top capsule interface on Android devices.
 
-Uygulama; cihaz modeli, Android surumu, uretici arayuzu ve izin durumuna gore farkli sekilde davranabilir.
+The app may behave differently depending on device model, Android version, manufacturer interface, and permission status.
 
-2. Izinler ve Sistem Davranisi
+2. Permissions and System Behavior
 
-Erisilebilirlik, ustte goster, bildirim erisimi, Bluetooth veya sistem ayarlarini degistirme gibi izinler verilmezse bazi moduller kisitli calisabilir veya hic calismayabilir.
+If permissions such as accessibility, display over other apps, notification access, Bluetooth, or modify system settings are not granted, some modules may work in a limited way or may not work at all.
 
-Bildirim tabanli moduller, secili bildirim alanlarini cihaz icinde yorumlayabilir. Jestler ve uygulama secimiyle ilgili ozellikler, cihazdaki yuklu uygulamalari yerelde listeleyebilir. Premium, satin alma veya geri yukleme gibi ozellikler kullanildiginda uygulama, ilgili odeme ve abonelik altyapisiyla iletisim kurabilir.
+Notification-based modules may interpret selected notification fields on the device. Features related to gestures and app selection may list installed apps locally. When premium, purchase, or restore features are used, the app may communicate with the relevant payment and subscription infrastructure.
 
-3. Uygun Kullanim
+3. Acceptable Use
 
-- cihazin sistem guvenligini asmamak
-- uygulamayi kotuye kullanmamak
-- sistem jestleri, kisayollar, hizli ayarlar ve benzeri kontrolleri yetkisiz veya zarar verici sekilde kullanmamak
-- ucuncu taraf haklarini ihlal etmemek
-- uygulamayi yasalara aykiri amaclarla kullanmamak
+You must:
 
-gerekir.
+- not bypass the device's system security
+- not misuse the app
+- not use system gestures, shortcuts, quick settings, or similar controls in an unauthorized or harmful way
+- not infringe third-party rights
+- not use the app for unlawful purposes
 
-4. Uyumluluk ve Garanti Siniri
+4. Compatibility and Warranty Limit
 
-- tum cihazlarda ayni gorunum garanti edilmez
-- tum uretici arayuzleriyle tam uyum garanti edilmez
-- arka plan davranisinin her cihazda ayni olacagi garanti edilmez
-- kilit ekrani, cutout, medya, bildirim ve torch davranisi cihaz bazinda farkli olabilir
-- sistem guncellemelerinden kaynakli degisiklikler olabilir
+- the same appearance is not guaranteed on all devices
+- full compatibility with all manufacturer interfaces is not guaranteed
+- background behavior is not guaranteed to be the same on every device
+- lock screen, cutout, media, notification, and torch behavior may vary by device
+- changes may occur due to system updates
 
-5. Kesintiler ve Degisiklikler
+5. Interruptions and Changes
 
-Gelistirici, uygulamanin ozelliklerinde degisiklik yapabilir, bazi modulleri kaldirabilir, yeni moduller ekleyebilir veya uygulamayi belirli cihazlarda farkli sekilde optimize edebilir.
+The developer may change app features, remove some modules, add new modules, or optimize the app differently for certain devices.
 
-6. Sorumlulugun Sinirlandirilmasi
+6. Limitation of Liability
 
-- kesintisiz calisma garantisi verilmez
-- hatasiz calisma garantisi verilmez
-- belirli bir amaca uygunluk konusunda mutlak garanti verilmez
+- uninterrupted operation is not guaranteed
+- error-free operation is not guaranteed
+- absolute fitness for a particular purpose is not guaranteed
 
-Gelistirici, kullanicinin cihazinda olusabilecek dolayli zararlar, veri kaybi veya beklenmeyen sistem davranislari icin yasal olarak izin verilen olcude sorumluluk ustlenmez.
+To the extent permitted by law, the developer is not responsible for indirect damage, data loss, or unexpected system behavior that may occur on the user's device.
 
-7. Fikri Mulkiyet
+7. Intellectual Property
 
-Uygulamanin tasarimi, markasi, metinleri ve ilgili icerikleri gelistiriciye veya ilgili hak sahiplerine aittir. Acikca izin verilmedigi surece kopyalanamaz, dagitilamaz veya ticari olarak kullanilamaz.
+The app's design, brand, text, and related content belong to the developer or relevant rights holders. They may not be copied, distributed, or used commercially unless explicitly permitted.
 
-8. Ucuncu Taraf Bilesenler
+8. Third-Party Components
 
-Uygulama, Flutter, Android sistem API'leri, Google Play Billing, RevenueCat ve diger acik kaynak kutuphaneler gibi ucuncu taraf bilesenler kullanabilir. Bu bilesenler kendi lisans, gizlilik ve kullanim kosullarina tabi olabilir.
+The app may use third-party components such as Flutter, Android system APIs, Google Play Billing, RevenueCat, and other open-source libraries. These components may be subject to their own licenses, privacy policies, and terms of use.
 
-9. Hesap ve Odeme Ozellikleri
+9. Account and Payment Features
 
-Uygulama, zorunlu bir kullanici hesabi gerektirmez. Bununla birlikte uygulama, premium ozellikler, satin alma, geri yukleme veya abonelik durumu kontrolu gibi odeme akislarini destekleyebilir.
+The app does not require a mandatory user account. However, it may support payment flows such as premium features, purchases, restores, or subscription status checks.
 
-Bu akislar sirasinda:
+During these flows:
 
-- fiyatlandirma ve satin alma kosullari ilgili magaza altyapisina tabidir
-- premium erisimi teknik olarak ucuncu taraf abonelik hizmetleriyle dogrulanabilir
-- satin alma ozellikleri her cihazda veya her ulkede ayni sekilde sunulmayabilir
-- kullanici, satin alma yapmadan once magazadaki guncel fiyat ve kosullari kontrol etmekle sorumludur
+- pricing and purchase conditions are subject to the relevant store infrastructure
+- premium access may be technically verified through third-party subscription services
+- purchase features may not be available in the same way on every device or in every country
+- the user is responsible for checking current prices and conditions in the store before purchasing
 
-10. Hesap ve Veri Silme
+10. Account and Data Deletion
 
-Uygulamada zorunlu kullanici hesabi olmadigindan klasik hesap kapatma akisi yoktur. Kullanici uygulamayi kaldirabilir, uygulama verilerini silebilir veya laphedusapp@gmail.com adresi uzerinden veri silme talebinde bulunabilir.
+Because the app does not require a mandatory user account, there is no classic account closure flow. The user may uninstall the app, clear app data, or request data deletion through laphedusapp@gmail.com.
 
-11. Kullanimin Sonlandirilmasi
+11. Termination of Use
 
-Kullanici, uygulamayi istedigi zaman kaldirabilir veya kullanmayi durdurabilir. Gelistirici de uygulamanin belirli ozelliklerini sonlandirma veya degistirme hakkini sakli tutar.
+The user may uninstall or stop using the app at any time. The developer also reserves the right to terminate or change certain app features.
 
-12. Degisiklikler
+12. Changes
 
-Bu kullanim kosullari zaman zaman guncellenebilir. Guncel metin uygulama ici ekran, web sayfasi veya magaza icerigi uzerinden paylasilabilir.
+These terms of use may be updated from time to time. The current text may be shared through the in-app screen, website, or store listing.
 
-13. Iletisim
+13. Contact
 
-Kullanim kosullariyla ilgili sorular icin:
+For questions about these terms:
 
-- Marka: LaphedusApp
-- Gelistirici: Laphedus
-- E-posta: laphedusapp@gmail.com`;
+- Brand: LaphedusApp
+- Developer: Laphedus
+- Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, dynamicPillTerms, 'defaultTerms');
       if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
@@ -450,102 +423,102 @@ Kullanim kosullariyla ilgili sorular icin:
 
   if (app === 'stamper' && contentEl) {
     if (isPrivacy) {
-      document.title = 'Gizlilik Politikasi | Stamper';
-      const stamperPrivacy = `Stamper Gizlilik Politikasi
-Son guncelleme: 20.04.2026
+      document.title = 'Privacy Policy | Stamper';
+      const stamperPrivacy = `Stamper Privacy Policy
+Last updated: 20.04.2026
 
-Stamper - My Stamp Album, kullanicilarin fotograflarindan kisisel dijital pullar olusturup bunlari albumlerde duzenlemesine imkan veren local-first bir Android uygulamasidir. Bu politika, uygulamanin hangi verileri isledigini, bu verilerin nasil kullanildigini ve hangi durumlarda ucuncu taraf hizmetlerle sinirli teknik bilgi paylasimi olabilecegini aciklar.
+Stamper - My Stamp Album is a local-first Android app that lets users create personal digital stamps from their photos and organize them in albums. This policy explains which data the app processes, how that data is used, and in which cases limited technical information may be shared with third-party services.
 
-1. Islenebilen Bilgiler
+1. Information That May Be Processed
 
-Uygulama, kullanim senaryosuna bagli olarak cihaz uzerinde su bilgi kategorilerini isleyebilir:
+Depending on how you use the app, the following categories of information may be processed on your device:
 
-- kameradan cekilen veya galeriden secilen fotograflar
-- pul basligi, not, album atamasi, olusturma zamani ve secili stil tercihleri gibi pul metaverileri
-- kullanicinin olusturdugu album bilgileri
-- yerel olarak olusturulan yedek dosyalari ve geri yukleme sirasinda secilen arsiv dosyalari
-- premium satin alma, geri yukleme ve entitlement dogrulama akislarinda gerekli sinirli teknik bilgiler
-- istege bagli konum ozelligi etkinlestirilirse konumla ilgili etiket veya metaveriler
+- photos taken with the camera or selected from the gallery
+- stamp metadata such as stamp title, note, album assignment, creation time, and selected style preferences
+- album information created by the user
+- backup files created locally and archive files selected during restore
+- limited technical information required for premium purchase, restore, and entitlement verification flows
+- location-related tags or metadata if the optional location feature is enabled
 
-2. Veriler Nasil Kullanilir
+2. How Data Is Used
 
-Bu bilgiler su amaclarla kullanilir:
+This information is used to:
 
-- fotografi pul formatinda duzenlemek ve kaydetmek
-- pullari albumlerde duzenlemek
-- not, baslik ve diger yerel metaverileri saklamak
-- yedek olusturmak ve geri yuklemek
-- kullanicinin premium ozelliklere erisimi olup olmadigini belirlemek
+- edit and save a photo in stamp format
+- organize stamps in albums
+- store notes, titles, and other local metadata
+- create and restore backups
+- determine whether the user has access to premium features
 
-3. Veriler Nerede Saklanir
+3. Where Data Is Stored
 
-Stamper, iceriklerini agirlikli olarak cihaz uzerinde saklar.
+Stamper stores content mainly on the device.
 
-- pul gorselleri uygulamanin yerel depolama alaninda tutulur
-- album ve pul metaverileri cihaz icindeki yerel dosyalarda saklanir
-- yedekler kullanicinin sectigi veya uygulamanin olusturdugu yerel klasorlere yazilabilir
+- stamp images are kept in the app's local storage area
+- album and stamp metadata is stored in local files on the device
+- backups may be written to local folders selected by the user or created by the app
 
-Uygulamayi kullanmak icin zorunlu bir hesap olusturman gerekmez.
+You do not need to create a mandatory account to use the app.
 
-4. Satin Alma ve Premium Ozellikler
+4. Purchases and Premium Features
 
-Stamper, premium ozelliklerin yonetimi icin Google Play Billing ve RevenueCat gibi ucuncu taraf altyapilar kullanabilir. Bu hizmetler satin alma akisinin calismasi, satin alimlarin geri yuklenmesi ve premium haklarin dogrulanmasi icin gerekli sinirli teknik verileri isleyebilir.
+Stamper may use third-party infrastructure such as Google Play Billing and RevenueCat to manage premium features. These services may process limited technical data required for purchase flows, purchase restoration, and premium entitlement verification.
 
-Bu kapsamda su tur teknik veriler islenebilir:
+This may include technical data such as:
 
-- satin alma durumu
-- islem veya urun tanimlayicilari
-- entitlement dogrulamasi icin gerekli uygulama ve cihaz baglam bilgileri
+- purchase status
+- transaction or product identifiers
+- app and device context information required for entitlement verification
 
-Stamper, odeme karti bilgilerini dogrudan toplamaz veya saklamaz. Odeme islemleri ilgili magaza ve odeme altyapilari uzerinden yurutulur.
+Stamper does not directly collect or store payment card information. Payments are handled through the relevant store and payment infrastructure.
 
-5. Izinler ve Gerekceleri
+5. Permissions and Reasons
 
-- Kamera izni: yeni bir fotograf cekerek pul olusturmak icin kullanilir
-- Fotograf veya medya erisimi: galeriden gorsel secmek, disa aktarma veya dosya islemleri icin kullanilir
-- Konum izni: yalnizca ilgili ozellik etkinlestirilirse konum tabanli metaveri eklemek icin kullanilabilir
+- Camera permission: used to create a stamp by taking a new photo
+- Photo or media access: used to select images from the gallery, export content, or handle file operations
+- Location permission: may be used to add location-based metadata only if the related feature is enabled
 
-Izinler, yalnizca ilgili ozellik kullanildiginda istenir.
+Permissions are requested only when the related feature is used.
 
-6. Veri Paylasimi
+6. Data Sharing
 
-Stamper, kullanicinin fotograf ve album iceriklerini varsayilan kullanim akisi icinde gelistiricinin kendi sunucularina gondermez.
+Stamper does not send the user's photo and album content to the developer's own servers in the default usage flow.
 
-Kisisel veriler reklam amaciyla satilmaz veya kiralanmaz.
+Personal data is not sold or rented for advertising purposes.
 
-Ancak premium satin alma veya geri yukleme gibi durumlarda Google Play Billing, RevenueCat veya benzeri hizmet saglayicilar gerekli teknik verileri isleyebilir. Ayrica yasal zorunluluk durumunda sinirli veri paylasimi gerekebilir.
+However, in cases such as premium purchase or restore, Google Play Billing, RevenueCat, or similar service providers may process required technical data. Limited data sharing may also be required due to legal obligations.
 
-7. Yedekleme ve Kullanici Kontrollu Paylasim
+7. Backups and User-Controlled Sharing
 
-Kullanici bir yedek dosyasi olusturdugunda, disa aktardiginda veya paylastiginda bu islem kullanici tarafindan baslatilir. Disa aktarilan dosyalarin daha sonra nasil saklanacagi veya paylasilacagi kullanicinin sorumlulugundadir.
+When the user creates, exports, or shares a backup file, that action is initiated by the user. The user is responsible for how exported files are later stored or shared.
 
-8. Veri Saklama ve Silme
+8. Data Retention and Deletion
 
-Yerel veriler, sen silene kadar veya uygulamayi kaldirana kadar cihazinda kalabilir.
+Local data may remain on your device until you delete it or uninstall the app.
 
-- pullari ve albumleri uygulama icinde silebilirsin
-- uygulamayi kaldirarak veya uygulama verilerini temizleyerek yerel verileri kaldirabilirsin
-- satin alma kayitlari ilgili magaza veya abonelik saglayicisinda kendi politikalarina gore tutulabilir
+- you can delete stamps and albums inside the app
+- you can remove local data by uninstalling the app or clearing app data
+- purchase records may be retained by the relevant store or subscription provider according to their own policies
 
-9. Cocuklarin Gizliligi
+9. Children's Privacy
 
-Stamper, cocuklara yonelik ozel bir hizmet olarak tasarlanmamistir. Bilerek cocuklardan kisisel veri toplama amaci yoktur.
+Stamper is not designed as a service directed specifically to children. It does not knowingly aim to collect personal data from children.
 
-10. Guvenlik
+10. Security
 
-Uygulama local-first bir yapida tasarlanmistir ve verileri mumkun oldugunca cihaz uzerinde tutmayi hedefler. Bununla birlikte hicbir depolama veya iletim yontemi yuzde yuz guvenli oldugu garantisini vermez.
+The app is designed with a local-first structure and aims to keep data on the device whenever possible. However, no storage or transmission method can guarantee one hundred percent security.
 
-11. Degisiklikler
+11. Changes
 
-Bu gizlilik politikasi zaman zaman guncellenebilir. Guncel surum bu sayfada yayinlanir.
+This privacy policy may be updated from time to time. The current version is published on this page.
 
-12. Iletisim
+12. Contact
 
-Gizlilik veya veri taleplerin icin:
+For privacy or data requests:
 
-- Marka: LaphedusApp
-- Gelistirici: Laphedus
-- E-posta: laphedusapp@gmail.com`;
+- Brand: LaphedusApp
+- Developer: Laphedus
+- Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, stamperPrivacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Stamper';
     }
@@ -553,49 +526,7 @@ Gizlilik veya veri taleplerin icin:
 
   if (app === 'expensly' && contentEl) {
     if (isPrivacy) {
-      const expenslyPrivacy = `Son güncelleme: 2025-04-11
-
-Masraf Kaydedici uygulamasını kullandığınız için teşekkür ederiz. Gizliliğiniz bizim için önemlidir. Bu gizlilik politikası, uygulamayı kullanırken toplanan, kullanılan ve açıklanan bilgilerle ilgili politikalarımızı açıklamaktadır.
-
-Topladığımız Bilgiler
-Masraf Kaydedici uygulaması, size hizmet sunmak için aşağıdaki bilgileri toplar:
-        
-    Kullanıcı Tarafından Sağlanan Veriler: Harcama kayıtları, kategori bilgileri, bütçe planları gibi uygulama içinde girdiğiniz tüm veriler.
-    Cihaz Bilgileri: Uygulama çöktüğünde veya hata oluştuğunda, cihazınızın modeli, işletim sistemi sürümü gibi temel bilgiler toplanabilir.
-        
-
-Verilerin Kullanımı
-Topladığımız bilgileri aşağıdaki amaçlarla kullanırız:
-        
-    Uygulamanın temel işlevlerini sağlamak
-    Uygulamayı iyileştirmek ve geliştirmek
-    Teknik sorunları tespit etmek ve çözmek
-        
-
-Veri Saklama
-Masraf Kaydedici, girdiğiniz tüm verileri öncelikle cihazınızda yerel olarak saklar. Verileriniz, siz silmeyi tercih etmediğiniz sürece cihazınızda kalır.
-
-Veri Paylaşımı
-Kişisel verilerinizi üçüncü taraflarla paylaşmıyoruz. Ancak aşağıdaki durumlarda bilgilerinizi paylaşabiliriz:
-        
-    Yasal Gereklilikler: Yasal bir yükümlülüğe uymak, yasal süreçlere yanıt vermek veya geçerli yasaları uygulamak için gerekli olduğunda.
-    Hizmet Sağlayıcılar: Uygulamanın işlevselliğini desteklemek için kullandığımız üçüncü taraf hizmet sağlayıcılarla (örneğin, analiz hizmetleri).
-        
-
-Veri Güvenliği
-Verilerinizin güvenliğini sağlamak için uygun teknik ve organizasyonel önlemler alıyoruz. Ancak, internet üzerinden hiçbir veri iletiminin veya elektronik depolamanın %100 güvenli olmadığını unutmayın.
-
-Çocukların Gizliliği
-Hizmetlerimiz 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz.
-
-Bu Gizlilik Politikasındaki Değişiklikler
-Gizlilik politikamızı zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada yayınlanacaktır. Önemli değişiklikler olması durumunda, uygulama içinde bir bildirim de sağlayabiliriz.
-
-İletişim
-Bu gizlilik politikası hakkında sorularınız veya endişeleriniz varsa, lütfen aşağıdaki iletişim bilgilerini kullanarak bize ulaşın:
-E-posta: laphedusapp@gmail.com
-    
-Privacy Policy - Expensly
+      const expenslyPrivacy = `Privacy Policy - Expensly
 Last updated: 2025-04-11
 
 Thank you for using the Expense Tracker app. Your privacy is important to us. This privacy policy explains our policies regarding the collection, use, and disclosure of information when you use our application.

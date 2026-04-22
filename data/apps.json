@@ -1,9 +1,9 @@
 [
   {
     "slug": "kayfe",
-    "name": "Kayfe - Yeni Fal Uygulaması",
-    "short_description": "Kahve falınıza bakın, geleceğinize göz atın.",
-    "long_description": "Kayfe, kahve falı deneyimini modern ve keyifli bir arayüzle sunar. Uygulama içi satın alma seçenekleriyle daha zengin içeriklere erişebilir, günlük yorumlarla eğlenceli bir rutin oluşturabilirsiniz.",
+    "name": "Kayfe - Coffee Fortune App",
+    "short_description": "Read your coffee cup and enjoy a glimpse into your future.",
+    "long_description": "Kayfe offers a modern and enjoyable coffee fortune experience. With in-app purchase options, you can access richer content and build a fun daily routine with fresh readings.",
     "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
     "icon_url": "https://play-lh.googleusercontent.com/ASFgeBRkxQNspVgFSoQo8NFIWsWVhVONOXCO4iA1esJXMOejSaaxJkS2rMuG3D8bnA=w480-h960-rw",
     "screenshots": [
@@ -11,13 +11,13 @@
       "https://play-lh.googleusercontent.com/aLaiJHE20GL7X8lwvixLUMmNnvdzhRXrigLgD9MVH2XDWTuO0nGYTvFhUOLxBBSBtaw=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/NgnJEEngQMi20nITjcVG_-8ZeqbsiNE4JoGU7dbCMWoBbgr0JHBjyb5Zjlx9SU3zEQ=w1052-h592-rw"
     ],
-    "category": "Eğlence"
+    "category": "Entertainment"
   },
   {
     "slug": "dinamik-ada",
     "name": "Dynamic Pill",
-    "short_description": "Android'de medya, bağlantı ve sistem olaylarını üst kapsülde gösteren özelleştirilebilir overlay deneyimi.",
-    "long_description": "Dynamic Pill; medya oynatma, pil ve bağlantı olaylarını ekranın üst kısmındaki kapsül arayüzünde toplar. Görünüm, konum, tema, jestler ve bazı yardımcı modüller cihaz bazlı olarak özelleştirilebilir. Flutter arayüzü ile Android servis katmanını birleştiren hibrit yapısı sayesinde hem ayar ekranlarını hem de sistem üstü kapsül deneyimini aynı ürün içinde sunar.",
+    "short_description": "A customizable Android overlay experience that shows media, connection, and system events in a top capsule.",
+    "long_description": "Dynamic Pill brings media playback, battery, and connection events together in a capsule interface at the top of the screen. Appearance, position, theme, gestures, and selected helper modules can be customized on the device. Its hybrid structure combines a Flutter interface with an Android service layer to provide both settings screens and the system overlay experience in one product.",
     "play_store_url": "",
     "has_account": false,
     "has_terms": true,
@@ -27,26 +27,26 @@
       "assets/image/dinamik-ada-screen-1.svg",
       "assets/image/dinamik-ada-screen-2.svg"
     ],
-    "category": "Araçlar"
+    "category": "Tools"
   },
   {
     "slug": "stamper",
     "name": "Stamper - My Stamp Album",
-    "short_description": "Fotograflarindan kisisel dijital pullar olustur, albumlerinde sakla ve yerel olarak yedekle.",
-    "long_description": "Stamper; kameradan veya galeriden sectigin fotograflari pul tarzinda dijital hatiralara donusturen, bunlari albumlerde duzenlemeni saglayan local-first bir Android uygulamasidir. Uygulama hesap gerektirmez, iceriklerini cihazinda saklar ve premium ozellikler icin Google Play Billing ile RevenueCat altyapisini kullanir.",
+    "short_description": "Create personal digital stamps from your photos, keep them in albums, and back them up locally.",
+    "long_description": "Stamper is a local-first Android app that turns photos selected from your camera or gallery into stamp-style digital memories and lets you organize them in albums. The app does not require an account, stores your content on your device, and uses Google Play Billing with RevenueCat for premium features.",
     "play_store_url": "",
     "has_account": false,
     "icon_url": "assets/image/stamper-icon.svg",
     "screenshots": [
       "assets/image/stamper-screen-1.svg"
     ],
-    "category": "Fotoğraf ve Anılar"
+    "category": "Photos and Memories"
   },
   {
     "slug": "expensly",
-    "name": "Expensly - Masraf Takibi",
-    "short_description": "Giderlerinizi kolayca kaydedin ve takip edin.",
-    "long_description": "Expensly ile günlük harcamalarınızı basitçe kaydedebilir, kategorize edebilir ve raporlayabilirsiniz. Temiz bir arayüz ve pratik akışlarla finansal farkındalığınızı artırır.",
+    "name": "Expensly - Expense Tracker",
+    "short_description": "Record and track your expenses easily.",
+    "long_description": "With Expensly, you can quickly record, categorize, and report your daily expenses. A clean interface and practical flows help improve your financial awareness.",
     "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
     "icon_url": "https://play-lh.googleusercontent.com/mtr4uc5I3fTIqP_slBIt2ZBOl_OlV_GOqTip3GcC4wSxb8sYTJEh_1l_U-NzS4AJUg=w480-h960-rw",
     "screenshots": [
@@ -56,13 +56,13 @@
       "https://play-lh.googleusercontent.com/UimvRaTVoKai-2R7OeOMO7tspBHq27FxbsBXs_y83IR8Xb2h83C0zDNfS8io8x1_sqZL=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/CSalmHaBwRMsKfB4axCyBK4rN_G7wEWMhlVaNWEdKiQd0BWTau_zggmfd8uoWs6WXw=w1052-h592-rw"
     ],
-    "category": "Finans"
+    "category": "Finance"
   },
   {
     "slug": "taptap",
-    "name": "TapTap - Skor",
-    "short_description": "Basit ve eğlenceli skor takibi.",
-    "long_description": "TapTap, skor tutma ve paylaşma süreçlerini basitleştirir. Hafif ve hızlı yapısıyla anlık kullanımlar için idealdir.",
+    "name": "TapTap - Score",
+    "short_description": "Simple and enjoyable score tracking.",
+    "long_description": "TapTap simplifies keeping and sharing scores. Its lightweight and fast structure makes it ideal for quick use.",
     "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
     "icon_url": "https://play-lh.googleusercontent.com/D9tIUs1b36Vc3mVJ12bF60oezAcOqHylj4p1msv5IAaypv0ne4qarSnBEszqy1HMQury=s512-rw",
     "screenshots": [
@@ -71,14 +71,14 @@
       "https://play-lh.googleusercontent.com/Djo0eBn_hlDAObmILi5_2wJM78N4KCJIEZP0dkSjHRrYSs0b4dxaERfxtZvWuGeSPbyM=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/UZyK4O_caM1VGP-NzqMOrRuj5cvZfnF5dkoyW6TZ6cD2rZUiCUd0fDEyV2fRNK54CtYo=w1052-h592-rw"
     ],
-    "category": "Araçlar"
+    "category": "Tools"
   }
   ,
   {
     "slug": "nowa4",
     "name": "Nowa4",
-    "short_description": "Nowa4 için gizlilik ve hesap silme bağlantıları içerir.",
-    "long_description": "Nowa4 uygulamasına özel içerik yakında. Bu sayfa gizlilik politikası ve hesap silme talepleri için bağlantılar sağlar.",
+    "short_description": "Includes privacy and account deletion links for Nowa4.",
+    "long_description": "App-specific content for Nowa4 is coming soon. This page provides links for the privacy policy and account deletion requests.",
     "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
     "icon_url": "https://play-lh.googleusercontent.com/f9Kh7vKGB315dubX_lbhwlipSXdEt09NwIFY_QUx3SuSdGeYI-PVITVrOG8gn7QudaKSexPwzPGbMvMDuRM9vGw=w480-h960-rw",
     "screenshots": [
@@ -88,6 +88,6 @@
       "https://play-lh.googleusercontent.com/OMVR22aM6kwpobcctvmBuoDTwfFQMt1QZtWRxhbwuKqNFJqgmD4Tge_4-VlFXqRbU7UB8_NYwlFaIJ4rYS5qBh0=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/vzXroMn6z6NCJbCON2uXx6PGMY_hG_PH8IeKLYC9I9ot074ZjvSqIbiV49p8n6zL-76Q7cUn4Rt29fcwdMSfAQ=w1052-h592-rw"
     ],
-    "category": "Araçlar"
+    "category": "Tools"
   }
 ]

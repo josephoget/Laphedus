@@ -19,33 +19,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     const res = await fetch('data/apps.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('apps.json yüklenemedi');
+    if (!res.ok) throw new Error('apps.json could not be loaded');
     const apps = await res.json();
     const app = apps.find(a => a.slug === slug);
 
-    if (!app) throw new Error('Uygulama bulunamadı');
+    if (!app) throw new Error('App not found');
 
     document.title = `${app.name} - LaphedusApp`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', app.short_description);
     const primaryAction = app.play_store_url
-      ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Google Play'de Aç</a>`
+      ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Open on Google Play</a>`
       : app.external_url
-        ? `<a class="btn primary" href="${app.external_url}">${app.external_label ?? 'Detayı Aç'}</a>`
+        ? `<a class="btn primary" href="${app.external_url}">${app.external_label ?? 'Open Details'}</a>`
         : '';
     const isAccountless = app.has_account === false;
     const backAction = app.slug === 'dinamik-ada'
       ? ''
-      : `<a class="btn" href="index.html">Diğer Uygulamalar</a>`;
+      : `<a class="btn" href="index.html">Other Apps</a>`;
     const legalActions = [
-      `<a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Gizlilik Politikası</a>`,
-      app.has_terms ? `<a class="btn" href="terms.html?app=${encodeURIComponent(app.slug)}">Kullanım Koşulları</a>` : '',
-      app.has_support ? `<a class="btn" href="support.html?app=${encodeURIComponent(app.slug)}">Destek</a>` : '',
-      isAccountless ? '' : `<a class="btn" href="account-deletion.html?app=${encodeURIComponent(app.slug)}">Hesap Silme</a>`
+      `<a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>`,
+      app.has_terms ? `<a class="btn" href="terms.html?app=${encodeURIComponent(app.slug)}">Terms of Use</a>` : '',
+      app.has_support ? `<a class="btn" href="support.html?app=${encodeURIComponent(app.slug)}">Support</a>` : '',
+      isAccountless ? '' : `<a class="btn" href="account-deletion.html?app=${encodeURIComponent(app.slug)}">Account Deletion</a>`
     ].filter(Boolean).join('');
 
     container.innerHTML = `
       <div>
-        <img class="app-icon" src="${app.icon_url}" alt="${app.name} ikon" />
+        <img class="app-icon" src="${app.icon_url}" alt="${app.name} icon" />
       </div>
       <div>
         <h1 class="app-title">${app.name}</h1>
@@ -58,19 +58,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
 
         <div class="app-section">
-          <h3>Özet</h3>
+          <h3>Summary</h3>
           <p>${app.short_description}</p>
         </div>
 
         <div class="app-section">
-          <h3>Detay</h3>
+          <h3>Details</h3>
           <p>${app.long_description}</p>
         </div>
 
         <div class="app-section">
-          <h3>Ekran Görüntüleri</h3>
+          <h3>Screenshots</h3>
           <div class="screens">
-            ${(app.screenshots ?? []).map(src => `<img class="screen" src="${src}" alt="Ekran görüntüsü" loading="lazy" />`).join('')}
+            ${(app.screenshots ?? []).map(src => `<img class="screen" src="${src}" alt="Screenshot" loading="lazy" />`).join('')}
           </div>
         </div>
       </div>
