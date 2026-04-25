@@ -101,20 +101,7 @@ function renderStamperPage(app) {
               collectible, album-based memories.
             </p>
           </div>
-          <div class="stamper-card-meta">
-            <div class="stamper-card-meta-item">
-              <span>Platform</span>
-              <strong>Android</strong>
-            </div>
-            <div class="stamper-card-meta-item">
-              <span>Storage</span>
-              <strong>Local-first</strong>
-            </div>
-            <div class="stamper-card-meta-item">
-              <span>Premium</span>
-              <strong>Google Play Billing</strong>
-            </div>
-          </div>
+          <div class="stamper-card-meta">Android · Local-first · Google Play Billing</div>
         </div>
       </section>
 
