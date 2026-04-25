@@ -88,33 +88,52 @@ function renderGenericPage(app) {
 
   return `
     <section class="generic-app-shell">
-      <div class="generic-app-header">
-        <img class="app-icon" src="${app.icon_url}" alt="${app.name} icon" />
-        <div>
-          <h1 class="app-title">${app.name}</h1>
-          <div class="app-meta">${app.category ?? ''}</div>
-          <p class="product-prose">${app.short_description}</p>
-        </div>
-      </div>
-
-      <div class="app-actions">
-        ${primaryAction}
-        ${legalActions}
-        <a class="btn" href="index.html">Other Apps</a>
-      </div>
-
-      <div class="app-section">
-        <h3>Overview</h3>
-        <p>${app.long_description}</p>
-      </div>
-
-      ${(app.screenshots ?? []).length > 0 ? `
-        <div class="app-section">
-          <h3>Screenshots</h3>
-          <div class="screens">
-            ${(app.screenshots ?? []).map(src => `<img class="screen" src="${src}" alt="Screenshot" loading="lazy" />`).join('')}
+      <section class="generic-showcase">
+        <div class="generic-showcase-copy">
+          <p class="stamper-eyebrow">${app.category ?? 'App'}</p>
+          <h1 class="generic-display">${app.name}</h1>
+          <p class="generic-summary">${app.short_description}</p>
+          <div class="stamper-actions">
+            ${primaryAction}
+            ${legalActions}
+            <a class="btn" href="index.html">Other Apps</a>
           </div>
         </div>
+        <div class="generic-visual">
+          <div class="generic-logo-shell">
+            <img class="generic-logo" src="${app.icon_url}" alt="${app.name} icon" />
+          </div>
+        </div>
+      </section>
+
+      <section class="generic-story-grid">
+        <article class="generic-story-card generic-story-card-wide">
+          <p class="stamper-section-label">Overview</p>
+          <h2>${app.name} at a glance</h2>
+          <p>${app.long_description}</p>
+        </article>
+
+        ${((app.screenshots ?? []).slice(0, 3)).map((src, index) => `
+          <article class="generic-story-card generic-story-card-image">
+            <img class="generic-screen" src="${src}" alt="${app.name} screenshot ${index + 1}" loading="lazy" />
+          </article>
+        `).join('')}
+      </section>
+
+      ${(app.screenshots ?? []).length > 3 ? `
+        <section class="generic-gallery">
+          <div class="generic-gallery-head">
+            <p class="stamper-section-label">Preview</p>
+            <h2>More from the app</h2>
+          </div>
+          <div class="generic-gallery-grid">
+            ${(app.screenshots ?? []).slice(3).map((src, index) => `
+              <article class="generic-gallery-card">
+                <img class="generic-screen" src="${src}" alt="${app.name} gallery image ${index + 4}" loading="lazy" />
+              </article>
+            `).join('')}
+          </div>
+        </section>
       ` : ''}
     </section>
   `;
