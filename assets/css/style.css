@@ -139,7 +139,8 @@ body.page-stamper .nav a.active {
 .stamper-hero,
 .stamper-grid,
 .stamper-story,
-.stamper-gallery {
+.stamper-explainer,
+.stamper-audience {
   position: relative;
 }
 
@@ -194,10 +195,17 @@ body.page-stamper .nav a.active {
   text-transform: uppercase;
 }
 
+.stamper-meta-line {
+  margin-top: 8px;
+  color: rgba(90, 67, 52, 0.72);
+  font-size: 14px;
+}
+
 .stamper-title,
 .stamper-panel h2,
 .stamper-story h2,
-.stamper-gallery h2 {
+.stamper-explainer h2,
+.stamper-audience h2 {
   font-family: "Fraunces", Georgia, serif;
   letter-spacing: -0.03em;
 }
@@ -225,6 +233,35 @@ body.page-stamper .nav a.active {
 
 .stamper-actions {
   margin-top: 24px;
+}
+
+.stamper-hero-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stamper-mini-icon-wrap {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 auto;
+  padding: 8px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 233, 219, 0.9));
+  border: 1px solid rgba(159, 111, 77, 0.12);
+  box-shadow: 0 10px 30px rgba(138, 104, 73, 0.08);
+}
+
+.stamper-mini-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.stamper-hero-head-copy {
+  min-width: 0;
 }
 
 .stamper-notes {
@@ -272,7 +309,8 @@ body.page-stamper .btn.primary {
 .stamper-hero-card,
 .stamper-panel,
 .stamper-story,
-.stamper-gallery {
+.stamper-explainer,
+.stamper-audience {
   border: 1px solid rgba(159, 111, 77, 0.12);
   background: rgba(255, 252, 248, 0.8);
   box-shadow: 0 18px 50px rgba(135, 104, 77, 0.1);
@@ -329,12 +367,29 @@ body.page-stamper .btn.primary {
   line-height: 1.2;
 }
 
+.stamper-highlight-list {
+  display: grid;
+  gap: 10px;
+}
+
+.stamper-highlight-item {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 250, 245, 0.86);
+  border: 1px solid rgba(159, 111, 77, 0.1);
+  color: rgba(90, 67, 52, 0.82);
+  font-size: 14px;
+}
+
 .stamper-card-copy p,
 .stamper-panel p,
 .stamper-story-copy p,
-.stamper-gallery-head p,
 .stamper-note span,
-.stamper-stat span {
+.stamper-stat span,
+.stamper-explainer-copy p,
+.stamper-audience-copy p,
+.stamper-step p,
+.stamper-audience-card p {
   margin: 0;
   color: rgba(90, 67, 52, 0.74);
 }
@@ -353,7 +408,8 @@ body.page-stamper .btn.primary {
 
 .stamper-panel h2,
 .stamper-story h2,
-.stamper-gallery h2 {
+.stamper-explainer h2,
+.stamper-audience h2 {
   margin: 14px 0 10px;
   font-size: clamp(28px, 4vw, 40px);
   line-height: 1.02;
@@ -379,42 +435,48 @@ body.page-stamper .btn.primary {
   border: 1px solid rgba(159, 111, 77, 0.12);
 }
 
-.stamper-gallery {
-  padding: 32px;
-  border-radius: 30px;
+.stamper-explainer,
+.stamper-audience {
+  padding: 34px;
+  border-radius: 32px;
 }
 
-.stamper-gallery-head {
-  max-width: 56ch;
-  margin-bottom: 22px;
-}
-
-.stamper-screens {
+.stamper-explainer {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.95fr);
+  gap: 24px;
+}
+
+.stamper-steps,
+.stamper-audience-grid {
+  display: grid;
   gap: 18px;
 }
 
-.stamper-screen-card {
-  margin: 0;
-  padding: 14px;
-  border-radius: 26px;
+.stamper-step,
+.stamper-audience-card {
+  padding: 20px;
+  border-radius: 22px;
   background: rgba(255, 250, 245, 0.88);
   border: 1px solid rgba(159, 111, 77, 0.12);
 }
 
-.stamper-screen {
+.stamper-step strong,
+.stamper-audience-card strong {
   display: block;
-  width: 100%;
-  border-radius: 18px;
-  background: #f6eadf;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.stamper-audience-copy {
+  max-width: 56ch;
 }
 
 @media (max-width: 980px) {
   .stamper-hero,
   .stamper-story,
   .stamper-grid,
-  .stamper-screens,
+  .stamper-explainer,
   .stamper-notes {
     grid-template-columns: 1fr;
   }
@@ -427,15 +489,21 @@ body.page-stamper .btn.primary {
 @media (max-width: 640px) {
   .stamper-hero,
   .stamper-story,
-  .stamper-gallery {
+  .stamper-explainer,
+  .stamper-audience {
     padding: 24px;
     border-radius: 24px;
   }
 
   .stamper-panel,
-  .stamper-screen-card {
+  .stamper-step,
+  .stamper-audience-card {
     padding: 18px;
     border-radius: 22px;
+  }
+
+  .stamper-hero-head {
+    align-items: flex-start;
   }
 }
 
