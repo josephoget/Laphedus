@@ -34,7 +34,7 @@
     "name": "Stamper - My Stamp Album",
     "short_description": "Create personal digital stamps from your photos, keep them in albums, and back them up locally.",
     "long_description": "Stamper is a local-first Android app that turns photos selected from your camera or gallery into stamp-style digital memories and lets you organize them in albums. The app does not require an account, stores your content on your device, and uses Google Play Billing with RevenueCat for premium features.",
-    "play_store_url": "",
+    "play_store_url": "https://play.google.com/store/apps/details?id=com.laphedus.stamperalbumapp.stamper&hl=en-US",
     "has_account": false,
     "icon_url": "assets/image/stamper-icon.svg",
     "screenshots": [
