@@ -63,21 +63,20 @@ function renderStamperPage(app) {
     <div class="stamper-shell">
       <section class="stamper-hero">
         <div class="stamper-hero-copy">
-          <div class="stamper-badge">Minimal memory albums</div>
+          <div class="stamper-badge">Stamp-style photo memories</div>
           <h1 class="stamper-title">${app.name}</h1>
           <p class="stamper-lead">
-            Turn photos into stamp-style keepsakes, organize them in albums, and keep your memories in a calm,
-            focused, easy-to-understand experience.
+            Turn everyday photos into collectible digital keepsakes, organize them into albums, and keep the
+            entire experience simple, personal, and beautifully focused.
           </p>
           <div class="stamper-actions">
             ${playAction}
             <a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>
-            <a class="btn" href="index.html">All Apps</a>
           </div>
           <div class="stamper-inline-points">
-            <span>Create from your own photos</span>
-            <span>Organize with albums</span>
-            <span>No account required</span>
+            <span>Create from camera or gallery</span>
+            <span>Organize inside albums</span>
+            <span>Local-first core experience</span>
           </div>
         </div>
         <div class="stamper-hero-card">
@@ -86,10 +85,10 @@ function renderStamperPage(app) {
           </div>
           <div class="stamper-card-copy">
             <span class="stamper-eyebrow">${app.category ?? 'Photos and Memories'}</span>
-            <strong>Built for people who want photo memories to feel more intentional</strong>
+            <strong>Made for memories that deserve more than a camera roll</strong>
             <p>
-              Stamper is not a generic gallery. It is a focused product for turning moments into personal,
-              collectible, album-based memories.
+              Stamper is a focused Android app for people who want their photos to feel saved with intention,
+              not just stored.
             </p>
           </div>
           <div class="stamper-card-meta">Android · Local-first · Google Play Billing</div>
@@ -97,28 +96,38 @@ function renderStamperPage(app) {
       </section>
 
       <section class="stamper-overview">
-        <div class="stamper-overview-copy">
+        <div class="stamper-overview-intro">
           <span class="stamper-kicker">Overview</span>
-          <h2>A focused app for turning photos into collectible memories</h2>
+          <h2>A modern memory app with a more collectible feel</h2>
           <p>
-            Stamper helps users move beyond ordinary photo storage. Instead of leaving moments buried in a gallery,
-            it turns selected photos into stamp-style keepsakes and lets them live inside albums that feel more
-            personal, organized, and worth returning to.
+            Stamper helps users move beyond ordinary photo storage. Instead of leaving moments buried inside a
+            gallery, it turns selected photos into stamp-style keepsakes and places them in albums that feel more
+            curated, more personal, and easier to revisit.
           </p>
         </div>
         <div class="stamper-columns">
           <div class="stamper-column">
-            <h3>What you can do</h3>
-            <p>Create stamps from photos, group them into albums, and build a growing memory collection.</p>
+            <h3>Create</h3>
+            <p>Use existing photos to make digital stamp memories with a clearer identity than a normal image.</p>
           </div>
           <div class="stamper-column">
-            <h3>Why it feels different</h3>
-            <p>It is calmer than a generic gallery app and more intentional than simple photo storage.</p>
+            <h3>Organize</h3>
+            <p>Build albums that keep your collection readable, intentional, and easy to browse over time.</p>
           </div>
           <div class="stamper-column">
-            <h3>Why users trust it</h3>
-            <p>Core usage stays local-first, simple, and privacy-conscious without requiring an account.</p>
+            <h3>Keep private</h3>
+            <p>The core experience stays simple and local-first, without forcing users into account creation.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="stamper-cta">
+        <p class="stamper-cta-copy">
+          For users who want a quieter, more intentional way to keep personal memories.
+        </p>
+        <div class="stamper-actions stamper-actions--footer">
+          ${playAction}
+          <a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>
         </div>
       </section>
     </div>
