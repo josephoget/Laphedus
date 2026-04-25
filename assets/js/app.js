@@ -16,80 +16,67 @@ function renderStamperPage(app) {
   ].filter(Boolean).join('');
 
   return `
-    <section class="product-hero product-hero-stamper">
-      <div class="product-hero-copy">
-        <p class="product-eyebrow">${app.eyebrow ?? ''}</p>
-        <h1 class="product-title">${app.hero_title ?? app.name}</h1>
-        <p class="product-lead">${app.hero_description ?? app.short_description}</p>
-        <div class="product-actions">
+    <section class="stamper-showcase">
+      <div class="stamper-showcase-copy">
+        <p class="stamper-eyebrow">${app.eyebrow ?? 'Digital memories, kept simple'}</p>
+        <h1 class="stamper-display">${app.hero_title ?? app.name}</h1>
+        <p class="stamper-summary">${app.hero_description ?? app.short_description}</p>
+        <div class="stamper-actions">
           <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Open on Google Play'}</a>
           ${legalActions}
         </div>
-      </div>
-      <aside class="product-hero-card">
-        <img class="product-icon" src="${app.icon_url}" alt="${app.name} icon" />
-        <div class="product-hero-card-body">
-          <h2>${app.name}</h2>
-          <p>${app.short_description}</p>
-          <ul class="product-inline-points">
-            ${(app.trust_points ?? []).map(point => `<li>${point}</li>`).join('')}
-          </ul>
+        <div class="stamper-inline-meta">
+          <span>Android</span>
+          <span>Local-first</span>
+          <span>Album-based</span>
         </div>
-      </aside>
+      </div>
+      <div class="stamper-visual">
+        <div class="stamper-logo-shell">
+          <img class="stamper-logo" src="${app.icon_url}" alt="${app.name} icon" />
+        </div>
+      </div>
     </section>
 
-    <section class="product-section product-section-intro">
-      <div class="product-section-heading">
-        <p class="section-kicker">Why Stamper</p>
-        <h2>A softer, more intentional way to keep your memories.</h2>
-      </div>
-      <p class="product-prose">${app.intro ?? app.long_description}</p>
-      ${renderList(app.benefits, 'benefit-list', item => `<article class="benefit-item"><p>${item}</p></article>`)}
-    </section>
+    <section class="stamper-story-grid">
+      <article class="stamper-story-card stamper-story-card-wide">
+        <p class="stamper-section-label">Overview</p>
+        <h2>Built for people who want their memories to feel collected, not buried.</h2>
+        <p>${app.intro ?? app.long_description}</p>
+      </article>
 
-    <section class="product-section">
-      <div class="product-section-heading">
-        <p class="section-kicker">Core Experience</p>
-        <h2>What you can do with Stamper</h2>
-      </div>
-      ${renderList(app.highlights, 'feature-grid', item => `
-        <article class="feature-card">
+      ${(app.highlights ?? []).slice(0, 3).map(item => `
+        <article class="stamper-story-card">
+          <p class="stamper-section-label">Feature</p>
           <h3>${item.title}</h3>
           <p>${item.description}</p>
         </article>
-      `)}
+      `).join('')}
     </section>
 
-    <section class="product-section">
-      <div class="product-section-heading">
-        <p class="section-kicker">How It Works</p>
-        <h2>Three simple steps from photo to collection</h2>
+    <section class="stamper-flow">
+      <div class="stamper-flow-head">
+        <p class="stamper-section-label">How It Works</p>
+        <h2>Three simple steps from photo to keepsake.</h2>
       </div>
-      ${renderList(app.how_it_works, 'steps-grid', (item, index) => `
-        <article class="step-card">
-          <span class="step-number">0${index + 1}</span>
-          <h3>${item.title}</h3>
-          <p>${item.description}</p>
-        </article>
-      `)}
-    </section>
-
-    <section class="product-section product-section-trust">
-      <div class="product-section-heading">
-        <p class="section-kicker">Privacy and Ownership</p>
-        <h2>Built to keep your memories under your control</h2>
+      <div class="stamper-flow-steps">
+        ${(app.how_it_works ?? []).slice(0, 3).map((item, index) => `
+          <article class="stamper-flow-step">
+            <span class="stamper-flow-number">0${index + 1}</span>
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+          </article>
+        `).join('')}
       </div>
-      <p class="product-prose">${app.long_description}</p>
-      ${renderList(app.trust_points, 'trust-list', item => `<article class="trust-item"><p>${item}</p></article>`)}
     </section>
 
-    <section class="product-cta">
+    <section class="stamper-bottom-cta">
       <div>
-        <p class="section-kicker">Get Started</p>
-        <h2>${app.cta_title ?? app.name}</h2>
+        <p class="stamper-section-label">Get Started</p>
+        <h2>${app.cta_title ?? 'Start your personal stamp album.'}</h2>
         <p>${app.cta_description ?? app.short_description}</p>
       </div>
-      <div class="product-actions">
+      <div class="stamper-actions stamper-actions-bottom">
         <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Open on Google Play'}</a>
         <a class="btn" href="index.html">Other Apps</a>
       </div>
