@@ -97,9 +97,9 @@ body {
 
 body.page-stamper {
   background:
-    radial-gradient(1100px 760px at 0% 0%, rgba(212, 224, 255, 0.2), transparent 55%),
-    radial-gradient(900px 620px at 100% 8%, rgba(212, 240, 234, 0.2), transparent 50%),
-    linear-gradient(180deg, #f8fafc 0%, #f4f7fb 52%, #eff4f8 100%);
+    radial-gradient(1100px 760px at 0% 0%, rgba(212, 224, 255, 0.16), transparent 55%),
+    radial-gradient(900px 620px at 100% 8%, rgba(212, 240, 234, 0.16), transparent 50%),
+    linear-gradient(180deg, #f5f8fc 0%, #f2f6fb 52%, #eef3f8 100%);
   color: #152033;
 }
 
@@ -140,6 +140,10 @@ body.page-stamper .nav a.active {
 .stamper-overview,
 .stamper-cta {
   position: relative;
+  border: 1px solid rgba(21, 32, 51, 0.07);
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 251, 255, 0.86));
+  box-shadow: 0 18px 48px rgba(33, 48, 73, 0.05);
 }
 
 .stamper-hero {
@@ -147,7 +151,7 @@ body.page-stamper .nav a.active {
   grid-template-columns: minmax(0, 1.1fr) 320px;
   gap: 48px;
   align-items: center;
-  padding: 72px 0 56px;
+  padding: 56px;
 }
 
 .stamper-badge,
@@ -302,10 +306,7 @@ body.page-stamper .btn.primary {
 .stamper-overview {
   display: grid;
   gap: 32px;
-  padding: 0;
-  border-radius: 0;
-  border-top: 1px solid rgba(21, 32, 51, 0.08);
-  padding-top: 40px;
+  padding: 40px;
 }
 
 .stamper-overview-intro {
@@ -334,8 +335,7 @@ body.page-stamper .btn.primary {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding-top: 28px;
-  border-top: 1px solid rgba(21, 32, 51, 0.08);
+  padding: 28px 32px;
 }
 
 .stamper-cta-copy {
@@ -356,12 +356,16 @@ body.page-stamper .btn.primary {
   }
 
   .stamper-hero {
-    padding: 40px 0 24px;
+    padding: 32px;
     gap: 28px;
   }
 
   .stamper-title {
     max-width: none;
+  }
+
+  .stamper-overview {
+    padding: 28px;
   }
 
   .stamper-cta {
@@ -373,8 +377,8 @@ body.page-stamper .btn.primary {
 @media (max-width: 640px) {
   .stamper-hero,
   .stamper-overview {
-    padding-top: 20px;
-    border-radius: 0;
+    padding: 20px;
+    border-radius: 24px;
   }
 
   .stamper-title {
@@ -420,6 +424,11 @@ body.page-stamper .btn.primary {
 
   .stamper-cta-copy {
     font-size: 16px;
+  }
+
+  .stamper-cta {
+    padding: 20px;
+    border-radius: 24px;
   }
 }
 
