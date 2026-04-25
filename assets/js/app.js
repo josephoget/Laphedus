@@ -55,79 +55,112 @@ function renderDefaultApp(app) {
 }
 
 function renderStamperPage(app) {
-  const playAction = app.play_store_url
-    ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">View on Google Play</a>`
-    : '';
-
   return `
     <div class="stamper-shell">
       <section class="stamper-hero">
         <div class="stamper-hero-copy">
-          <div class="stamper-badge">Stamp-style photo memories</div>
+          <div class="stamper-badge">Local-first memory crafting</div>
           <h1 class="stamper-title">${app.name}</h1>
           <p class="stamper-lead">
-            Turn everyday photos into collectible digital keepsakes, organize them into albums, and keep the
-            entire experience simple, personal, and beautifully focused.
+            Photos become collectible stamp memories in a calmer, more intentional album experience.
+            Stamper keeps creation personal, organized, and device-first.
           </p>
           <div class="stamper-actions">
-            ${playAction}
-            <a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>
-          </div>
-          <div class="stamper-inline-points">
-            <span>Create from camera or gallery</span>
-            <span>Organize inside albums</span>
-            <span>Local-first core experience</span>
+            <a class="btn primary" href="#privacy">Privacy</a>
+            <a class="btn stamper-secondary" href="index.html">All Apps</a>
           </div>
         </div>
         <div class="stamper-hero-card">
-          <div class="stamper-icon-frame">
+          <div class="stamper-icon-wrap">
             <img class="stamper-app-icon" src="${app.icon_url}" alt="${app.name} icon" />
           </div>
           <div class="stamper-card-copy">
             <span class="stamper-eyebrow">${app.category ?? 'Photos and Memories'}</span>
-            <strong>Made for memories that deserve more than a camera roll</strong>
+            <strong>Quietly premium by design</strong>
             <p>
-              Stamper is a focused Android app for people who want their photos to feel saved with intention,
-              not just stored.
+              Built for users who want to transform everyday photos into lasting, stamp-style keepsakes
+              without giving up control of their data.
             </p>
           </div>
-          <div class="stamper-card-meta">Android · Local-first · Google Play Billing</div>
         </div>
       </section>
 
-      <section class="stamper-overview">
-        <div class="stamper-overview-intro">
-          <span class="stamper-kicker">Overview</span>
-          <h2>A modern memory app with a more collectible feel</h2>
+      <section class="stamper-grid" aria-label="Stamper highlights">
+        <article class="stamper-panel">
+          <span class="stamper-kicker">Create</span>
+          <h2>Turn moments into collectible digital stamps</h2>
           <p>
-            Stamper helps users move beyond ordinary photo storage. Instead of leaving moments buried inside a
-            gallery, it turns selected photos into stamp-style keepsakes and places them in albums that feel more
-            curated, more personal, and easier to revisit.
+            Select a photo from your camera or gallery, transform it into a stamp-like memory, and place it
+            into albums that feel curated rather than cluttered.
+          </p>
+        </article>
+
+        <article class="stamper-panel">
+          <span class="stamper-kicker">Organize</span>
+          <h2>Albums designed for clarity</h2>
+          <p>
+            Stamper keeps your growing collection readable and intentional, making it easy to revisit favorite
+            moments without the noise of a traditional gallery.
+          </p>
+        </article>
+
+        <article class="stamper-panel">
+          <span class="stamper-kicker">Protect</span>
+          <h2>Your memories stay on your device</h2>
+          <p>
+            Stamper does not require an account. Your created content is stored locally on your device, giving
+            users a simpler and more privacy-conscious experience from the start.
+          </p>
+        </article>
+      </section>
+
+      <section class="stamper-story">
+        <div class="stamper-story-copy">
+          <span class="stamper-kicker">Experience</span>
+          <h2>Minimal, warm, and intentionally focused</h2>
+          <p>
+            The product is positioned around emotional value instead of feature overload. That makes Stamper a
+            better fit for users who want a personal archive with a distinct visual identity.
           </p>
         </div>
-        <div class="stamper-columns">
-          <div class="stamper-column">
-            <h3>Create</h3>
-            <p>Use existing photos to make digital stamp memories with a clearer identity than a normal image.</p>
+        <div class="stamper-stat-stack">
+          <div class="stamper-stat">
+            <strong>Local-first</strong>
+            <span>No account required for core usage.</span>
           </div>
-          <div class="stamper-column">
-            <h3>Organize</h3>
-            <p>Build albums that keep your collection readable, intentional, and easy to browse over time.</p>
+          <div class="stamper-stat">
+            <strong>Premium-ready</strong>
+            <span>Google Play Billing and RevenueCat support premium features.</span>
           </div>
-          <div class="stamper-column">
-            <h3>Keep private</h3>
-            <p>The core experience stays simple and local-first, without forcing users into account creation.</p>
+          <div class="stamper-stat">
+            <strong>Single-purpose</strong>
+            <span>Crafted around collectible photo memories, not generic storage.</span>
           </div>
         </div>
       </section>
 
-      <section class="stamper-cta">
-        <p class="stamper-cta-copy">
-          For users who want a quieter, more intentional way to keep personal memories.
-        </p>
-        <div class="stamper-actions stamper-actions--footer">
-          ${playAction}
-          <a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>
+      <section id="privacy" class="stamper-privacy">
+        <div class="stamper-privacy-head">
+          <span class="stamper-kicker">Privacy</span>
+          <h2>Privacy at a glance</h2>
+          <p>
+            This summary keeps the privacy entry point inside the Stamper page, while the underlying policy
+            structure for the rest of the site remains unchanged.
+          </p>
+        </div>
+        <div class="stamper-privacy-grid">
+          <article class="stamper-privacy-card">
+            <h3>No account by default</h3>
+            <p>Users can create and manage their stamp albums without signing up.</p>
+          </article>
+          <article class="stamper-privacy-card">
+            <h3>Local storage</h3>
+            <p>Created content is kept on the user’s device rather than centered around cloud storage.</p>
+          </article>
+          <article class="stamper-privacy-card">
+            <h3>Premium purchases</h3>
+            <p>Premium features are handled through Google Play Billing with RevenueCat integration.</p>
+          </article>
         </div>
       </section>
     </div>
@@ -163,7 +196,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.classList.toggle('page-stamper', isStamper);
     container.classList.toggle('app-detail--stamper', isStamper);
     if (headerPrivacyLink) {
-      headerPrivacyLink.setAttribute('href', isStamper ? `privacy.html?app=${encodeURIComponent(app.slug)}` : 'privacy.html');
+      headerPrivacyLink.setAttribute('href', isStamper ? '#privacy' : 'privacy.html');
     }
     container.innerHTML = isStamper ? renderStamperPage(app) : renderDefaultApp(app);
 
