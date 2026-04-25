@@ -66,7 +66,7 @@ function renderStamperPage(app) {
             Stamper keeps creation personal, organized, and device-first.
           </p>
           <div class="stamper-actions">
-            <a class="btn primary" href="#privacy">Privacy</a>
+            <a class="btn primary" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy</a>
             <a class="btn stamper-secondary" href="index.html">All Apps</a>
           </div>
         </div>
@@ -138,31 +138,6 @@ function renderStamperPage(app) {
           </div>
         </div>
       </section>
-
-      <section id="privacy" class="stamper-privacy">
-        <div class="stamper-privacy-head">
-          <span class="stamper-kicker">Privacy</span>
-          <h2>Privacy at a glance</h2>
-          <p>
-            This summary keeps the privacy entry point inside the Stamper page, while the underlying policy
-            structure for the rest of the site remains unchanged.
-          </p>
-        </div>
-        <div class="stamper-privacy-grid">
-          <article class="stamper-privacy-card">
-            <h3>No account by default</h3>
-            <p>Users can create and manage their stamp albums without signing up.</p>
-          </article>
-          <article class="stamper-privacy-card">
-            <h3>Local storage</h3>
-            <p>Created content is kept on the user’s device rather than centered around cloud storage.</p>
-          </article>
-          <article class="stamper-privacy-card">
-            <h3>Premium purchases</h3>
-            <p>Premium features are handled through Google Play Billing with RevenueCat integration.</p>
-          </article>
-        </div>
-      </section>
     </div>
   `;
 }
@@ -192,12 +167,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.title = `${app.name} - LaphedusApp`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', app.short_description);
     const isStamper = app.slug === 'stamper';
-    const headerPrivacyLink = document.querySelector('.nav a[href="privacy.html"]');
     document.body.classList.toggle('page-stamper', isStamper);
     container.classList.toggle('app-detail--stamper', isStamper);
-    if (headerPrivacyLink) {
-      headerPrivacyLink.setAttribute('href', isStamper ? '#privacy' : 'privacy.html');
-    }
     container.innerHTML = isStamper ? renderStamperPage(app) : renderDefaultApp(app);
 
     fallback.hidden = true;

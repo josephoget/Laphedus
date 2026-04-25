@@ -90,27 +90,27 @@ body {
 
 body.page-stamper {
   background:
-    radial-gradient(900px 500px at 10% 10%, rgba(240, 171, 99, 0.18), transparent 60%),
-    radial-gradient(700px 420px at 90% 12%, rgba(245, 158, 11, 0.12), transparent 58%),
-    linear-gradient(180deg, #16120d 0%, #0f1115 55%, #0d1014 100%);
-  color: #f8f3eb;
+    radial-gradient(900px 500px at 10% 10%, rgba(239, 185, 132, 0.28), transparent 60%),
+    radial-gradient(700px 420px at 90% 12%, rgba(199, 153, 116, 0.18), transparent 58%),
+    linear-gradient(180deg, #fcf7f0 0%, #f7efe3 52%, #f3eadf 100%);
+  color: #5a4334;
 }
 
 body.page-stamper .site-header {
-  background: rgba(18, 16, 13, 0.72);
-  border-bottom-color: rgba(255, 255, 255, 0.08);
+  background: rgba(252, 247, 240, 0.82);
+  border-bottom-color: rgba(138, 104, 73, 0.12);
   backdrop-filter: blur(18px);
 }
 
 body.page-stamper .logo {
-  background: linear-gradient(90deg, #f8e7c8, #f2b56c);
+  background: linear-gradient(90deg, #9f6f4d, #d2a071);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 body.page-stamper .nav a:hover,
 body.page-stamper .nav a.active {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(182, 146, 115, 0.12);
 }
 
 .app-detail--stamper {
@@ -127,8 +127,7 @@ body.page-stamper .nav a.active {
 
 .stamper-hero,
 .stamper-grid,
-.stamper-story,
-.stamper-privacy {
+.stamper-story {
   position: relative;
 }
 
@@ -137,12 +136,12 @@ body.page-stamper .nav a.active {
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
   gap: 24px;
   padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(159, 111, 77, 0.14);
   border-radius: 32px;
   background:
-    linear-gradient(135deg, rgba(255, 248, 238, 0.08), rgba(255, 190, 112, 0.05)),
-    rgba(20, 17, 13, 0.72);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    linear-gradient(135deg, rgba(255, 252, 248, 0.92), rgba(244, 229, 208, 0.82)),
+    rgba(255, 248, 239, 0.86);
+  box-shadow: 0 30px 80px rgba(135, 104, 77, 0.12);
   overflow: hidden;
 }
 
@@ -153,7 +152,7 @@ body.page-stamper .nav a.active {
   width: 320px;
   height: 320px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(210, 160, 113, 0.24), transparent 70%);
   pointer-events: none;
 }
 
@@ -165,9 +164,9 @@ body.page-stamper .nav a.active {
   width: fit-content;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  color: #e7c998;
+  border: 1px solid rgba(159, 111, 77, 0.14);
+  background: rgba(255, 251, 246, 0.9);
+  color: #b27c50;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -176,8 +175,7 @@ body.page-stamper .nav a.active {
 
 .stamper-title,
 .stamper-panel h2,
-.stamper-story h2,
-.stamper-privacy h2 {
+.stamper-story h2 {
   font-family: "Fraunces", Georgia, serif;
   letter-spacing: -0.03em;
 }
@@ -192,7 +190,7 @@ body.page-stamper .nav a.active {
 .stamper-lead {
   max-width: 58ch;
   margin: 0;
-  color: rgba(248, 243, 235, 0.82);
+  color: rgba(90, 67, 52, 0.82);
   font-size: 18px;
 }
 
@@ -209,19 +207,19 @@ body.page-stamper .nav a.active {
 
 body.page-stamper .btn {
   border-radius: 999px;
-  border-color: rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.03);
-  color: #f8f3eb;
+  border-color: rgba(159, 111, 77, 0.16);
+  background: rgba(255, 251, 246, 0.8);
+  color: #6b4f3d;
 }
 
 body.page-stamper .btn:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(250, 240, 229, 0.95);
 }
 
 body.page-stamper .btn.primary {
-  border-color: rgba(255, 196, 129, 0.25);
-  background: linear-gradient(135deg, #f6d2a1, #e9a95d);
-  color: #2f1d0d;
+  border-color: rgba(184, 129, 84, 0.2);
+  background: linear-gradient(135deg, #ddb184, #c88e63);
+  color: #fff9f3;
 }
 
 .stamper-secondary {
@@ -230,11 +228,10 @@ body.page-stamper .btn.primary {
 
 .stamper-hero-card,
 .stamper-panel,
-.stamper-story,
-.stamper-privacy {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+.stamper-story {
+  border: 1px solid rgba(159, 111, 77, 0.12);
+  background: rgba(255, 252, 248, 0.8);
+  box-shadow: 0 18px 50px rgba(135, 104, 77, 0.1);
 }
 
 .stamper-hero-card {
@@ -248,7 +245,7 @@ body.page-stamper .btn.primary {
 .stamper-icon-wrap {
   padding: 18px;
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 248, 238, 0.12), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 230, 212, 0.72));
 }
 
 .stamper-app-icon {
@@ -271,11 +268,9 @@ body.page-stamper .btn.primary {
 .stamper-card-copy p,
 .stamper-panel p,
 .stamper-story-copy p,
-.stamper-privacy-head p,
-.stamper-privacy-card p,
 .stamper-stat span {
   margin: 0;
-  color: rgba(248, 243, 235, 0.76);
+  color: rgba(90, 67, 52, 0.74);
 }
 
 .stamper-grid {
@@ -290,15 +285,13 @@ body.page-stamper .btn.primary {
 }
 
 .stamper-panel h2,
-.stamper-story h2,
-.stamper-privacy h2 {
+.stamper-story h2 {
   margin: 14px 0 10px;
   font-size: clamp(28px, 4vw, 40px);
   line-height: 1.02;
 }
 
-.stamper-story,
-.stamper-privacy {
+.stamper-story {
   padding: 32px;
   border-radius: 30px;
 }
@@ -315,11 +308,11 @@ body.page-stamper .btn.primary {
 }
 
 .stamper-stat,
-.stamper-privacy-card {
+.stamper-panel {
   padding: 20px;
   border-radius: 22px;
-  background: rgba(7, 7, 7, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 250, 245, 0.78);
+  border: 1px solid rgba(159, 111, 77, 0.12);
 }
 
 .stamper-stat {
@@ -327,18 +320,10 @@ body.page-stamper .btn.primary {
   gap: 6px;
 }
 
-.stamper-privacy-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 22px;
-}
-
 @media (max-width: 980px) {
   .stamper-hero,
   .stamper-story,
-  .stamper-grid,
-  .stamper-privacy-grid {
+  .stamper-grid {
     grid-template-columns: 1fr;
   }
 
@@ -349,8 +334,7 @@ body.page-stamper .btn.primary {
 
 @media (max-width: 640px) {
   .stamper-hero,
-  .stamper-story,
-  .stamper-privacy {
+  .stamper-story {
     padding: 24px;
     border-radius: 24px;
   }
