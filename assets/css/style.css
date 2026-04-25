@@ -97,31 +97,31 @@ body {
 
 body.page-stamper {
   background:
-    radial-gradient(900px 500px at 8% 8%, rgba(232, 191, 145, 0.32), transparent 60%),
-    radial-gradient(680px 360px at 92% 10%, rgba(196, 167, 139, 0.22), transparent 55%),
-    linear-gradient(180deg, #fffaf4 0%, #f8efe2 50%, #f3e8db 100%);
-  color: #5a4334;
+    radial-gradient(1200px 700px at 0% 0%, rgba(214, 223, 255, 0.26), transparent 55%),
+    radial-gradient(900px 600px at 100% 10%, rgba(214, 239, 232, 0.28), transparent 52%),
+    linear-gradient(180deg, #f7f8fb 0%, #f3f5f9 48%, #eef2f7 100%);
+  color: #152033;
 }
 
 body.page-stamper .site-header {
-  background: rgba(255, 250, 244, 0.86);
-  border-bottom-color: rgba(138, 104, 73, 0.12);
+  background: rgba(247, 248, 251, 0.8);
+  border-bottom-color: rgba(21, 32, 51, 0.08);
   backdrop-filter: blur(18px);
 }
 
 body.page-stamper .logo {
-  background: linear-gradient(90deg, #9f6f4d, #d2a071);
+  background: linear-gradient(90deg, #172033, #4b6b96);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 body.page-stamper .nav a {
-  color: #6b4f3d;
+  color: #31445f;
 }
 
 body.page-stamper .nav a:hover,
 body.page-stamper .nav a.active {
-  background: rgba(182, 146, 115, 0.12);
+  background: rgba(49, 68, 95, 0.08);
 }
 
 .app-detail--stamper {
@@ -147,35 +147,12 @@ body.page-stamper .nav a.active {
 .stamper-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
-  gap: 28px;
-  padding: 48px;
-  border: 1px solid rgba(159, 111, 77, 0.12);
-  border-radius: 36px;
-  background:
-    linear-gradient(135deg, rgba(255, 252, 247, 0.96), rgba(245, 232, 217, 0.9)),
-    rgba(255, 248, 239, 0.92);
-  box-shadow: 0 28px 90px rgba(138, 104, 73, 0.12);
-  overflow: hidden;
-}
-
-.stamper-hero::before {
-  content: "";
-  position: absolute;
-  inset: 22px;
-  border: 1px dashed rgba(178, 124, 80, 0.14);
-  border-radius: 28px;
-  pointer-events: none;
-}
-
-.stamper-hero::after {
-  content: "";
-  position: absolute;
-  inset: auto -120px -140px auto;
-  width: 320px;
-  height: 320px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(210, 160, 113, 0.24), transparent 70%);
-  pointer-events: none;
+  gap: 32px;
+  padding: 56px;
+  border: 1px solid rgba(21, 32, 51, 0.08);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 70px rgba(33, 48, 73, 0.08);
 }
 
 .stamper-badge,
@@ -186,9 +163,9 @@ body.page-stamper .nav a.active {
   width: fit-content;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(159, 111, 77, 0.14);
-  background: rgba(255, 251, 246, 0.9);
-  color: #b27c50;
+  border: 1px solid rgba(35, 55, 86, 0.1);
+  background: rgba(242, 246, 252, 0.96);
+  color: #4a678d;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -197,7 +174,7 @@ body.page-stamper .nav a.active {
 
 .stamper-meta-line {
   margin-top: 8px;
-  color: rgba(90, 67, 52, 0.72);
+  color: rgba(49, 68, 95, 0.7);
   font-size: 14px;
 }
 
@@ -220,8 +197,8 @@ body.page-stamper .nav a.active {
 .stamper-lead {
   max-width: 54ch;
   margin: 0;
-  color: rgba(90, 67, 52, 0.82);
-  font-size: 19px;
+  color: rgba(21, 32, 51, 0.76);
+  font-size: 20px;
 }
 
 .stamper-actions,
@@ -236,74 +213,50 @@ body.page-stamper .nav a.active {
 }
 
 .stamper-hero-head {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.stamper-mini-icon-wrap {
-  width: 72px;
-  height: 72px;
-  flex: 0 0 auto;
-  padding: 8px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 233, 219, 0.9));
-  border: 1px solid rgba(159, 111, 77, 0.12);
-  box-shadow: 0 10px 30px rgba(138, 104, 73, 0.08);
-}
-
-.stamper-mini-icon {
   display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-  object-fit: cover;
 }
 
-.stamper-hero-head-copy {
-  min-width: 0;
-}
-
-.stamper-notes {
+.stamper-hero-points {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 30px;
 }
 
-.stamper-note {
-  padding: 18px 18px 16px;
-  border-radius: 22px;
-  background: rgba(255, 252, 248, 0.72);
-  border: 1px solid rgba(159, 111, 77, 0.12);
+.stamper-point {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(246, 249, 253, 0.92);
+  border: 1px solid rgba(35, 55, 86, 0.08);
 }
 
-.stamper-note strong {
+.stamper-point strong {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-size: 15px;
+  color: #172033;
 }
 
-.stamper-note span {
-  color: rgba(90, 67, 52, 0.72);
+.stamper-point span {
+  color: rgba(49, 68, 95, 0.74);
   font-size: 14px;
 }
 
 body.page-stamper .btn {
   border-radius: 999px;
-  border-color: rgba(159, 111, 77, 0.16);
-  background: rgba(255, 251, 246, 0.8);
-  color: #6b4f3d;
+  border-color: rgba(35, 55, 86, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  color: #22324a;
 }
 
 body.page-stamper .btn:hover {
-  background: rgba(250, 240, 229, 0.95);
+  background: rgba(244, 248, 252, 0.98);
 }
 
 body.page-stamper .btn.primary {
-  border-color: rgba(184, 129, 84, 0.2);
-  background: linear-gradient(135deg, #ddb184, #c88e63);
-  color: #fff9f3;
+  border-color: rgba(35, 55, 86, 0.08);
+  background: linear-gradient(135deg, #1f2d44, #47658f);
+  color: #f8fbff;
 }
 
 .stamper-hero-card,
@@ -311,50 +264,35 @@ body.page-stamper .btn.primary {
 .stamper-story,
 .stamper-explainer,
 .stamper-audience {
-  border: 1px solid rgba(159, 111, 77, 0.12);
-  background: rgba(255, 252, 248, 0.8);
-  box-shadow: 0 18px 50px rgba(135, 104, 77, 0.1);
+  border: 1px solid rgba(21, 32, 51, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 50px rgba(33, 48, 73, 0.06);
 }
 
 .stamper-hero-card {
   display: grid;
-  gap: 18px;
+  gap: 22px;
   align-content: start;
-  padding: 28px;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.stamper-paper {
-  position: relative;
-  padding: 12px;
+  padding: 32px;
   border-radius: 28px;
-  background: linear-gradient(180deg, #fffdf9, #f4e5d3);
-  transform: rotate(-3deg);
-  box-shadow: 0 18px 40px rgba(150, 115, 87, 0.12);
 }
 
-.stamper-paper::before {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border: 1px solid rgba(178, 124, 80, 0.12);
-  border-radius: 22px;
-}
-
-.stamper-icon-wrap {
-  position: relative;
-  z-index: 1;
-  padding: 22px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 233, 219, 0.9));
+.stamper-icon-frame {
+  width: 132px;
+  height: 132px;
+  padding: 14px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #ffffff, #eef4fb);
+  border: 1px solid rgba(35, 55, 86, 0.08);
+  box-shadow: 0 16px 36px rgba(44, 66, 98, 0.08);
 }
 
 .stamper-app-icon {
   display: block;
   width: 100%;
-  max-width: 220px;
-  margin: 0 auto;
+  height: 100%;
+  border-radius: 24px;
+  object-fit: cover;
 }
 
 .stamper-card-copy {
@@ -367,43 +305,53 @@ body.page-stamper .btn.primary {
   line-height: 1.2;
 }
 
-.stamper-highlight-list {
+.stamper-card-meta {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.stamper-highlight-item {
-  padding: 12px 14px;
-  border-radius: 16px;
-  background: rgba(255, 250, 245, 0.86);
-  border: 1px solid rgba(159, 111, 77, 0.1);
-  color: rgba(90, 67, 52, 0.82);
+.stamper-card-meta-item {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(246, 249, 253, 0.9);
+  border: 1px solid rgba(35, 55, 86, 0.08);
+}
+
+.stamper-card-meta-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(49, 68, 95, 0.64);
+  font-size: 12px;
+}
+
+.stamper-card-meta-item strong {
   font-size: 14px;
+  color: #172033;
 }
 
 .stamper-card-copy p,
 .stamper-panel p,
 .stamper-story-copy p,
-.stamper-note span,
 .stamper-stat span,
 .stamper-explainer-copy p,
 .stamper-audience-copy p,
 .stamper-step p,
 .stamper-audience-card p {
   margin: 0;
-  color: rgba(90, 67, 52, 0.74);
+  color: rgba(49, 68, 95, 0.76);
 }
 
 .stamper-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .stamper-panel {
   padding: 24px;
-  border-radius: 28px;
-  background: rgba(255, 250, 245, 0.92);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .stamper-panel h2,
@@ -430,15 +378,15 @@ body.page-stamper .btn.primary {
 
 .stamper-stat {
   padding: 20px;
-  border-radius: 22px;
-  background: rgba(255, 250, 245, 0.78);
-  border: 1px solid rgba(159, 111, 77, 0.12);
+  border-radius: 20px;
+  background: rgba(246, 249, 253, 0.92);
+  border: 1px solid rgba(35, 55, 86, 0.08);
 }
 
 .stamper-explainer,
 .stamper-audience {
   padding: 34px;
-  border-radius: 32px;
+  border-radius: 28px;
 }
 
 .stamper-explainer {
@@ -456,9 +404,9 @@ body.page-stamper .btn.primary {
 .stamper-step,
 .stamper-audience-card {
   padding: 20px;
-  border-radius: 22px;
-  background: rgba(255, 250, 245, 0.88);
-  border: 1px solid rgba(159, 111, 77, 0.12);
+  border-radius: 20px;
+  background: rgba(246, 249, 253, 0.92);
+  border: 1px solid rgba(35, 55, 86, 0.08);
 }
 
 .stamper-step strong,
@@ -477,7 +425,8 @@ body.page-stamper .btn.primary {
   .stamper-story,
   .stamper-grid,
   .stamper-explainer,
-  .stamper-notes {
+  .stamper-hero-points,
+  .stamper-card-meta {
     grid-template-columns: 1fr;
   }
 
@@ -502,8 +451,9 @@ body.page-stamper .btn.primary {
     border-radius: 22px;
   }
 
-  .stamper-hero-head {
-    align-items: flex-start;
+  .stamper-icon-frame {
+    width: 112px;
+    height: 112px;
   }
 }
 

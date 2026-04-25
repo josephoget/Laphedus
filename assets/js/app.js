@@ -63,93 +63,95 @@ function renderStamperPage(app) {
     <div class="stamper-shell">
       <section class="stamper-hero">
         <div class="stamper-hero-copy">
-          <div class="stamper-hero-head">
-            <div class="stamper-mini-icon-wrap">
-              <img class="stamper-mini-icon" src="${app.icon_url}" alt="${app.name} icon" />
-            </div>
-            <div class="stamper-hero-head-copy">
-              <div class="stamper-badge">Photo keepsakes, reimagined</div>
-              <div class="stamper-meta-line">${app.category ?? 'Photos and Memories'} · Local-first Android app</div>
-            </div>
-          </div>
+          <div class="stamper-badge">Minimal memory albums</div>
           <h1 class="stamper-title">${app.name}</h1>
           <p class="stamper-lead">
-            Turn everyday photos into collectible stamp memories, organize them into albums, and keep the whole
-            experience personal, calm, and beautifully easy to understand.
+            Turn photos into stamp-style keepsakes, organize them in albums, and keep your memories in a calm,
+            focused, easy-to-understand experience.
           </p>
           <div class="stamper-actions">
             ${playAction}
             <a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>
             <a class="btn" href="index.html">All Apps</a>
           </div>
-          <div class="stamper-notes">
-            <div class="stamper-note">
-              <strong>Create from your own photos</strong>
-              <span>Use camera or gallery images to build digital stamps that feel personal and collectible.</span>
+          <div class="stamper-hero-points">
+            <div class="stamper-point">
+              <strong>Stamp creation</strong>
+              <span>Create collectible digital memories from your own photos.</span>
             </div>
-            <div class="stamper-note">
-              <strong>Keep memories organized</strong>
-              <span>Save them inside albums that feel curated, readable, and pleasant to revisit.</span>
+            <div class="stamper-point">
+              <strong>Album organization</strong>
+              <span>Keep memories grouped in a clean and readable structure.</span>
+            </div>
+            <div class="stamper-point">
+              <strong>Local-first privacy</strong>
+              <span>No account is required for the core experience.</span>
             </div>
           </div>
         </div>
         <div class="stamper-hero-card">
-          <div class="stamper-paper">
-            <div class="stamper-icon-wrap">
-              <img class="stamper-app-icon" src="${app.icon_url}" alt="${app.name} icon" />
-            </div>
+          <div class="stamper-icon-frame">
+            <img class="stamper-app-icon" src="${app.icon_url}" alt="${app.name} icon" />
           </div>
           <div class="stamper-card-copy">
             <span class="stamper-eyebrow">${app.category ?? 'Photos and Memories'}</span>
-            <strong>A clearer way to understand the product at first glance</strong>
+            <strong>Built for people who want photo memories to feel more intentional</strong>
             <p>
-              Stamper is built around memory collecting, not generic file storage. The app is for users who want
-              their moments to feel saved with intention.
+              Stamper is not a generic gallery. It is a focused product for turning moments into personal,
+              collectible, album-based memories.
             </p>
           </div>
-          <div class="stamper-highlight-list">
-            <div class="stamper-highlight-item">No account required for core usage</div>
-            <div class="stamper-highlight-item">Albums designed for personal collections</div>
-            <div class="stamper-highlight-item">Premium features via Google Play Billing</div>
+          <div class="stamper-card-meta">
+            <div class="stamper-card-meta-item">
+              <span>Platform</span>
+              <strong>Android</strong>
+            </div>
+            <div class="stamper-card-meta-item">
+              <span>Storage</span>
+              <strong>Local-first</strong>
+            </div>
+            <div class="stamper-card-meta-item">
+              <span>Premium</span>
+              <strong>Google Play Billing</strong>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="stamper-grid" aria-label="Stamper features">
         <article class="stamper-panel">
-          <span class="stamper-kicker">Feature</span>
-          <h2>Stamp-style creation</h2>
+          <span class="stamper-kicker">01</span>
+          <h2>Create stamp-style memories</h2>
           <p>
-            Users can transform selected photos into distinctive digital stamp memories with a playful but
-            polished presentation.
+            Select a photo and transform it into a memory that feels more collectible and expressive than a
+            standard gallery image.
           </p>
         </article>
 
         <article class="stamper-panel">
-          <span class="stamper-kicker">Feature</span>
-          <h2>Album organization</h2>
+          <span class="stamper-kicker">02</span>
+          <h2>Organize everything into albums</h2>
           <p>
-            Collections stay easy to browse, revisit, and arrange inside dedicated albums built around clarity.
+            Build a personal structure for your memories so they stay easy to browse, revisit, and enjoy later.
           </p>
         </article>
 
         <article class="stamper-panel">
-          <span class="stamper-kicker">Feature</span>
-          <h2>Local-first privacy</h2>
+          <span class="stamper-kicker">03</span>
+          <h2>Keep the experience private</h2>
           <p>
-            The app does not require an account for core usage and keeps content stored on the user’s device.
+            Stamper keeps the core experience simple with local-first storage and no mandatory account.
           </p>
         </article>
       </section>
 
       <section class="stamper-explainer">
         <div class="stamper-explainer-copy">
-          <span class="stamper-kicker">What Stamper does</span>
-          <h2>A simple product story users can understand quickly</h2>
+          <span class="stamper-kicker">How it works</span>
+          <h2>A simple flow users understand immediately</h2>
           <p>
-            Stamper helps users take ordinary photos and turn them into something more memorable. Instead of
-            leaving images buried inside a camera roll, the app reframes them as stamp-like keepsakes that can be
-            grouped, saved, and enjoyed as a growing personal collection.
+            Stamper takes a familiar action, choosing a photo, and turns it into a more meaningful end result:
+            a collectible memory that can live inside a curated album instead of disappearing into the camera roll.
           </p>
         </div>
         <div class="stamper-steps">
@@ -170,11 +172,11 @@ function renderStamperPage(app) {
 
       <section class="stamper-story">
         <div class="stamper-story-copy">
-          <span class="stamper-kicker">Why download it</span>
-          <h2>Made for people who want their photos to feel more special</h2>
+          <span class="stamper-kicker">Why people download it</span>
+          <h2>A cleaner alternative to generic photo storage</h2>
           <p>
-            Stamper gives ordinary photos a keepsake quality. It is a better fit for users who want a focused,
-            emotionally warm product instead of a crowded general-purpose photo tool.
+            Users choose Stamper because it gives ordinary photos a more personal format. The product is focused,
+            visually calm, and built around the idea of collecting moments rather than just storing files.
           </p>
         </div>
         <div class="stamper-stat-stack">
@@ -196,9 +198,9 @@ function renderStamperPage(app) {
       <section class="stamper-audience">
         <div class="stamper-audience-copy">
           <span class="stamper-kicker">Best for</span>
-          <h2>Who Stamper is designed for</h2>
+          <h2>Who Stamper is for</h2>
           <p>
-            This page should help visitors decide quickly whether Stamper matches what they want from a memory app.
+            The page now speaks more clearly to the people most likely to download and enjoy the app.
           </p>
         </div>
         <div class="stamper-audience-grid">
