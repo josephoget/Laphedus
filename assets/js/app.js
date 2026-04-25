@@ -69,18 +69,6 @@ function renderStamperPage(app) {
         `).join('')}
       </div>
     </section>
-
-    <section class="stamper-bottom-cta">
-      <div>
-        <p class="stamper-section-label">Get Started</p>
-        <h2>${app.cta_title ?? 'Start your personal stamp album.'}</h2>
-        <p>${app.cta_description ?? app.short_description}</p>
-      </div>
-      <div class="stamper-actions stamper-actions-bottom">
-        <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Open on Google Play'}</a>
-        <a class="btn" href="index.html">Other Apps</a>
-      </div>
-    </section>
   `;
 }
 
