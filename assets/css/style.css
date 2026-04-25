@@ -133,7 +133,7 @@ body.page-stamper .nav a.active {
 
 .stamper-shell {
   display: grid;
-  gap: 64px;
+  gap: 24px;
 }
 
 .stamper-hero,
@@ -141,9 +141,9 @@ body.page-stamper .nav a.active {
 .stamper-cta {
   position: relative;
   border: 1px solid rgba(21, 32, 51, 0.07);
-  border-radius: 32px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 251, 255, 0.86));
-  box-shadow: 0 18px 48px rgba(33, 48, 73, 0.05);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(247, 250, 255, 0.88));
+  box-shadow: 0 14px 36px rgba(33, 48, 73, 0.04);
 }
 
 .stamper-hero {
@@ -151,7 +151,7 @@ body.page-stamper .nav a.active {
   grid-template-columns: minmax(0, 1.1fr) 320px;
   gap: 48px;
   align-items: center;
-  padding: 56px;
+  padding: 44px;
 }
 
 .stamper-badge,
@@ -184,7 +184,7 @@ body.page-stamper .nav a.active {
 }
 
 .stamper-title {
-  margin: 18px 0 18px;
+  margin: 16px 0 14px;
   font-size: clamp(46px, 8vw, 88px);
   line-height: 0.94;
   max-width: 8ch;
@@ -206,14 +206,14 @@ body.page-stamper .nav a.active {
 }
 
 .stamper-actions {
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .stamper-inline-points {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
-  margin-top: 24px;
+  margin-top: 18px;
   color: rgba(49, 68, 95, 0.78);
   font-size: 14px;
 }
@@ -249,26 +249,26 @@ body.page-stamper .btn.primary {
 .stamper-hero-card {
   display: grid;
   justify-items: start;
-  gap: 20px;
+  gap: 16px;
   align-content: start;
   padding: 0;
 }
 
 .stamper-icon-frame {
-  width: 188px;
-  height: 188px;
-  padding: 14px;
-  border-radius: 44px;
+  width: 172px;
+  height: 172px;
+  padding: 12px;
+  border-radius: 36px;
   background: linear-gradient(180deg, #ffffff, #f5f8fc);
   border: 1px solid rgba(35, 55, 86, 0.08);
-  box-shadow: 0 18px 44px rgba(44, 66, 98, 0.07);
+  box-shadow: 0 12px 28px rgba(44, 66, 98, 0.05);
 }
 
 .stamper-app-icon {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 32px;
+  border-radius: 28px;
   object-fit: cover;
 }
 
@@ -279,7 +279,7 @@ body.page-stamper .btn.primary {
 }
 
 .stamper-card-copy strong {
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.12;
   letter-spacing: -0.03em;
 }
@@ -305,8 +305,8 @@ body.page-stamper .btn.primary {
 
 .stamper-overview {
   display: grid;
-  gap: 32px;
-  padding: 40px;
+  gap: 24px;
+  padding: 32px 36px;
 }
 
 .stamper-overview-intro {
@@ -316,7 +316,7 @@ body.page-stamper .btn.primary {
 .stamper-columns {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 36px;
+  gap: 24px;
 }
 
 .stamper-column h3 {
@@ -330,12 +330,16 @@ body.page-stamper .btn.primary {
   max-width: 28ch;
 }
 
+.stamper-column {
+  padding-top: 6px;
+}
+
 .stamper-cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 28px 32px;
+  padding: 24px 28px;
 }
 
 .stamper-cta-copy {
@@ -365,7 +369,7 @@ body.page-stamper .btn.primary {
   }
 
   .stamper-overview {
-    padding: 28px;
+    padding: 24px 28px;
   }
 
   .stamper-cta {
@@ -404,8 +408,8 @@ body.page-stamper .btn.primary {
   }
 
   .stamper-icon-frame {
-    width: 116px;
-    height: 116px;
+    width: 108px;
+    height: 108px;
     border-radius: 30px;
   }
 
@@ -419,7 +423,7 @@ body.page-stamper .btn.primary {
   }
 
   .stamper-columns {
-    gap: 24px;
+    gap: 18px;
   }
 
   .stamper-cta-copy {
@@ -427,7 +431,7 @@ body.page-stamper .btn.primary {
   }
 
   .stamper-cta {
-    padding: 20px;
+    padding: 18px 20px;
     border-radius: 24px;
   }
 }
