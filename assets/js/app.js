@@ -62,31 +62,45 @@ function renderStamperPage(app) {
           <div class="stamper-badge">Local-first memory crafting</div>
           <h1 class="stamper-title">${app.name}</h1>
           <p class="stamper-lead">
-            Photos become collectible stamp memories in a calmer, more intentional album experience.
-            Stamper keeps creation personal, organized, and device-first.
+            Turn quiet everyday moments into collectible stamp memories with a page that feels warm,
+            tactile, and intentionally curated from the very first glance.
           </p>
           <div class="stamper-actions">
             <a class="btn primary" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy</a>
             <a class="btn stamper-secondary" href="index.html">All Apps</a>
           </div>
+          <div class="stamper-notes">
+            <div class="stamper-note">
+              <strong>Gentle by default</strong>
+              <span>No cluttered dashboard, no heavy-handed UI, just a focused memory album feel.</span>
+            </div>
+            <div class="stamper-note">
+              <strong>Made for keepsakes</strong>
+              <span>Every section frames Stamper as a crafted collection rather than a utility app.</span>
+            </div>
+          </div>
         </div>
         <div class="stamper-hero-card">
-          <div class="stamper-icon-wrap">
-            <img class="stamper-app-icon" src="${app.icon_url}" alt="${app.name} icon" />
+          <div class="stamper-orb stamper-orb-one"></div>
+          <div class="stamper-orb stamper-orb-two"></div>
+          <div class="stamper-paper">
+            <div class="stamper-icon-wrap">
+              <img class="stamper-app-icon" src="${app.icon_url}" alt="${app.name} icon" />
+            </div>
           </div>
           <div class="stamper-card-copy">
             <span class="stamper-eyebrow">${app.category ?? 'Photos and Memories'}</span>
-            <strong>Quietly premium by design</strong>
+            <strong>A digital album with an artisanal tone</strong>
             <p>
-              Built for users who want to transform everyday photos into lasting, stamp-style keepsakes
-              without giving up control of their data.
+              Built for users who want stamp-style keepsakes, calm organization, and full respect for
+              personal data boundaries.
             </p>
           </div>
         </div>
       </section>
 
       <section class="stamper-grid" aria-label="Stamper highlights">
-        <article class="stamper-panel">
+        <article class="stamper-panel stamper-panel-tilt-left">
           <span class="stamper-kicker">Create</span>
           <h2>Turn moments into collectible digital stamps</h2>
           <p>
@@ -95,7 +109,7 @@ function renderStamperPage(app) {
           </p>
         </article>
 
-        <article class="stamper-panel">
+        <article class="stamper-panel stamper-panel-center">
           <span class="stamper-kicker">Organize</span>
           <h2>Albums designed for clarity</h2>
           <p>
@@ -104,7 +118,7 @@ function renderStamperPage(app) {
           </p>
         </article>
 
-        <article class="stamper-panel">
+        <article class="stamper-panel stamper-panel-tilt-right">
           <span class="stamper-kicker">Protect</span>
           <h2>Your memories stay on your device</h2>
           <p>
@@ -116,11 +130,11 @@ function renderStamperPage(app) {
 
       <section class="stamper-story">
         <div class="stamper-story-copy">
-          <span class="stamper-kicker">Experience</span>
-          <h2>Minimal, warm, and intentionally focused</h2>
+          <span class="stamper-kicker">Atmosphere</span>
+          <h2>Soft editorial rhythm instead of a generic app pitch</h2>
           <p>
-            The product is positioned around emotional value instead of feature overload. That makes Stamper a
-            better fit for users who want a personal archive with a distinct visual identity.
+            Stamper works best when the page feels like a keepsake journal: airy spacing, natural tones,
+            tactile cards, and messaging that centers memory, sentiment, and simplicity.
           </p>
         </div>
         <div class="stamper-stat-stack">
@@ -137,6 +151,18 @@ function renderStamperPage(app) {
             <span>Crafted around collectible photo memories, not generic storage.</span>
           </div>
         </div>
+      </section>
+
+      <section class="stamper-closing">
+        <div class="stamper-closing-copy">
+          <span class="stamper-kicker">Privacy</span>
+          <h2>Privacy stays simple and separate</h2>
+          <p>
+            The privacy action leads directly to the dedicated privacy page for Stamper, while this product page
+            stays focused on brand tone and product presentation.
+          </p>
+        </div>
+        <a class="btn primary" href="privacy.html?app=${encodeURIComponent(app.slug)}">Open Privacy Policy</a>
       </section>
     </div>
   `;
@@ -167,8 +193,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.title = `${app.name} - LaphedusApp`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', app.short_description);
     const isStamper = app.slug === 'stamper';
+    const headerPrivacyLink = document.querySelector('.nav a[href="privacy.html"]');
     document.body.classList.toggle('page-stamper', isStamper);
     container.classList.toggle('app-detail--stamper', isStamper);
+    if (headerPrivacyLink) {
+      headerPrivacyLink.setAttribute('href', isStamper ? `privacy.html?app=${encodeURIComponent(app.slug)}` : 'privacy.html');
+    }
     container.innerHTML = isStamper ? renderStamperPage(app) : renderDefaultApp(app);
 
     fallback.hidden = true;
