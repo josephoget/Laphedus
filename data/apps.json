@@ -32,15 +32,62 @@
   {
     "slug": "stamper",
     "name": "Stamper - My Stamp Album",
-    "short_description": "Create personal digital stamps from your photos, keep them in albums, and back them up locally.",
-    "long_description": "Stamper is a local-first Android app that turns photos selected from your camera or gallery into stamp-style digital memories and lets you organize them in albums. The app does not require an account, stores your content on your device, and uses Google Play Billing with RevenueCat for premium features.",
-    "play_store_url": "",
+    "short_description": "Turn your photos into stamp-style memories, organize them in albums, and keep everything on your device.",
+    "long_description": "Stamper is a local-first Android app for collecting memories in a more personal format. Choose a photo from your camera or gallery, transform it into a stamp-style keepsake, and organize your collection in albums that stay under your control. There is no required account, your content remains on your device, and premium features are handled through Google Play Billing with RevenueCat.",
+    "play_store_url": "https://play.google.com/store/apps/details?id=com.laphedus.stamperalbumapp.stamper&hl=en-US",
     "has_account": false,
+    "has_support": true,
     "icon_url": "assets/image/stamper-icon.svg",
     "screenshots": [
       "assets/image/stamper-screen-1.svg"
     ],
-    "category": "Photos and Memories"
+    "category": "Photos and Memories",
+    "eyebrow": "Digital memories, kept simple",
+    "hero_title": "Your personal stamp album for the moments worth keeping.",
+    "hero_description": "Create warm, stamp-style keepsakes from your own photos, collect them in albums, and keep your memories local, private, and easy to revisit.",
+    "intro": "Stamper is built for people who want something more personal than a standard gallery. It gives your favorite photos a collectible feel without turning memory-keeping into a complicated workflow.",
+    "primary_cta_label": "View on Google Play",
+    "secondary_cta_label": "Read Privacy Policy",
+    "highlights": [
+      {
+        "title": "Create stamp-style memories",
+        "description": "Turn a photo from your camera or gallery into a polished, collectible-looking digital stamp."
+      },
+      {
+        "title": "Organize by album",
+        "description": "Keep your creations tidy with albums that make your collection feel intentional instead of scattered."
+      },
+      {
+        "title": "Local-first by design",
+        "description": "Your content stays on your device, so you can keep control over your memories without relying on an account."
+      }
+    ],
+    "benefits": [
+      "A calmer alternative to crowded gallery apps",
+      "A more emotional, collectible format for personal photos",
+      "A simple flow that works without account setup"
+    ],
+    "how_it_works": [
+      {
+        "title": "Pick a photo",
+        "description": "Start with an image from your camera or gallery."
+      },
+      {
+        "title": "Create your stamp",
+        "description": "Transform the photo into Stamper's signature memory style."
+      },
+      {
+        "title": "Save it to an album",
+        "description": "Build themed collections you can revisit anytime."
+      }
+    ],
+    "trust_points": [
+      "No account required to use the core experience",
+      "Your content stays stored on your device",
+      "Premium access is handled with Google Play Billing"
+    ],
+    "cta_title": "Keep your favorite moments in a format that feels worth saving.",
+    "cta_description": "If you want a photo app that feels more personal, more intentional, and easier to own, Stamper is designed for that."
   },
   {
     "slug": "expensly",

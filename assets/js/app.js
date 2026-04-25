@@ -1,18 +1,109 @@
 function qs(name) {
-  const p = new URLSearchParams(window.location.search);
-  return p.get(name);
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name);
 }
 
-function renderDefaultApp(app) {
+function renderList(items, className, renderer) {
+  if (!Array.isArray(items) || items.length === 0) return '';
+  return `<div class="${className}">${items.map(renderer).join('')}</div>`;
+}
+
+function renderStamperPage(app) {
+  const legalActions = [
+    `<a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">${app.secondary_cta_label ?? 'Privacy Policy'}</a>`,
+    app.has_support ? `<a class="btn" href="support.html?app=${encodeURIComponent(app.slug)}">Support</a>` : '',
+    app.has_terms ? `<a class="btn" href="terms.html?app=${encodeURIComponent(app.slug)}">Terms of Use</a>` : ''
+  ].filter(Boolean).join('');
+
+  return `
+    <section class="product-hero product-hero-stamper">
+      <div class="product-hero-copy">
+        <p class="product-eyebrow">${app.eyebrow ?? ''}</p>
+        <h1 class="product-title">${app.hero_title ?? app.name}</h1>
+        <p class="product-lead">${app.hero_description ?? app.short_description}</p>
+        <div class="product-actions">
+          <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Open on Google Play'}</a>
+          ${legalActions}
+        </div>
+      </div>
+      <aside class="product-hero-card">
+        <img class="product-icon" src="${app.icon_url}" alt="${app.name} icon" />
+        <div class="product-hero-card-body">
+          <h2>${app.name}</h2>
+          <p>${app.short_description}</p>
+          <ul class="product-inline-points">
+            ${(app.trust_points ?? []).map(point => `<li>${point}</li>`).join('')}
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="product-section product-section-intro">
+      <div class="product-section-heading">
+        <p class="section-kicker">Why Stamper</p>
+        <h2>A softer, more intentional way to keep your memories.</h2>
+      </div>
+      <p class="product-prose">${app.intro ?? app.long_description}</p>
+      ${renderList(app.benefits, 'benefit-list', item => `<article class="benefit-item"><p>${item}</p></article>`)}
+    </section>
+
+    <section class="product-section">
+      <div class="product-section-heading">
+        <p class="section-kicker">Core Experience</p>
+        <h2>What you can do with Stamper</h2>
+      </div>
+      ${renderList(app.highlights, 'feature-grid', item => `
+        <article class="feature-card">
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </article>
+      `)}
+    </section>
+
+    <section class="product-section">
+      <div class="product-section-heading">
+        <p class="section-kicker">How It Works</p>
+        <h2>Three simple steps from photo to collection</h2>
+      </div>
+      ${renderList(app.how_it_works, 'steps-grid', (item, index) => `
+        <article class="step-card">
+          <span class="step-number">0${index + 1}</span>
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </article>
+      `)}
+    </section>
+
+    <section class="product-section product-section-trust">
+      <div class="product-section-heading">
+        <p class="section-kicker">Privacy and Ownership</p>
+        <h2>Built to keep your memories under your control</h2>
+      </div>
+      <p class="product-prose">${app.long_description}</p>
+      ${renderList(app.trust_points, 'trust-list', item => `<article class="trust-item"><p>${item}</p></article>`)}
+    </section>
+
+    <section class="product-cta">
+      <div>
+        <p class="section-kicker">Get Started</p>
+        <h2>${app.cta_title ?? app.name}</h2>
+        <p>${app.cta_description ?? app.short_description}</p>
+      </div>
+      <div class="product-actions">
+        <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Open on Google Play'}</a>
+        <a class="btn" href="index.html">Other Apps</a>
+      </div>
+    </section>
+  `;
+}
+
+function renderGenericPage(app) {
   const primaryAction = app.play_store_url
     ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Open on Google Play</a>`
     : app.external_url
       ? `<a class="btn primary" href="${app.external_url}">${app.external_label ?? 'Open Details'}</a>`
       : '';
   const isAccountless = app.has_account === false;
-  const backAction = app.slug === 'dinamik-ada'
-    ? ''
-    : `<a class="btn" href="index.html">Other Apps</a>`;
   const legalActions = [
     `<a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>`,
     app.has_terms ? `<a class="btn" href="terms.html?app=${encodeURIComponent(app.slug)}">Terms of Use</a>` : '',
@@ -21,149 +112,36 @@ function renderDefaultApp(app) {
   ].filter(Boolean).join('');
 
   return `
-    <div>
-      <img class="app-icon" src="${app.icon_url}" alt="${app.name} icon" />
-    </div>
-    <div>
-      <h1 class="app-title">${app.name}</h1>
-      <div class="app-meta">${app.category ?? ''}</div>
+    <section class="generic-app-shell">
+      <div class="generic-app-header">
+        <img class="app-icon" src="${app.icon_url}" alt="${app.name} icon" />
+        <div>
+          <h1 class="app-title">${app.name}</h1>
+          <div class="app-meta">${app.category ?? ''}</div>
+          <p class="product-prose">${app.short_description}</p>
+        </div>
+      </div>
 
       <div class="app-actions">
         ${primaryAction}
-        ${backAction}
         ${legalActions}
+        <a class="btn" href="index.html">Other Apps</a>
       </div>
 
       <div class="app-section">
-        <h3>Summary</h3>
-        <p>${app.short_description}</p>
-      </div>
-
-      <div class="app-section">
-        <h3>Details</h3>
+        <h3>Overview</h3>
         <p>${app.long_description}</p>
       </div>
 
-      <div class="app-section">
-        <h3>Screenshots</h3>
-        <div class="screens">
-          ${(app.screenshots ?? []).map(src => `<img class="screen" src="${src}" alt="Screenshot" loading="lazy" />`).join('')}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function renderStamperPage(app) {
-  return `
-    <div class="stamper-shell">
-      <section class="stamper-hero">
-        <div class="stamper-hero-copy">
-          <div class="stamper-badge">Local-first memory crafting</div>
-          <h1 class="stamper-title">${app.name}</h1>
-          <p class="stamper-lead">
-            Photos become collectible stamp memories in a calmer, more intentional album experience.
-            Stamper keeps creation personal, organized, and device-first.
-          </p>
-          <div class="stamper-actions">
-            <a class="btn primary" href="#privacy">Privacy</a>
-            <a class="btn stamper-secondary" href="index.html">All Apps</a>
+      ${(app.screenshots ?? []).length > 0 ? `
+        <div class="app-section">
+          <h3>Screenshots</h3>
+          <div class="screens">
+            ${(app.screenshots ?? []).map(src => `<img class="screen" src="${src}" alt="Screenshot" loading="lazy" />`).join('')}
           </div>
         </div>
-        <div class="stamper-hero-card">
-          <div class="stamper-icon-wrap">
-            <img class="stamper-app-icon" src="${app.icon_url}" alt="${app.name} icon" />
-          </div>
-          <div class="stamper-card-copy">
-            <span class="stamper-eyebrow">${app.category ?? 'Photos and Memories'}</span>
-            <strong>Quietly premium by design</strong>
-            <p>
-              Built for users who want to transform everyday photos into lasting, stamp-style keepsakes
-              without giving up control of their data.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="stamper-grid" aria-label="Stamper highlights">
-        <article class="stamper-panel">
-          <span class="stamper-kicker">Create</span>
-          <h2>Turn moments into collectible digital stamps</h2>
-          <p>
-            Select a photo from your camera or gallery, transform it into a stamp-like memory, and place it
-            into albums that feel curated rather than cluttered.
-          </p>
-        </article>
-
-        <article class="stamper-panel">
-          <span class="stamper-kicker">Organize</span>
-          <h2>Albums designed for clarity</h2>
-          <p>
-            Stamper keeps your growing collection readable and intentional, making it easy to revisit favorite
-            moments without the noise of a traditional gallery.
-          </p>
-        </article>
-
-        <article class="stamper-panel">
-          <span class="stamper-kicker">Protect</span>
-          <h2>Your memories stay on your device</h2>
-          <p>
-            Stamper does not require an account. Your created content is stored locally on your device, giving
-            users a simpler and more privacy-conscious experience from the start.
-          </p>
-        </article>
-      </section>
-
-      <section class="stamper-story">
-        <div class="stamper-story-copy">
-          <span class="stamper-kicker">Experience</span>
-          <h2>Minimal, warm, and intentionally focused</h2>
-          <p>
-            The product is positioned around emotional value instead of feature overload. That makes Stamper a
-            better fit for users who want a personal archive with a distinct visual identity.
-          </p>
-        </div>
-        <div class="stamper-stat-stack">
-          <div class="stamper-stat">
-            <strong>Local-first</strong>
-            <span>No account required for core usage.</span>
-          </div>
-          <div class="stamper-stat">
-            <strong>Premium-ready</strong>
-            <span>Google Play Billing and RevenueCat support premium features.</span>
-          </div>
-          <div class="stamper-stat">
-            <strong>Single-purpose</strong>
-            <span>Crafted around collectible photo memories, not generic storage.</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="privacy" class="stamper-privacy">
-        <div class="stamper-privacy-head">
-          <span class="stamper-kicker">Privacy</span>
-          <h2>Privacy at a glance</h2>
-          <p>
-            This summary keeps the privacy entry point inside the Stamper page, while the underlying policy
-            structure for the rest of the site remains unchanged.
-          </p>
-        </div>
-        <div class="stamper-privacy-grid">
-          <article class="stamper-privacy-card">
-            <h3>No account by default</h3>
-            <p>Users can create and manage their stamp albums without signing up.</p>
-          </article>
-          <article class="stamper-privacy-card">
-            <h3>Local storage</h3>
-            <p>Created content is kept on the user’s device rather than centered around cloud storage.</p>
-          </article>
-          <article class="stamper-privacy-card">
-            <h3>Premium purchases</h3>
-            <p>Premium features are handled through Google Play Billing with RevenueCat integration.</p>
-          </article>
-        </div>
-      </section>
-    </div>
+      ` : ''}
+    </section>
   `;
 }
 
@@ -182,27 +160,23 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    const res = await fetch('data/apps.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('apps.json could not be loaded');
-    const apps = await res.json();
-    const app = apps.find(a => a.slug === slug);
+    const response = await fetch('data/apps.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('apps.json could not be loaded');
 
+    const apps = await response.json();
+    const app = apps.find(entry => entry.slug === slug);
     if (!app) throw new Error('App not found');
 
     document.title = `${app.name} - LaphedusApp`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', app.short_description);
-    const isStamper = app.slug === 'stamper';
-    const headerPrivacyLink = document.querySelector('.nav a[href="privacy.html"]');
-    document.body.classList.toggle('page-stamper', isStamper);
-    container.classList.toggle('app-detail--stamper', isStamper);
-    if (headerPrivacyLink) {
-      headerPrivacyLink.setAttribute('href', isStamper ? '#privacy' : 'privacy.html');
-    }
-    container.innerHTML = isStamper ? renderStamperPage(app) : renderDefaultApp(app);
+    document.body.classList.add('app-detail-page', `app-theme-${app.slug}`);
+
+    container.className = `app-detail app-detail-${app.slug === 'stamper' ? 'stamper' : 'generic'}`;
+    container.innerHTML = app.slug === 'stamper' ? renderStamperPage(app) : renderGenericPage(app);
 
     fallback.hidden = true;
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error(error);
     fallback.hidden = false;
     container.innerHTML = '';
   }

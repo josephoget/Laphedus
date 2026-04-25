@@ -1,0 +1,66 @@
+<svg width="1024" height="500" viewBox="0 0 1024 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="500" rx="40" fill="url(#bg)"/>
+  <circle cx="134" cy="66" r="180" fill="url(#glowA)" opacity="0.58"/>
+  <circle cx="898" cy="446" r="224" fill="url(#glowB)" opacity="0.45"/>
+  <rect x="48" y="48" width="928" height="404" rx="34" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="2"/>
+  <g opacity="0.95">
+    <rect x="92" y="104" width="108" height="108" rx="32" fill="url(#logoPanel)"/>
+    <rect x="114" y="126" width="66" height="66" rx="18" fill="#FFFFFF"/>
+    <path d="M124 144C130 144 130 136 136 136C142 136 142 144 148 144C154 144 154 136 160 136C166 136 166 144 172 144V174C166 174 166 182 160 182C154 182 154 174 148 174C142 174 142 182 136 182C130 182 130 174 124 174V144Z" fill="#FFF4E2" stroke="#FFB06C" stroke-width="4"/>
+    <circle cx="148" cy="159" r="13" fill="#FFFFFF" stroke="#22304A" stroke-width="4"/>
+    <path d="M142 160L147 165L155 154" stroke="#32BFA3" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="232" y="158" fill="#FFFFFF" font-family="Avenir, Poppins, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="0.5">LaphedusApp</text>
+  <text x="232" y="206" fill="#D9E6F2" font-family="Avenir, Poppins, Arial, sans-serif" font-size="24" font-weight="500">Simple, useful, human-centered mobile apps.</text>
+  <text x="232" y="246" fill="#B5C7D8" font-family="Avenir, Poppins, Arial, sans-serif" font-size="17" font-weight="500">From productivity to playful utilities, one clear design language across every app.</text>
+  <g opacity="0.98">
+    <rect x="610" y="94" width="126" height="158" rx="30" transform="rotate(-7 610 94)" fill="#FFF8EF"/>
+    <rect x="715" y="118" width="136" height="176" rx="34" transform="rotate(6 715 118)" fill="#F4FCFF"/>
+    <rect x="638" y="154" width="178" height="192" rx="42" fill="#FFFFFF" stroke="#EBE0D3" stroke-width="5"/>
+    <path d="M679 194C691 194 691 178 703 178C715 178 715 194 727 194C739 194 739 178 751 178C763 178 763 194 775 194V306C763 306 763 322 751 322C739 322 739 306 727 306C715 306 715 322 703 322C691 322 691 306 679 306V194Z" fill="url(#stampCard)" stroke="#FFB06C" stroke-width="8"/>
+    <circle cx="727" cy="246" r="38" fill="#FFFFFF" stroke="#22304A" stroke-width="10"/>
+    <path d="M710 256L723 269L749 224" stroke="#32BFA3" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g opacity="0.88">
+    <rect x="94" y="308" width="146" height="96" rx="26" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="2"/>
+    <rect x="112" y="328" width="38" height="38" rx="12" fill="#FF8D65"/>
+    <text x="164" y="351" fill="#FFFFFF" font-family="Avenir, Poppins, Arial, sans-serif" font-size="22" font-weight="700">Multi-app</text>
+    <text x="112" y="385" fill="#D3E0EB" font-family="Avenir, Poppins, Arial, sans-serif" font-size="16">Clean visuals for different product types</text>
+  </g>
+  <g opacity="0.88">
+    <rect x="258" y="308" width="158" height="96" rx="26" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="2"/>
+    <rect x="276" y="328" width="38" height="38" rx="12" fill="#FFC371"/>
+    <text x="328" y="351" fill="#FFFFFF" font-family="Avenir, Poppins, Arial, sans-serif" font-size="22" font-weight="700">Warm tech</text>
+    <text x="276" y="385" fill="#D3E0EB" font-family="Avenir, Poppins, Arial, sans-serif" font-size="16">Friendly color system with product clarity</text>
+  </g>
+  <g opacity="0.88">
+    <rect x="434" y="308" width="148" height="96" rx="26" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="2"/>
+    <rect x="452" y="328" width="38" height="38" rx="12" fill="#7CD6D1"/>
+    <text x="504" y="351" fill="#FFFFFF" font-family="Avenir, Poppins, Arial, sans-serif" font-size="22" font-weight="700">Polished</text>
+    <text x="452" y="385" fill="#D3E0EB" font-family="Avenir, Poppins, Arial, sans-serif" font-size="16">Store-ready branding that stays readable</text>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="22" x2="978" y2="494" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162338"/>
+      <stop offset="0.54" stop-color="#203759"/>
+      <stop offset="1" stop-color="#121F33"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(134 66) rotate(90) scale(180)">
+      <stop stop-color="#FF8D65"/>
+      <stop offset="1" stop-color="#FF8D65" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(898 446) rotate(90) scale(224)">
+      <stop stop-color="#7CD6D1"/>
+      <stop offset="1" stop-color="#7CD6D1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="logoPanel" x1="98" y1="104" x2="196" y2="208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8D65"/>
+      <stop offset="0.52" stop-color="#FFC371"/>
+      <stop offset="1" stop-color="#7CD6D1"/>
+    </linearGradient>
+    <linearGradient id="stampCard" x1="680" y1="186" x2="779" y2="315" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#FFF0DB"/>
+    </linearGradient>
+  </defs>
+</svg>
