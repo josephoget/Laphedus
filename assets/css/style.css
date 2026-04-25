@@ -133,14 +133,11 @@ body.page-stamper .nav a.active {
 
 .stamper-shell {
   display: grid;
-  gap: 48px;
+  gap: 56px;
 }
 
 .stamper-hero,
-.stamper-grid,
-.stamper-story,
-.stamper-explainer,
-.stamper-audience {
+.stamper-overview {
   position: relative;
 }
 
@@ -179,10 +176,7 @@ body.page-stamper .nav a.active {
 }
 
 .stamper-title,
-.stamper-panel h2,
-.stamper-story h2,
-.stamper-explainer h2,
-.stamper-audience h2 {
+.stamper-overview h2 {
   font-family: "Manrope", system-ui, sans-serif;
   letter-spacing: -0.04em;
 }
@@ -217,30 +211,24 @@ body.page-stamper .nav a.active {
   display: block;
 }
 
-.stamper-hero-points {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 34px;
-}
-
-.stamper-point {
-  padding: 20px;
-  border-radius: 18px;
-  background: transparent;
-  border: 1px solid rgba(35, 55, 86, 0.08);
-}
-
-.stamper-point strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 15px;
-  color: #172033;
-}
-
-.stamper-point span {
-  color: rgba(49, 68, 95, 0.74);
+.stamper-inline-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 28px;
+  color: rgba(49, 68, 95, 0.78);
   font-size: 14px;
+}
+
+.stamper-inline-points span::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  border-radius: 999px;
+  background: #5679a8;
+  vertical-align: middle;
 }
 
 body.page-stamper .btn {
@@ -258,16 +246,6 @@ body.page-stamper .btn.primary {
   border-color: rgba(35, 55, 86, 0.08);
   background: linear-gradient(135deg, #1f2d44, #47658f);
   color: #f8fbff;
-}
-
-.stamper-hero-card,
-.stamper-panel,
-.stamper-story,
-.stamper-explainer,
-.stamper-audience {
-  border: 0;
-  background: transparent;
-  box-shadow: none;
 }
 
 .stamper-hero-card {
@@ -314,41 +292,20 @@ body.page-stamper .btn.primary {
 }
 
 .stamper-card-copy p,
-.stamper-panel p,
-.stamper-story-copy p,
-.stamper-stat span,
-.stamper-explainer-copy p,
-.stamper-audience-copy p,
-.stamper-step p,
-.stamper-audience-card p {
+.stamper-overview-copy p,
+.stamper-column p {
   margin: 0;
   color: rgba(49, 68, 95, 0.76);
 }
 
-.stamper-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.stamper-panel {
-  padding: 0;
-  border-radius: 0;
-  background: transparent;
-}
-
-.stamper-panel h2,
-.stamper-story h2,
-.stamper-explainer h2,
-.stamper-audience h2 {
+.stamper-overview h2 {
   margin: 14px 0 10px;
   font-size: clamp(28px, 4vw, 40px);
   line-height: 1.02;
 }
 
-.stamper-story {
+.stamper-overview {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
   gap: 28px;
   padding: 0;
   border-radius: 0;
@@ -356,66 +313,25 @@ body.page-stamper .btn.primary {
   padding-top: 32px;
 }
 
-.stamper-stat-stack {
+.stamper-overview-copy {
+  max-width: 64ch;
+}
+
+.stamper-columns {
   display: grid;
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
 }
 
-.stamper-stat {
-  padding: 18px 0;
-  border-radius: 0;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid rgba(21, 32, 51, 0.08);
-}
-
-.stamper-explainer,
-.stamper-audience {
-  padding: 0;
-  border-radius: 0;
-  border-top: 1px solid rgba(21, 32, 51, 0.08);
-  padding-top: 32px;
-}
-
-.stamper-explainer {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.95fr);
-  gap: 24px;
-}
-
-.stamper-steps,
-.stamper-audience-grid {
-  display: grid;
-  gap: 12px;
-}
-
-.stamper-step,
-.stamper-audience-card {
-  padding: 18px 0;
-  border-radius: 0;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid rgba(21, 32, 51, 0.08);
-}
-
-.stamper-step strong,
-.stamper-audience-card strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
-
-.stamper-audience-copy {
-  max-width: 56ch;
+.stamper-column h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
 }
 
 @media (max-width: 980px) {
   .stamper-hero,
-  .stamper-story,
-  .stamper-grid,
-  .stamper-explainer,
-  .stamper-hero-points,
-  .stamper-card-meta {
+  .stamper-columns {
     grid-template-columns: 1fr;
   }
 
@@ -431,17 +347,8 @@ body.page-stamper .btn.primary {
 
 @media (max-width: 640px) {
   .stamper-hero,
-  .stamper-story,
-  .stamper-explainer,
-  .stamper-audience {
+  .stamper-overview {
     padding-top: 20px;
-    border-radius: 0;
-  }
-
-  .stamper-panel,
-  .stamper-step,
-  .stamper-audience-card {
-    padding: 18px;
     border-radius: 0;
   }
 
@@ -477,8 +384,8 @@ body.page-stamper .btn.primary {
     border-radius: 20px;
   }
 
-  .stamper-hero-points {
-    gap: 12px;
+  .stamper-inline-points {
+    gap: 8px 14px;
     margin-top: 22px;
   }
 }
