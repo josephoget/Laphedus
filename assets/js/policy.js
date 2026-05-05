@@ -527,46 +527,50 @@ For privacy or data requests:
   if (app === 'expensly' && contentEl) {
     if (isPrivacy) {
       const expenslyPrivacy = `Privacy Policy - Expensly
-Last updated: 2025-04-11
+Last updated: 2026-05-05
 
-Thank you for using the Expense Tracker app. Your privacy is important to us. This privacy policy explains our policies regarding the collection, use, and disclosure of information when you use our application.
+Thank you for using Expense Tracker. Your privacy matters to us. This privacy policy explains how information may be processed when you use the application.
 
 Information We Collect
-The Expense Tracker app collects the following information to provide you with our service:
-        
-    User Provided Data: All data you enter within the app, such as expense records, category information, budget plans, etc.
-    Device Information: When the app crashes or an error occurs, basic information such as your device model and operating system version may be collected.
-        
+The app may process the following categories of information to provide its features:
+
+    User Provided Data: expense records, category information, budget plans, recurring expense plans, and any optional notes or images you attach.
+    App Settings and Preferences: notification preferences, widget-related display data, language, theme, and similar settings stored locally on your device.
+    Limited Technical Data: some technical information may be processed by your device or third-party SDKs to support app functionality, ad delivery, or abuse prevention.
 
 Use of Data
-We use the information we collect for the following purposes:
-        
+We use this information for the following purposes:
+
     To provide the core functionality of the app
-    To improve and enhance the app
-    To identify and fix technical issues
-        
+    To keep home screen widgets updated with relevant summaries and quick actions
+    To schedule on-device notifications for daily summaries, weekly summaries, budget alerts, savings target warnings, and upcoming recurring payments
+    To improve stability, protect security, and reduce technical issues
+    To support an ad-funded experience
 
 Data Storage
-Expense Tracker primarily stores all the data you enter locally on your device. Your data remains on your device unless you choose to delete it.
+Expense Tracker primarily stores the data you enter locally on your device. Expense records, budget settings, recurring plans, notification preferences, and widget summaries remain on your device unless you choose to delete them.
+
+Widgets and Notifications
+The app may provide home screen widgets and local notifications. Widgets use app data stored on your device to show items such as daily or monthly net summaries and quick add shortcuts. Notifications are scheduled on-device for daily summaries, weekly summaries, budget threshold alerts, savings target status, and upcoming recurring payments. This feature does not rely on remote push notification infrastructure.
 
 Data Sharing
-We do not share your personal information with third parties. However, we may share your information in the following circumstances:
-        
-    Legal Requirements: When required to comply with a legal obligation, respond to legal processes, or enforce applicable laws.
-    Service Providers: With third-party service providers we use to support the app's functionality (e.g., analytics services).
-        
+We do not sell your personal information. However, limited data may be processed or shared in the following situations:
+
+    Advertising Services: the app may use third-party ad services such as Google Mobile Ads. These services may process limited technical data, such as advertising identifiers, device information, or interaction signals, according to their own policies.
+    Legal Requirements: when required to comply with legal obligations, respond to lawful requests, or enforce applicable laws.
 
 Data Security
-We take appropriate technical and organizational measures to ensure the security of your data. However, please note that no data transmission over the internet or electronic storage is 100% secure.
+We take reasonable technical and organizational measures to help protect your data. However, no method of transmission or electronic storage can be guaranteed to be completely secure.
 
 Children's Privacy
 Our services are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.
 
 Changes to This Privacy Policy
-We may update our privacy policy from time to time. Changes will be posted on this page. In case of significant changes, we may also provide a notification within the app.
+We may update this privacy policy from time to time. Changes will be posted on this page. If a change is material, we may also provide additional notice inside the app or through relevant publishing channels.
 
 Contact Us
 If you have any questions or concerns about this privacy policy, please contact us using the information below:
+Developer: Laphedus
 Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, expenslyPrivacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Expensly';
