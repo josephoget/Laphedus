@@ -233,9 +233,9 @@ After Deletion
     if (isPrivacy) {
       document.title = 'Privacy Policy | Dynamic Pill';
       const dynamicPillPrivacy = `Dynamic Pill Privacy Policy
-Last updated: 04.08.2026
+Last updated: 21.05.2026
 
-Dynamic Pill is a helper app that places a capsule-like interface at the top of Android devices and shows features such as media, notifications, connection status, battery, lock state, gestures, and selected quick controls. This policy explains which data the app may process on-device, which data stays local, and in which limited cases third-party payment infrastructure may be contacted.
+Dynamic Pill is a helper app that places a capsule-like interface at the top of Android devices and shows features such as media, notifications, connection status, battery, lock state, gestures, and selected quick controls. This policy explains which data the app may process on-device, which data stays local, and in which limited cases third-party payment and analytics infrastructure may be contacted.
 
 1. Information That May Be Processed
 
@@ -249,8 +249,9 @@ The app may process the following categories of information on your device so it
 - when notification-based features are enabled, selected notification fields such as package name, title, text, and time
 - app names, package names, and icons of installed apps for gestures, shortcuts, and notification filters
 - limited technical information required for premium purchase, restore, and entitlement verification flows
+- analytics events focused on product measurement such as app opens, screen views, onboarding progress, permission completion, and purchase flow events
 
-This data is used to update the capsule interface, show selected events correctly, preserve user settings, and determine premium status.
+This data is used to update the capsule interface, show selected events correctly, preserve user settings, determine premium status, and understand app usage at an aggregated analytics level.
 
 2. Data Not Collected or Targeted
 
@@ -260,8 +261,9 @@ This data is used to update the capsule interface, show selected events correctl
 - it does not keep location history
 - it does not collect contact lists, photo galleries, or messaging databases
 - camera permission is not used to take photos or videos; flashlight control is only for the device torch hardware
-- accessibility data is not used for advertising, analytics, or marketing
+- accessibility data is not used for advertising or marketing
 - it is not designed to record typed text or transfer message contents to external servers
+- notification text, message contents, and installed app lists are not sent to analytics for profiling
 
 3. How Data Is Used
 
@@ -272,12 +274,13 @@ This data is used to update the capsule interface, show selected events correctl
 - to manage helper system controls such as volume, brightness, and flashlight
 - to keep settings and premium access status on the device
 - to perform purchase, restore, and entitlement checks
+- to measure which screens and steps are used so the app experience can be improved
 
 4. Where Data Is Stored
 
 App settings, modules, filters, and most status information are mainly stored on the device. Data such as notification title/text, app list, and icons is processed locally while the feature runs and is not stored under a separate cloud account by default.
 
-When premium purchase or restore is used, third-party infrastructure such as Google Play Billing and RevenueCat may process limited technical data required for the purchase flow. If analytics, remote crash reporting, account sync, or cloud backup is added in the future, this policy will be updated.
+When premium purchase or restore is used, third-party infrastructure such as Google Play Billing and RevenueCat may process limited technical data required for the purchase flow. The app also uses Firebase Analytics to process limited technical identifiers and event data for app opens, screen views, onboarding, permission completion, and purchase events. Notification text, typed content, contact lists, and installed app lists are not sent to analytics.
 
 5. Permissions and Reasons
 
@@ -294,13 +297,13 @@ When premium purchase or restore is used, third-party infrastructure such as Goo
 
 The app does not sell, rent, or share user data with third parties for advertising purposes.
 
-However, the app may use Google Play Billing, RevenueCat, or similar providers for premium purchases and entitlement checks. These services may process limited technical data required for the purchase flow.
+However, the app may use Google Play Billing, RevenueCat, Firebase Analytics, or similar service providers for premium purchases, entitlement checks, and app usage measurement. These services may process limited technical data required for those flows.
 
 Data is not shared except for legal obligations, court orders, or official authority requests. In such cases, only the necessary information is provided.
 
 7. Data Security
 
-The app prioritizes keeping processed preference and status data on the device whenever possible. Permissions are requested only for relevant features, and each module can be enabled or disabled by the user. However, no software, storage, or transmission method can guarantee one hundred percent security.
+The app prioritizes keeping processed preference and status data on the device whenever possible. Permissions are requested only for relevant features, and each module can be enabled or disabled by the user. Data transferred to third-party services is expected to be encrypted in transit. However, no software, storage, or transmission method can guarantee one hundred percent security.
 
 8. Account Deletion and Data Deletion
 
@@ -308,6 +311,7 @@ Dynamic Pill does not currently require a user account. For this reason, there i
 
 - to delete local data, you can uninstall the app from your device or clear the app data
 - premium purchase records may be retained by the relevant store or subscription infrastructure
+- analytics event records may be processed by Firebase Analytics according to its service operation
 - for data deletion or privacy requests, you can write to laphedusapp@gmail.com
 
 9. Children's Privacy
