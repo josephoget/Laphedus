@@ -26,7 +26,7 @@ function renderStamperPage(app) {
           ${legalActions}
         </div>
         <div class="stamper-inline-meta">
-          <span>Android</span>
+          <span>iOS & Android</span>
           <span>Local-first</span>
           <span>Album-based</span>
         </div>
