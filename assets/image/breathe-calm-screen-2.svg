@@ -1,0 +1,55 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="screen2Bg" x1="60" y1="40" x2="1220" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F6FD"/>
+      <stop offset="0.5" stop-color="#EFEAF8"/>
+      <stop offset="1" stop-color="#E4DDF2"/>
+    </linearGradient>
+    <filter id="clayShadow2" x="80" y="80" width="580" height="560" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#4B4370" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" rx="36" fill="#F4F1F9"/>
+  <rect x="40" y="40" width="1200" height="640" rx="32" fill="url(#screen2Bg)"/>
+
+  <!-- Sol Kart: Düşünce & Zihin Günlüğü Arayüzü -->
+  <g filter="url(#clayShadow2)">
+    <rect x="100" y="90" width="520" height="540" rx="36" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6"/>
+  </g>
+
+  <rect x="140" y="130" width="48" height="48" rx="16" fill="#8F84C2"/>
+  <text x="154" y="162" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="24" font-weight="700">✎</text>
+  <text x="204" y="162" fill="#241E38" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="24" font-weight="700">Mind Journal</text>
+  <text x="140" y="220" fill="#241E38" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="32" font-weight="800">Cognitive Reframe</text>
+  <text x="140" y="254" fill="#696084" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16">Challenge catastrophic loops and reclaim mental headspace.</text>
+
+  <!-- Prompt Kutusu -->
+  <rect x="140" y="290" width="440" height="130" rx="22" fill="#F6F3FA" stroke="#E2DBED" stroke-width="2"/>
+  <text x="165" y="325" fill="#8F84C2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="700">AUTOMATIC THOUGHT</text>
+  <text x="165" y="360" fill="#241E38" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="18">"Everything is falling behind schedule."</text>
+  <text x="165" y="395" fill="#5F756C" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14">Distortion: Catastrophizing · Mind Reading</text>
+
+  <!-- Reframing Çözüm Kutusu -->
+  <rect x="140" y="440" width="440" height="130" rx="22" fill="#EEF7F2" stroke="#BCE3CF" stroke-width="2"/>
+  <text x="165" y="475" fill="#4E8470" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="700">BALANCED PERSPECTIVE</text>
+  <text x="165" y="510" fill="#1C2E26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="18">"I can only take action on one task at a time."</text>
+  <text x="165" y="545" fill="#4E8470" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14">Result: Stress eased from 8/10 to 3/10</text>
+
+  <!-- Sağ Bilgi Paneli -->
+  <rect x="680" y="140" width="480" height="210" rx="30" fill="#FFFFFF" stroke="#EAE5F5" stroke-width="2"/>
+  <rect x="720" y="175" width="40" height="40" rx="14" fill="#E68770"/>
+  <text x="732" y="202" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20">⚡</text>
+  <text x="775" y="202" fill="#241E38" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="22" font-weight="700">Circle of Control Tool</text>
+  <text x="720" y="248" fill="#696084" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16">Separate what you cannot control from the clear, practical actions right in front of you.</text>
+  <rect x="720" y="285" width="180" height="38" rx="12" fill="#F6F3FA"/>
+  <text x="735" y="310" fill="#8F84C2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600">Cognitive Behavioral</text>
+
+  <rect x="680" y="380" width="480" height="210" rx="30" fill="#FFFFFF" stroke="#EAE5F5" stroke-width="2"/>
+  <rect x="720" y="415" width="40" height="40" rx="14" fill="#619E85"/>
+  <text x="730" y="442" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20">🔒</text>
+  <text x="775" y="442" fill="#241E38" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="22" font-weight="700">Face ID Hardware Lock</text>
+  <text x="720" y="488" fill="#696084" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16">Your personal reflections stay private. Secured through Apple's Secure Enclave hardware.</text>
+  <rect x="720" y="525" width="200" height="38" rx="12" fill="#EEF7F2"/>
+  <text x="735" y="550" fill="#4E8470" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="14" font-weight="600">Zero Cloud Uploads</text>
+</svg>

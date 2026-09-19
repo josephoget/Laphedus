@@ -1,0 +1,61 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EBF4F0"/>
+      <stop offset="0.5" stop-color="#DEEBE6"/>
+      <stop offset="1" stop-color="#CFDFDA"/>
+    </linearGradient>
+    <linearGradient id="petal1" x1="180" y1="120" x2="332" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#72AF96"/>
+      <stop offset="1" stop-color="#4E8470"/>
+    </linearGradient>
+    <linearGradient id="petal2" x1="140" y1="180" x2="290" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9C92D3"/>
+      <stop offset="1" stop-color="#6F65A8"/>
+    </linearGradient>
+    <linearGradient id="petal3" x1="220" y1="180" x2="370" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F29E8A"/>
+      <stop offset="1" stop-color="#D9725B"/>
+    </linearGradient>
+    <filter id="softGlow" x="60" y="60" width="392" height="392" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#4E8470" flood-opacity="0.25"/>
+    </filter>
+    <filter id="clayShadow" x="100" y="100" width="312" height="312" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#264438" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Arka Plan Squircle -->
+  <rect width="512" height="512" rx="124" fill="url(#bgGrad)"/>
+  
+  <!-- Dış Dinginlik Halesi / Nefes Halkası -->
+  <circle cx="256" cy="256" r="172" stroke="#8EBFA8" stroke-width="6" stroke-dasharray="12 10" opacity="0.55"/>
+  <circle cx="256" cy="256" r="142" stroke="#A8A0DB" stroke-width="4" opacity="0.45"/>
+
+  <!-- Yumuşak Clay Gölgeli Ana Merkez -->
+  <g filter="url(#softGlow)">
+    <circle cx="256" cy="256" r="118" fill="#F8FCFA"/>
+  </g>
+
+  <!-- Dinamik Nefes & Farkındalık Kil Yaprakları -->
+  <g filter="url(#clayShadow)">
+    <!-- Sol Yaprak (Lavanta / Zihin) -->
+    <path d="M256 256 C200 230 155 285 180 340 C205 385 256 320 256 256 Z" fill="url(#petal2)" opacity="0.9"/>
+    
+    <!-- Sağ Yaprak (Şeftali / Beden & Canlılık) -->
+    <path d="M256 256 C312 230 357 285 332 340 C307 385 256 320 256 256 Z" fill="url(#petal3)" opacity="0.9"/>
+    
+    <!-- Üst / Merkez Yaprak (Adaçayı Nanesi / Nefes & Dinginlik) -->
+    <path d="M256 142 C210 200 220 270 256 295 C292 270 302 200 256 142 Z" fill="url(#petal1)"/>
+    
+    <!-- Merkez Dinginlik Çekirdeği -->
+    <circle cx="256" cy="265" r="22" fill="#FFFFFF"/>
+    <circle cx="256" cy="265" r="14" fill="#619E85"/>
+  </g>
+
+  <!-- Küçük Ritim Noktaları (4 Faz: Al, Tut, Ver, Bekle) -->
+  <circle cx="256" cy="94" r="8" fill="#619E85"/>
+  <circle cx="418" cy="256" r="8" fill="#E68770"/>
+  <circle cx="256" cy="418" r="8" fill="#619E85"/>
+  <circle cx="94" cy="256" r="8" fill="#8F84C2"/>
+</svg>

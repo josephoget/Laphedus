@@ -8,12 +8,20 @@ function renderList(items, className, renderer) {
   return `<div class="${className}">${items.map(renderer).join('')}</div>`;
 }
 
-function renderStamperPage(app) {
+function renderShowcasePage(app) {
   const legalActions = [
     `<a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">${app.secondary_cta_label ?? 'Privacy Policy'}</a>`,
     app.has_support ? `<a class="btn" href="support.html?app=${encodeURIComponent(app.slug)}">Support</a>` : '',
     app.has_terms ? `<a class="btn" href="terms.html?app=${encodeURIComponent(app.slug)}">Terms of Use</a>` : ''
   ].filter(Boolean).join('');
+
+  const primaryAction = app.app_store_url
+    ? `<a class="btn primary" href="${app.app_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Download on App Store'}</a>`
+    : app.play_store_url
+      ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Get on Google Play'}</a>`
+      : app.external_url
+        ? `<a class="btn primary" href="${app.external_url}" target="_blank" rel="noopener">${app.external_label ?? 'Open Details'}</a>`
+        : `<span class="btn primary disabled">${app.primary_cta_label ?? 'Available for iOS'}</span>`;
 
   return `
     <section class="stamper-showcase">
@@ -22,13 +30,13 @@ function renderStamperPage(app) {
         <h1 class="stamper-display">${app.hero_title ?? app.name}</h1>
         <p class="stamper-summary">${app.hero_description ?? app.short_description}</p>
         <div class="stamper-actions">
-          <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Get on Google Play'}</a>
+          ${primaryAction}
           ${legalActions}
         </div>
         <div class="stamper-inline-meta">
-          <span>iOS & Android</span>
+          <span>${app.slug === 'breathe-calm' ? 'iOS (SwiftUI)' : 'iOS & Android'}</span>
           <span>Local-first</span>
-          <span>Album-based</span>
+          <span>${app.slug === 'breathe-calm' ? 'Zero Tracking' : 'Album-based'}</span>
         </div>
       </div>
       <div class="stamper-visual">
@@ -41,7 +49,7 @@ function renderStamperPage(app) {
     <section class="stamper-story-grid">
       <article class="stamper-story-card stamper-story-card-wide">
         <p class="stamper-section-label">Overview</p>
-        <h2>Built for people who want their memories to feel collected, not buried.</h2>
+        <h2>${app.slug === 'breathe-calm' ? 'A quiet sanctuary for your daily headspace and calm.' : 'Built for people who want their memories to feel collected, not buried.'}</h2>
         <p>${app.intro ?? app.long_description}</p>
       </article>
 
@@ -57,7 +65,7 @@ function renderStamperPage(app) {
     <section class="stamper-flow">
       <div class="stamper-flow-head">
         <p class="stamper-section-label">How It Works</p>
-        <h2>Three simple steps from photo to keepsake.</h2>
+        <h2>${app.slug === 'breathe-calm' ? 'Three mindful steps to ease tension.' : 'Three simple steps from photo to keepsake.'}</h2>
       </div>
       <div class="stamper-flow-steps">
         ${(app.how_it_works ?? []).slice(0, 3).map((item, index) => `
@@ -69,15 +77,33 @@ function renderStamperPage(app) {
         `).join('')}
       </div>
     </section>
+
+    ${(app.screenshots ?? []).length > 0 ? `
+      <section class="generic-gallery" style="margin-top: 3rem;">
+        <div class="generic-gallery-head">
+          <p class="stamper-section-label">Preview</p>
+          <h2>Experience the Interface</h2>
+        </div>
+        <div class="generic-gallery-grid">
+          ${app.screenshots.map((src, index) => `
+            <article class="generic-gallery-card">
+              <img class="generic-screen" src="${src}" alt="${app.name} preview ${index + 1}" loading="lazy" />
+            </article>
+          `).join('')}
+        </div>
+      </section>
+    ` : ''}
   `;
 }
 
 function renderGenericPage(app) {
-  const primaryAction = app.play_store_url
-    ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Get on Google Play</a>`
-    : app.external_url
-      ? `<a class="btn primary" href="${app.external_url}" target="_blank" rel="noopener">${app.external_label ?? 'Open Details'}</a>`
-      : '';
+  const primaryAction = app.app_store_url
+    ? `<a class="btn primary" href="${app.app_store_url}" target="_blank" rel="noopener">Download on App Store</a>`
+    : app.play_store_url
+      ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Get on Google Play</a>`
+      : app.external_url
+        ? `<a class="btn primary" href="${app.external_url}" target="_blank" rel="noopener">${app.external_label ?? 'Open Details'}</a>`
+        : '';
   const isAccountless = app.has_account === false;
   const legalActions = [
     `<a class="btn" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy Policy</a>`,
@@ -165,8 +191,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.querySelector('meta[name="description"]')?.setAttribute('content', app.short_description);
     document.body.classList.add('app-detail-page', `app-theme-${app.slug}`);
 
-    container.className = `app-detail app-detail-${app.slug === 'stamper' ? 'stamper' : 'generic'}`;
-    container.innerHTML = app.slug === 'stamper' ? renderStamperPage(app) : renderGenericPage(app);
+    const hasRichShowcase = app.slug === 'stamper' || app.slug === 'breathe-calm' || Boolean(app.highlights);
+    container.className = `app-detail app-detail-${hasRichShowcase ? 'stamper' : 'generic'}`;
+    container.innerHTML = hasRichShowcase ? renderShowcasePage(app) : renderGenericPage(app);
 
     fallback.hidden = true;
   } catch (error) {

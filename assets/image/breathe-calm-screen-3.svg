@@ -1,0 +1,86 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="screen3Bg" x1="60" y1="40" x2="1220" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDF8F5"/>
+      <stop offset="0.5" stop-color="#F7ECE5"/>
+      <stop offset="1" stop-color="#EEDCD3"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop stop-color="#619E85"/>
+      <stop offset="0.7" stop-color="#8F84C2"/>
+      <stop offset="1" stop-color="#E68770"/>
+    </linearGradient>
+    <filter id="clayShadow3" x="80" y="80" width="580" height="560" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#543C30" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" rx="36" fill="#F8F2EE"/>
+  <rect x="40" y="40" width="1200" height="640" rx="32" fill="url(#screen3Bg)"/>
+
+  <!-- Sol Kart: Haftalık Ritim & Nabız Analitiği -->
+  <g filter="url(#clayShadow3)">
+    <rect x="100" y="90" width="520" height="540" rx="36" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6"/>
+  </g>
+
+  <rect x="140" y="130" width="48" height="48" rx="16" fill="#E68770"/>
+  <text x="154" y="162" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="700">📈</text>
+  <text x="204" y="162" fill="#301E17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="24" font-weight="700">Weekly Pulse</text>
+  <text x="140" y="220" fill="#301E17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="32" font-weight="800">Mind Rhythm Insights</text>
+  <text x="140" y="254" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16">Personalized analysis of your daily calming patterns.</text>
+
+  <!-- Bar Grafiği -->
+  <g transform="translate(140, 290)">
+    <rect x="0" y="0" width="440" height="210" rx="20" fill="#FCFAF8" stroke="#F0E5DF" stroke-width="2"/>
+    
+    <!-- Günlük Barlar (Pzt - Paz) -->
+    <!-- Mon -->
+    <rect x="30" y="70" width="36" height="100" rx="10" fill="#619E85"/>
+    <text x="48" y="195" text-anchor="middle" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Mon</text>
+
+    <!-- Tue -->
+    <rect x="88" y="45" width="36" height="125" rx="10" fill="#8F84C2"/>
+    <text x="106" y="195" text-anchor="middle" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Tue</text>
+
+    <!-- Wed -->
+    <rect x="146" y="90" width="36" height="80" rx="10" fill="#619E85"/>
+    <text x="164" y="195" text-anchor="middle" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Wed</text>
+
+    <!-- Thu -->
+    <rect x="204" y="30" width="36" height="140" rx="10" fill="#E68770"/>
+    <text x="222" y="195" text-anchor="middle" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Thu</text>
+
+    <!-- Fri -->
+    <rect x="262" y="80" width="36" height="90" rx="10" fill="#619E85"/>
+    <text x="280" y="195" text-anchor="middle" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Fri</text>
+
+    <!-- Sat -->
+    <rect x="320" y="110" width="36" height="60" rx="10" fill="#619E85"/>
+    <text x="338" y="195" text-anchor="middle" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Sat</text>
+
+    <!-- Sun -->
+    <rect x="378" y="120" width="36" height="50" rx="10" fill="#619E85"/>
+    <text x="396" y="195" text-anchor="middle" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Sun</text>
+  </g>
+
+  <rect x="140" y="520" width="440" height="70" rx="20" fill="#EEF7F2" stroke="#BCE3CF" stroke-width="2"/>
+  <text x="165" y="550" fill="#4E8470" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">WEEKLY INSIGHT</text>
+  <text x="165" y="572" fill="#1C2E26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14">"Recent logs show a gentler, more serene rhythm heading into the weekend."</text>
+
+  <!-- Sağ Kartlar: Local-First & SwiftData -->
+  <rect x="680" y="140" width="480" height="210" rx="30" fill="#FFFFFF" stroke="#F0E5DF" stroke-width="2"/>
+  <rect x="720" y="175" width="40" height="40" rx="14" fill="#619E85"/>
+  <text x="730" y="202" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20">💾</text>
+  <text x="775" y="202" fill="#301E17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="22" font-weight="700">Offline-First &amp; SwiftData</text>
+  <text x="720" y="248" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16">Zero external servers. Every stress entry, breathing counter, and note is stored solely in local device storage.</text>
+  <rect x="720" y="285" width="180" height="38" rx="12" fill="#EEF7F2"/>
+  <text x="735" y="310" fill="#4E8470" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600">100% On-Device</text>
+
+  <rect x="680" y="380" width="480" height="210" rx="30" fill="#FFFFFF" stroke="#F0E5DF" stroke-width="2"/>
+  <rect x="720" y="415" width="40" height="40" rx="14" fill="#8F84C2"/>
+  <text x="730" y="442" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20">📦</text>
+  <text x="775" y="442" fill="#301E17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="22" font-weight="700">JSON Export &amp; Full Erasure</text>
+  <text x="720" y="488" fill="#755E54" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16">Export your full diary as readable JSON anytime, or permanently wipe all app records with a single tap in Settings.</text>
+  <rect x="720" y="525" width="190" height="38" rx="12" fill="#F6F3FA"/>
+  <text x="735" y="550" fill="#8F84C2" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600">Total Data Sovereignty</text>
+</svg>

@@ -580,4 +580,117 @@ Email: laphedusapp@gmail.com`;
       if (appNameEl) appNameEl.textContent = 'Expensly';
     }
   }
+
+  if (app === 'breathe-calm' && contentEl) {
+    if (appNameEl) appNameEl.textContent = 'Breathe & Calm';
+
+    if (isPrivacy) {
+      document.title = 'Privacy Policy | Breathe & Calm - Laphedus';
+      const breathePrivacy = `Breathe & Calm Privacy Policy
+Last Updated: September 19, 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+Your Privacy is Sacred.
+In Breathe & Calm, your mental well-being, personal reflections, and stress logs belong solely to you. The app is built on strict "offline-first" principles: no personal data ever leaves your device.
+
+1. Offline-First & Local-Only Storage
+Your journal reflections, stress logs, breathing exercise history, and app preferences are stored exclusively on your device using Apple SwiftData. They are never transmitted to remote servers, external cloud databases, or third-party storage.
+
+2. Zero Analytics, No Ads & No Tracking
+There are no third-party ad networks (such as Google AdMob or Meta Audience Network), user profiling frameworks, or hidden analytics trackers in this app. Under Apple's App Tracking Transparency (ATT) guidelines, we never track you across apps or websites.
+
+3. Biometric Hardware Security (Face ID / Touch ID)
+When the App Lock feature is enabled, biometric verification occurs entirely within Apple's Secure Enclave hardware on your device. The developer (Laphedus) has zero access to your biometric samples, facial scans, fingerprints, or device passcode.
+
+4. Local Notifications & On-Device Scheduling
+Mindfulness pauses and gentle check-in reminders are scheduled locally by your device's operating system (iOS UserNotifications). No push tokens, device IDs, or remote messaging servers are utilized.
+
+5. In-App Subscriptions & Billing Privacy
+Pro memberships and purchases are processed directly through Apple StoreKit. Your payment details and credit card credentials remain safely managed by Apple. The developer has zero access to your financial information.
+
+6. Data Portability & Total Deletion (KVKK / GDPR)
+You are the sole custodian of your data. You can export all entries at any time as a clean, human-readable JSON backup from Settings, or erase all history permanently and irreversibly with a single tap in Settings > Delete All Data.
+
+7. Children's Privacy & Direct Contact
+This app does not knowingly collect personal information from children under 13. If you have questions about this privacy policy or our local-first practices, contact the developer directly:
+Developer: Laphedus
+Email: laphedusapp@gmail.com`;
+      setPreContent(contentEl, breathePrivacy, 'defaultPrivacy');
+    }
+
+    if (isTerms) {
+      document.title = 'Terms of Use | Breathe & Calm - Laphedus';
+      const breatheTerms = `Breathe & Calm Terms of Use & Legal Agreement
+Last Updated: September 19, 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+By downloading, installing, or using Breathe & Calm, you agree to be bound by these Terms of Use and the standard Apple End User License Agreement (EULA).
+
+1. Medical & Health Disclaimer (Critical Notice)
+This application is NOT a medical device, clinical psychiatric instrument, diagnostic tool, or emergency psychological therapy service. Breathwork exercises, cognitive reframing tools, and soundscapes are designed solely for general wellness, relaxation, and mindfulness. They cannot substitute for professional diagnosis, psychiatric counsel, or clinical treatment. Individuals with cardiovascular, respiratory, epileptic, or acute psychiatric conditions should consult a licensed physician before engaging in paced breathwork. If you experience acute distress or thoughts of self-harm, please immediately contact emergency services (e.g. 911 / 112) or local crisis hotlines.
+
+2. License to Use & Intellectual Property
+The developer (Laphedus) grants you a personal, non-commercial, non-transferable, revocable license to use the app on Apple-branded products. App designs, 3D Claymorphism interfaces, original acoustic sound recordings, algorithms, and trademarks belong exclusively to Laphedus and may not be extracted, reproduced, or reverse-engineered.
+
+3. Pro Subscriptions, Billing & Cancellations
+Optional Pro subscriptions renew automatically unless cancelled at least 24 hours prior to the conclusion of the active billing cycle. Payment is billed directly to your Apple ID account upon purchase confirmation. You may manage or cancel your subscription at any time via iOS Settings > Apple ID > Subscriptions.
+
+4. User Responsibilities & Device Security
+Because your reflections and logs are stored strictly on-device, maintaining device security (passcode, biometric sensors) and securing exported backup files is entirely your responsibility. In the event of device damage, loss, or OS reset without a prior local backup, data cannot be recovered by the developer.
+
+5. Disclaimer of Warranties & Limitation of Liability
+The service is provided on an "as-is" and "as-available" basis without warranties of any kind. To the fullest extent permitted by law, Laphedus is not liable for indirect, incidental, or consequential damages arising from the use of or inability to use the application.
+
+6. Modifications & Contact
+These terms may be updated periodically. Continued use constitutes acceptance of updated terms. For legal notices, questions, or support:
+Developer: Laphedus
+Email: laphedusapp@gmail.com`;
+      setPreContent(contentEl, breatheTerms, 'defaultTerms');
+    }
+
+    if (isSupport) {
+      document.title = 'Support | Breathe & Calm - Laphedus';
+      const breatheSupport = `Breathe & Calm Customer Care & Support
+
+Thank you for using Breathe & Calm. We are committed to providing a calm, reliable, and respectful experience.
+
+Common Inquiries & Assistance:
+- Breathwork Guidance: How to customize tempo, vibration, and audio chimes in the Breathe tab.
+- Data Backup & Export: How to export your journal as JSON via Settings > Data Management.
+- Face ID / Biometric Lock: How to enable hardware biometric lock for your reflections.
+- Subscriptions & Restores: Manage or restore Pro features directly via Apple ID Subscriptions.
+
+Direct Contact:
+For bug reports, feature requests, or technical support, contact the developer directly:
+Developer: Laphedus
+Email: laphedusapp@gmail.com
+
+Please include your iOS version and iPhone model when reporting technical issues.`;
+      setPreContent(contentEl, breatheSupport, 'defaultSupport');
+    }
+
+    if (isDeletion) {
+      document.title = 'Data Deletion | Breathe & Calm - Laphedus';
+      const breatheDeletion = `Breathe & Calm - Data Deletion & Privacy Sovereignty
+
+Breathe & Calm operates on an offline-first architecture. We do not operate remote user accounts, cloud databases, or remote tracking servers.
+
+Because your data is never uploaded to our servers, you have total, instant control over deletion directly on your device:
+
+How to Erase All Data Instantly:
+1. Open Breathe & Calm on your iPhone or iPad.
+2. Tap the Settings icon (top right).
+3. Scroll to the "Data Management & Privacy" section.
+4. Tap "Delete All History & Data".
+5. Confirm by tapping "Delete Everything".
+All journal reflections, breath counters, and mood logs will be immediately and irreversibly purged from local device storage.
+
+Alternatively, uninstalling the application from iOS will automatically purge all local SwiftData sandbox stores from your device.
+
+Need Additional Verification?
+If you have any questions regarding data privacy or erasure, please contact:
+Email: laphedusapp@gmail.com`;
+      setPreContent(contentEl, breatheDeletion, 'defaultDeletion');
+    }
+  }
 });

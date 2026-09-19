@@ -1,0 +1,60 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="screen1Bg" x1="60" y1="40" x2="1220" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2F8F5"/>
+      <stop offset="0.5" stop-color="#E5F0EB"/>
+      <stop offset="1" stop-color="#DAEAE3"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F7FAF8"/>
+    </linearGradient>
+    <linearGradient id="orbGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#619E85"/>
+      <stop offset="0.6" stop-color="#8F84C2"/>
+      <stop offset="1" stop-color="#E68770"/>
+    </linearGradient>
+    <filter id="clayShadow1" x="80" y="80" width="480" height="560" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#345B4B" flood-opacity="0.12"/>
+    </filter>
+    <filter id="orbShadow" x="620" y="120" width="460" height="460" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="36" flood-color="#619E85" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Arka Plan -->
+  <rect width="1280" height="720" rx="36" fill="#EFF5F2"/>
+  <rect x="40" y="40" width="1200" height="640" rx="32" fill="url(#screen1Bg)"/>
+
+  <!-- Sol Telefon / Panel Mockup -->
+  <g filter="url(#clayShadow1)">
+    <rect x="100" y="90" width="420" height="540" rx="36" fill="url(#cardGrad)" stroke="#FFFFFF" stroke-width="6"/>
+  </g>
+
+  <!-- Panel İçi Header -->
+  <rect x="140" y="130" width="48" height="48" rx="16" fill="#619E85"/>
+  <circle cx="164" cy="154" r="10" fill="#FFFFFF"/>
+  <text x="204" y="162" fill="#1C2E26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="24" font-weight="700">Breathe &amp; Calm</text>
+  <text x="140" y="224" fill="#1C2E26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="36" font-weight="800">Box Breathing</text>
+  <text x="140" y="260" fill="#5F756C" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="18">Inhale 4s · Hold 4s · Exhale 4s · Rest 4s</text>
+
+  <!-- Mini Nefes Dairesi -->
+  <circle cx="310" cy="390" r="100" fill="#E8F4EE" stroke="#A3CEBD" stroke-width="4"/>
+  <circle cx="310" cy="390" r="76" fill="#619E85" opacity="0.15"/>
+  <circle cx="310" cy="390" r="50" fill="#619E85"/>
+  <text x="310" y="396" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="20" font-weight="700">INHALE</text>
+
+  <rect x="140" y="530" width="340" height="60" rx="20" fill="#619E85"/>
+  <text x="310" y="567" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="18" font-weight="700">Start 4-Minute Session</text>
+
+  <!-- Sağ Tanıtım Alanı -->
+  <g filter="url(#orbShadow)">
+    <circle cx="850" cy="340" r="150" fill="url(#orbGrad)"/>
+    <circle cx="850" cy="340" r="185" stroke="#619E85" stroke-width="4" stroke-dasharray="14 12" opacity="0.4"/>
+    <circle cx="850" cy="340" r="215" stroke="#8F84C2" stroke-width="2" stroke-dasharray="10 10" opacity="0.3"/>
+  </g>
+
+  <rect x="620" y="520" width="460" height="110" rx="26" fill="#FFFFFF" opacity="0.9" stroke="#DAEAE3" stroke-width="2"/>
+  <text x="650" y="560" fill="#1C2E26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="22" font-weight="700">Scientifically Grounded Rhythms</text>
+  <text x="650" y="595" fill="#5F756C" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="16">Activates the parasympathetic nervous system in under two minutes.</text>
+</svg>

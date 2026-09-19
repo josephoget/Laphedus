@@ -136,5 +136,69 @@
       "https://play-lh.googleusercontent.com/vzXroMn6z6NCJbCON2uXx6PGMY_hG_PH8IeKLYC9I9ot074ZjvSqIbiV49p8n6zL-76Q7cUn4Rt29fcwdMSfAQ=w1052-h592-rw"
     ],
     "category": "Tools"
+  },
+  {
+    "slug": "breathe-calm",
+    "name": "Breathe & Calm - Stress & Mind Journal",
+    "short_description": "Scientific breathwork, cognitive stress relief tools, and private offline journaling for a calmer mind.",
+    "long_description": "Breathe & Calm is an offline-first iOS wellness sanctuary designed to ease stress, soothe anxiety, and interrupt mental looping. Grounded in science, the app offers paced breathwork routines (Box Breathing, 4-7-8, Deep Release), cognitive journaling tools (Cognitive Distortion Reframing, Circle of Control, Mind Dump), and weekly emotional rhythm analytics. Built with strict privacy-first principles: no accounts required, no tracking SDKs, and local SwiftData storage secured behind Face ID / Touch ID hardware authentication.",
+    "play_store_url": "",
+    "app_store_url": "",
+    "has_account": false,
+    "has_terms": true,
+    "has_support": true,
+    "icon_url": "assets/image/breathe-calm-icon.svg",
+    "screenshots": [
+      "assets/image/breathe-calm-screen-1.svg",
+      "assets/image/breathe-calm-screen-2.svg",
+      "assets/image/breathe-calm-screen-3.svg"
+    ],
+    "category": "Health & Fitness",
+    "eyebrow": "Mental Well-Being, Offline & Private",
+    "hero_title": "Take a breath. Reclaim your headspace in minutes.",
+    "hero_description": "A mindful iOS companion combining paced scientific breathwork, cognitive stress reframing, and local-only journaling to restore calm whenever life feels overwhelming.",
+    "intro": "Breathe & Calm was built for those who value privacy, simplicity, and scientifically grounded peace of mind. Without invasive cloud servers or overwhelming features, it delivers tactile, focused tools for your daily mental well-being.",
+    "primary_cta_label": "Explore App Features",
+    "secondary_cta_label": "Read Privacy Policy",
+    "highlights": [
+      {
+        "title": "Guided Paced Breathwork",
+        "description": "Engage your parasympathetic nervous system with Box Breathing (4-4-4-4), Relaxing (4-7-8), and custom calming tempos."
+      },
+      {
+        "title": "Cognitive Stress Reframing",
+        "description": "Deconstruct anxiety triggers, untangle cognitive distortions, and regain clarity with the Circle of Control tool."
+      },
+      {
+        "title": "100% Offline & Biometric Security",
+        "description": "Your journal and stress entries are saved exclusively on your device via SwiftData, protected with Apple Face ID hardware lock."
+      }
+    ],
+    "benefits": [
+      "Quick relief during stress peaks and panic surges",
+      "Zero accounts, zero ads, and zero third-party tracking",
+      "Tactile Claymorphism design crafted for emotional serenity"
+    ],
+    "how_it_works": [
+      {
+        "title": "Pause & Breathe",
+        "description": "Start a short 2 to 4 minute breathwork session to physically down-regulate nervous system arousal."
+      },
+      {
+        "title": "Log & Reframe",
+        "description": "Dump your thoughts onto paper and use guided prompts to challenge automatic negative thoughts."
+      },
+      {
+        "title": "Track Your Rhythm",
+        "description": "Review your weekly pulse and discover time-of-day stress patterns without compromising personal privacy."
+      }
+    ],
+    "trust_points": [
+      "No account required to use all core features",
+      "All health and journal reflections stay strictly on your device",
+      "Pro upgrades and subscriptions managed securely via Apple StoreKit"
+    ],
+    "cta_title": "A calmer, more centered mind starts with a single mindful breath.",
+    "cta_description": "Experience thoughtful, privacy-first wellness on your iPhone and iPad."
   }
 ]
