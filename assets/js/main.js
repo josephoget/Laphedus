@@ -12,18 +12,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     grid.innerHTML = apps.map(app => `
       <article class="card">
-        <div class="card-media">
-          <img src="${app.icon_url}" alt="${app.name} icon" loading="lazy" />
+        <div class="card-top">
+          <img class="app-squircle-icon" src="${app.icon_url}" alt="${app.name} icon" loading="lazy" />
+          <div class="card-top-info">
+            <span class="card-category">${app.category || 'App'}</span>
+            <h3 class="card-title">${app.name}</h3>
+          </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title">${app.name}</h3>
           <p class="card-desc">${app.short_description}</p>
           <div class="card-actions">
             <a class="btn primary" href="app.html?slug=${encodeURIComponent(app.slug)}">Details</a>
             ${app.play_store_url
               ? `<a class="btn" href="${app.play_store_url}" target="_blank" rel="noopener">Store</a>`
               : app.external_url
-                ? `<a class="btn" href="${app.external_url}">${app.external_label ?? 'Open'}</a>`
+                ? `<a class="btn" href="${app.external_url}" target="_blank" rel="noopener">${app.external_label ?? 'Open'}</a>`
                 : ''}
           </div>
         </div>

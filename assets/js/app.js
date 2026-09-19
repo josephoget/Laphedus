@@ -22,7 +22,7 @@ function renderStamperPage(app) {
         <h1 class="stamper-display">${app.hero_title ?? app.name}</h1>
         <p class="stamper-summary">${app.hero_description ?? app.short_description}</p>
         <div class="stamper-actions">
-          <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Open on Google Play'}</a>
+          <a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">${app.primary_cta_label ?? 'Get on Google Play'}</a>
           ${legalActions}
         </div>
         <div class="stamper-inline-meta">
@@ -74,9 +74,9 @@ function renderStamperPage(app) {
 
 function renderGenericPage(app) {
   const primaryAction = app.play_store_url
-    ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Open on Google Play</a>`
+    ? `<a class="btn primary" href="${app.play_store_url}" target="_blank" rel="noopener">Get on Google Play</a>`
     : app.external_url
-      ? `<a class="btn primary" href="${app.external_url}">${app.external_label ?? 'Open Details'}</a>`
+      ? `<a class="btn primary" href="${app.external_url}" target="_blank" rel="noopener">${app.external_label ?? 'Open Details'}</a>`
       : '';
   const isAccountless = app.has_account === false;
   const legalActions = [
@@ -96,7 +96,7 @@ function renderGenericPage(app) {
           <div class="stamper-actions">
             ${primaryAction}
             ${legalActions}
-            <a class="btn" href="index.html">Other Apps</a>
+            <a class="btn" href="index.html">All Apps</a>
           </div>
         </div>
         <div class="generic-visual">
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const app = apps.find(entry => entry.slug === slug);
     if (!app) throw new Error('App not found');
 
-    document.title = `${app.name} - LaphedusApp`;
+    document.title = `${app.name} - Laphedus`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', app.short_description);
     document.body.classList.add('app-detail-page', `app-theme-${app.slug}`);
 

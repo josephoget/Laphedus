@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = qs('app');
   const appNameEl = document.getElementById('appName');
   const backEl = document.getElementById('backToApp');
-  const isPrivacy = /privacy\.html$/.test(window.location.pathname);
-  const isTerms = /terms\.html$/.test(window.location.pathname);
-  const isSupport = /support\.html$/.test(window.location.pathname);
-  const isDeletion = /account-deletion\.html$/.test(window.location.pathname);
+  const isPrivacy = /privacy(\.html)?$/.test(window.location.pathname);
+  const isTerms = /terms(\.html)?$/.test(window.location.pathname);
+  const isSupport = /support(\.html)?$/.test(window.location.pathname);
+  const isDeletion = /account-deletion(\.html)?$/.test(window.location.pathname);
   const contentEl = document.getElementById('policyContent');
 
   if (appNameEl) appNameEl.textContent = app ? app : 'General';

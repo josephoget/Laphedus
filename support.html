@@ -3,25 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Support and Contact</title>
-  <meta name="description" content="Support and contact information for LaphedusApp apps." />
+  <title>Support & Contact - Laphedus</title>
+  <meta name="description" content="Support and contact information for Laphedus apps." />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .policy-section { padding: 24px 0 48px; }
-    .policy-card { border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: #0f172a; }
-    .policy-card h1 { margin: 0 0 8px; font-size: 26px; }
-    .policy-card h2 { margin: 16px 0 8px; font-size: 18px; }
-    .muted { color: var(--muted); }
-  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <a href="index.html" class="logo">LaphedusApp</a>
+        <a href="index.html" class="logo">Laphedus</a>
       </div>
       <nav class="nav">
         <a href="index.html">Home</a>
+        <a href="index.html#apps">Apps</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="support.html" class="active">Support</a>
@@ -34,33 +28,43 @@
   <main>
     <section class="policy-section">
       <div class="container">
-        <div class="policy-card">
+        <article class="policy-card">
+          <span class="policy-badge">Customer Care & Support</span>
           <h1>Support and Contact</h1>
-          <p class="muted">App: <strong id="appName">General</strong></p>
+          <p class="muted">Application Scope: <strong id="appName">General</strong></p>
 
           <div id="policyContent"></div>
 
           <div id="defaultSupport">
             <h2>Support Channel</h2>
-            <p>For questions, feedback, and technical support requests about the apps, please use the official developer channels.</p>
+            <p>For questions, feedback, and technical support requests about our apps, you can reach out directly via email at <a href="mailto:laphedusapp@gmail.com">laphedusapp@gmail.com</a>.</p>
 
             <h2>Helpful Details to Share</h2>
-            <p>Device model, operating system version, app version, and steps to reproduce the issue help speed up the review process.</p>
+            <p>To help us resolve your inquiry as quickly as possible, please include:</p>
+            <ul>
+              <li>The name and version of the app</li>
+              <li>Your device model and operating system version</li>
+              <li>A brief description of the issue or steps to reproduce it</li>
+            </ul>
           </div>
 
-          <div class="app-actions" style="margin-top:16px;">
-            <a class="btn" id="backToApp" href="index.html">Back to App</a>
+          <div class="app-actions">
+            <a class="btn primary" id="backToApp" href="index.html">← Back to App</a>
+            <a class="btn" href="mailto:laphedusapp@gmail.com">Send Email</a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <small>© <span id="year"></span> LaphedusApp</small>
-      <div class="links">
+      <small>© <span id="year"></span> Laphedus. All rights reserved.</small>
+      <div class="footer-links">
         <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="account-deletion.html">Account Deletion</a>
       </div>
     </div>
   </footer>
