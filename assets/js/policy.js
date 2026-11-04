@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     backEl.href = app ? `app.html?slug=${encodeURIComponent(app)}` : 'index.html';
   }
 
+  // Terms are rendered separately; privacy, support and deletion remain unchanged.
+  if (isTerms) return;
+
   if (app === 'kayfe' && contentEl) {
     if (isPrivacy) {
       const kayfePrivacy = `Introduction

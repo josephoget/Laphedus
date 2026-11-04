@@ -11,7 +11,8 @@
       "https://play-lh.googleusercontent.com/aLaiJHE20GL7X8lwvixLUMmNnvdzhRXrigLgD9MVH2XDWTuO0nGYTvFhUOLxBBSBtaw=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/NgnJEEngQMi20nITjcVG_-8ZeqbsiNE4JoGU7dbCMWoBbgr0JHBjyb5Zjlx9SU3zEQ=w1052-h592-rw"
     ],
-    "category": "Entertainment"
+    "category": "Entertainment",
+    "has_terms": true
   },
   {
     "slug": "dinamik-ada",
@@ -87,7 +88,8 @@
       "Premium access is handled with Google Play Billing"
     ],
     "cta_title": "Keep your favorite moments in a format that feels worth saving.",
-    "cta_description": "If you want a photo app that feels more personal, more intentional, and easier to own, Stamper is designed for that."
+    "cta_description": "If you want a photo app that feels more personal, more intentional, and easier to own, Stamper is designed for that.",
+    "has_terms": true
   },
   {
     "slug": "expensly",
@@ -103,7 +105,8 @@
       "https://play-lh.googleusercontent.com/UimvRaTVoKai-2R7OeOMO7tspBHq27FxbsBXs_y83IR8Xb2h83C0zDNfS8io8x1_sqZL=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/CSalmHaBwRMsKfB4axCyBK4rN_G7wEWMhlVaNWEdKiQd0BWTau_zggmfd8uoWs6WXw=w1052-h592-rw"
     ],
-    "category": "Finance"
+    "category": "Finance",
+    "has_terms": true
   },
   {
     "slug": "taptap",
@@ -118,9 +121,9 @@
       "https://play-lh.googleusercontent.com/Djo0eBn_hlDAObmILi5_2wJM78N4KCJIEZP0dkSjHRrYSs0b4dxaERfxtZvWuGeSPbyM=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/UZyK4O_caM1VGP-NzqMOrRuj5cvZfnF5dkoyW6TZ6cD2rZUiCUd0fDEyV2fRNK54CtYo=w1052-h592-rw"
     ],
-    "category": "Tools"
-  }
-  ,
+    "category": "Tools",
+    "has_terms": true
+  },
   {
     "slug": "nowa4",
     "name": "Nowa4",
@@ -135,7 +138,8 @@
       "https://play-lh.googleusercontent.com/OMVR22aM6kwpobcctvmBuoDTwfFQMt1QZtWRxhbwuKqNFJqgmD4Tge_4-VlFXqRbU7UB8_NYwlFaIJ4rYS5qBh0=w1052-h592-rw",
       "https://play-lh.googleusercontent.com/vzXroMn6z6NCJbCON2uXx6PGMY_hG_PH8IeKLYC9I9ot074ZjvSqIbiV49p8n6zL-76Q7cUn4Rt29fcwdMSfAQ=w1052-h592-rw"
     ],
-    "category": "Tools"
+    "category": "Tools",
+    "has_terms": true
   },
   {
     "slug": "breathe-calm",
