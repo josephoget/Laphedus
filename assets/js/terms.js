@@ -14,7 +14,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     const privacy = document.createElement('a');
     privacy.href = 'privacy.html?app=' + encodeURIComponent(slug);
     privacy.textContent = 'Read the privacy policy for ' + app.name;
-    content.appendChild(privacy);
+    const related = document.createElement('p');
+    related.appendChild(privacy);
+    const support = document.createElement('a');
+    support.href = 'support.html?app=' + encodeURIComponent(slug);
+    support.textContent = 'Support';
+    related.append(' · ', support);
+    if (['kayfe', 'nowa4', 'breathe-calm'].includes(slug)) {
+      const deletion = document.createElement('a');
+      deletion.href = 'account-deletion.html?app=' + encodeURIComponent(slug);
+      deletion.textContent = 'Account / data deletion';
+      related.append(' · ', deletion);
+    }
+    content.appendChild(related);
   } catch (error) {
     content.textContent = 'The selected app’s terms could not be loaded. Select an app below or contact laphedusapp@gmail.com.';
   }
