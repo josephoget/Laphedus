@@ -132,11 +132,7 @@ function renderShowcasePage(app, allApps) {
 
     <section class="stamper-showcase">
       <div class="stamper-showcase-copy">
-        <div class="showcase-eyebrow-row">
-          <p class="stamper-eyebrow">${esc(app.eyebrow ?? 'Digital memories, kept simple')}</p>
-          ${app.platform ? `<span class="meta-pill meta-pill-${esc(app.platform.toLowerCase())}">${esc(app.platform)}</span>` : ''}
-          ${app.status ? `<span class="meta-pill meta-pill-status">${esc(app.status)}</span>` : ''}
-        </div>
+        <p class="stamper-eyebrow">${[app.eyebrow ?? 'Digital memories, kept simple', app.platform, app.status].filter(Boolean).map(esc).join(' &middot; ')}</p>
         <h1 class="stamper-display">${esc(app.hero_title ?? app.name)}</h1>
         <p class="stamper-summary">${esc(app.hero_description ?? app.short_description)}</p>
         <div class="stamper-actions">
@@ -272,11 +268,7 @@ function renderGenericPage(app, allApps) {
     <section class="generic-app-shell">
       <section class="generic-showcase">
         <div class="generic-showcase-copy">
-          <div class="showcase-eyebrow-row">
-            <p class="stamper-eyebrow">${esc(app.category ?? 'App')}</p>
-            ${app.platform ? `<span class="meta-pill meta-pill-${esc(app.platform.toLowerCase())}">${esc(app.platform)}</span>` : ''}
-            ${app.status ? `<span class="meta-pill meta-pill-status">${esc(app.status)}</span>` : ''}
-          </div>
+          <p class="stamper-eyebrow">${[app.category ?? 'App', app.platform, app.status].filter(Boolean).map(esc).join(' &middot; ')}</p>
           <h1 class="generic-display">${esc(app.name)}</h1>
           <p class="generic-summary">${esc(app.short_description)}</p>
           <div class="stamper-actions">

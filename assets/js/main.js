@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('app-grid');
   const filtersEl = document.getElementById('app-filters');
   const fallback = document.getElementById('app-grid-fallback');
-  const heroStage = document.getElementById('hero-stage');
   const esc = window.LaphedusUI?.escapeHtml ?? (v => String(v ?? ''));
 
   const getIconFallback = (app) => app.fallback_icon_url || 'assets/image/laphedus-store-logo.svg';
@@ -23,102 +22,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `${detailsBtn}<a class="btn subtle" href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy</a>`;
   };
 
-  const renderPlatformPill = (app) => {
-    if (!app.platform) return '';
-    const slug = app.platform.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    return `<span class="meta-pill meta-pill-${esc(slug)}">${esc(app.platform)}</span>`;
-  };
-
-  const renderStatusPill = (app) => {
-    if (!app.status) return '';
-    return `<span class="meta-pill meta-pill-status">${esc(app.status)}</span>`;
-  };
-
-  const initHeroStage = (apps) => {
-    if (!heroStage) return;
-    const spotlightSlugs = ['breathe-calm', 'stamper', 'dinamik-ada'];
-    const showcaseApps = spotlightSlugs
-      .map(slug => apps.find(a => a.slug === slug))
-      .filter(Boolean);
-    if (!showcaseApps.length) return;
-
-    const tabsEl = heroStage.querySelector('.hero-stage-tabs');
-    const viewportEl = heroStage.querySelector('.hero-stage-viewport');
-    if (!tabsEl || !viewportEl) return;
-
-    let currentSlug = showcaseApps[0].slug;
-
-    const renderStage = (slug) => {
-      const app = showcaseApps.find(a => a.slug === slug) || showcaseApps[0];
-      const screen = (app.screenshots && app.screenshots[0]) || 'assets/image/laphedus-store-banner.svg';
-      const fallbackIcon = esc(getIconFallback(app));
-
-      tabsEl.querySelectorAll('.hero-stage-tab').forEach(btn => {
-        const active = btn.getAttribute('data-slug') === app.slug;
-        btn.classList.toggle('is-active', active);
-        btn.setAttribute('aria-selected', String(active));
-      });
-
-      viewportEl.innerHTML = `
-        <div class="hero-stage-bar">
-          <div class="hero-stage-identity">
-            <img
-              src="${esc(app.icon_url)}"
-              alt="${esc(app.name)} icon"
-              width="38"
-              height="38"
-              onerror="this.onerror=null;this.src='${fallbackIcon}';"
-            />
-            <div>
-              <strong>${esc(app.name)}</strong>
-              <span>${esc(app.category || 'App')} · ${esc(app.platform || 'Mobile')}</span>
-            </div>
-          </div>
-          <a class="hero-stage-link" href="app.html?slug=${encodeURIComponent(app.slug)}">Open &rarr;</a>
-        </div>
-        <a class="hero-stage-frame app-accent-${esc(app.slug)}" href="app.html?slug=${encodeURIComponent(app.slug)}" aria-label="View ${esc(app.name)}">
-          <img src="${esc(screen)}" alt="${esc(app.name)} interface preview" />
-        </a>
-        <p class="hero-stage-caption">${esc(app.short_description)}</p>
-      `;
-    };
-
-    tabsEl.innerHTML = showcaseApps.map(app => `
-      <button
-        type="button"
-        role="tab"
-        class="hero-stage-tab${app.slug === currentSlug ? ' is-active' : ''}"
-        data-slug="${esc(app.slug)}"
-        aria-selected="${app.slug === currentSlug ? 'true' : 'false'}"
-      >${esc(app.name.split(' - ')[0])}</button>
-    `).join('');
-
-    tabsEl.addEventListener('click', (event) => {
-      const btn = event.target.closest('.hero-stage-tab');
-      if (!btn) return;
-      const nextSlug = btn.getAttribute('data-slug');
-      if (!nextSlug || nextSlug === currentSlug) return;
-      currentSlug = nextSlug;
-      renderStage(currentSlug);
-    });
-
-    renderStage(currentSlug);
+  const renderMetaLine = (app, prefix = '') => {
+    const parts = [
+      prefix,
+      app.category || 'App',
+      app.platform || '',
+      app.status || ''
+    ].filter(Boolean);
+    return parts.map(part => esc(part)).join(' &middot; ');
   };
 
   const renderFeaturedCard = (app) => {
     const fallbackIcon = esc(getIconFallback(app));
-    const screens = Array.isArray(app.screenshots) ? app.screenshots.slice(0, 2) : [];
-    const highlights = Array.isArray(app.highlights) ? app.highlights.slice(0, 3) : [];
+    const preview = Array.isArray(app.screenshots) && app.screenshots.length > 0 ? app.screenshots[0] : '';
 
     return `
-      <article class="card card-featured app-accent-${esc(app.slug)}">
+      <article class="card card-featured">
         <div class="card-featured-content">
-          <div class="card-badges">
-            <span class="meta-pill meta-pill-featured">Featured</span>
-            ${renderPlatformPill(app)}
-            <span class="card-category">${esc(app.category || 'App')}</span>
-            ${renderStatusPill(app)}
-          </div>
+          <p class="card-meta">${renderMetaLine(app, 'Featured')}</p>
           <div class="card-top card-top-featured">
             <img
               class="app-squircle-icon app-squircle-lg"
@@ -132,23 +53,14 @@ document.addEventListener('DOMContentLoaded', async () => {
               <p class="card-desc card-desc-featured">${esc(app.short_description)}</p>
             </div>
           </div>
-          ${highlights.length ? `
-            <ul class="featured-highlights">
-              ${highlights.map(item => `<li>${esc(item.title)}</li>`).join('')}
-            </ul>
-          ` : ''}
           <div class="card-actions">
             ${getStoreButton(app, true)}
           </div>
         </div>
-        ${screens.length ? `
-          <div class="card-featured-visual">
-            ${screens.map((src, index) => `
-              <a class="featured-screen-frame" href="app.html?slug=${encodeURIComponent(app.slug)}" aria-label="${esc(app.name)} preview ${index + 1}">
-                <img src="${esc(src)}" alt="${esc(app.name)} preview ${index + 1}" loading="lazy" />
-              </a>
-            `).join('')}
-          </div>
+        ${preview ? `
+          <a class="featured-preview" href="app.html?slug=${encodeURIComponent(app.slug)}" aria-label="${esc(app.name)} interface preview">
+            <img src="${esc(preview)}" alt="${esc(app.name)} interface preview" loading="lazy" />
+          </a>
         ` : ''}
       </article>
     `;
@@ -158,27 +70,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const fallbackIcon = esc(getIconFallback(app));
 
     return `
-      <article class="card card-studio app-accent-${esc(app.slug)}">
-        <a class="card-stage" href="app.html?slug=${encodeURIComponent(app.slug)}" aria-label="View ${esc(app.name)} details">
-          <div class="card-stage-top">
-            <span class="card-category">${esc(app.category || 'App')}</span>
-            <div class="card-stage-pills">
-              ${renderPlatformPill(app)}
-              ${renderStatusPill(app)}
-            </div>
+      <article class="card">
+        <div class="card-top">
+          <img
+            class="app-squircle-icon"
+            src="${esc(app.icon_url)}"
+            alt="${esc(app.name)} icon"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='${fallbackIcon}';"
+          />
+          <div class="card-top-info">
+            <p class="card-meta">${renderMetaLine(app)}</p>
+            <h3 class="card-title">${esc(app.name)}</h3>
           </div>
-          <div class="card-stage-icon-wrap">
-            <img
-              class="app-squircle-icon app-squircle-stage"
-              src="${esc(app.icon_url)}"
-              alt="${esc(app.name)} icon"
-              loading="lazy"
-              onerror="this.onerror=null;this.src='${fallbackIcon}';"
-            />
-          </div>
-        </a>
+        </div>
         <div class="card-body">
-          <h3 class="card-title">${esc(app.name)}</h3>
           <p class="card-desc">${esc(app.short_description)}</p>
           <div class="card-actions">
             ${getStoreButton(app)}
@@ -192,8 +98,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const res = await fetch('data/apps.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('apps.json could not be loaded');
     const apps = await res.json();
-
-    initHeroStage(apps);
 
     const categories = ['All', ...new Set(apps.map(app => app.category).filter(Boolean))];
     let activeCategory = 'All';
@@ -215,23 +119,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       filtersEl.innerHTML = categories.map(cat => `
         <button
           type="button"
-          class="filter-pill${cat === activeCategory ? ' is-active' : ''}"
+          class="filter-tab${cat === activeCategory ? ' is-active' : ''}"
           data-category="${esc(cat)}"
           aria-pressed="${cat === activeCategory ? 'true' : 'false'}"
         >${esc(cat)}</button>
       `).join('');
 
       filtersEl.addEventListener('click', (event) => {
-        const btn = event.target.closest('.filter-pill');
+        const btn = event.target.closest('.filter-tab');
         if (!btn) return;
         const nextCat = btn.getAttribute('data-category');
         if (!nextCat || nextCat === activeCategory) return;
 
         activeCategory = nextCat;
-        filtersEl.querySelectorAll('.filter-pill').forEach(pill => {
-          const isMatch = pill.getAttribute('data-category') === activeCategory;
-          pill.classList.toggle('is-active', isMatch);
-          pill.setAttribute('aria-pressed', String(isMatch));
+        filtersEl.querySelectorAll('.filter-tab').forEach(tab => {
+          const isMatch = tab.getAttribute('data-category') === activeCategory;
+          tab.classList.toggle('is-active', isMatch);
+          tab.setAttribute('aria-pressed', String(isMatch));
         });
         renderApps();
       });

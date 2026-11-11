@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/image/laphedus-store-logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -16,9 +16,8 @@
     <div class="container header-inner">
       <div class="brand">
         <a href="index.html" class="logo">
-          <img class="logo-mark" src="assets/image/laphedus-store-logo.svg" alt="" width="28" height="28" />
+          <img class="logo-mark" src="assets/image/laphedus-store-logo.svg" alt="" width="24" height="24" />
           <span>Laphedus</span>
-          <span class="logo-badge">Studio</span>
         </a>
       </div>
       <div class="header-controls">
@@ -27,7 +26,7 @@
           <a href="#apps">Apps</a>
           <a href="privacy.html">Privacy</a>
           <a href="support.html">Support</a>
-          <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" class="nav-cta" target="_blank" rel="noopener">Google Play <span aria-hidden="true">&#8599;</span></a>
+          <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" class="nav-external" target="_blank" rel="noopener">Google Play <span aria-hidden="true">&#8599;</span></a>
         </nav>
         <button type="button" class="theme-toggle" aria-label="Switch color theme" aria-pressed="false"></button>
         <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
@@ -39,44 +38,44 @@
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="hero-tag">Independent App Studio</span>
-          <h1>User-focused <span class="text-gradient">mobile apps.</span></h1>
-          <p>Practical, refined, and privacy-first mobile experiences crafted with care for iOS and Android.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#apps">Explore Apps</a>
-            <a class="btn" href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play Store</a>
-          </div>
-          <div class="hero-metrics">
-            <span>Crafted for iOS &amp; Android</span>
-            <span>Local-First Architecture</span>
-            <span>Zero Ad-Data Selling</span>
-          </div>
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Independent Mobile Studio</p>
+        <h1>Thoughtful mobile apps, built with care.</h1>
+        <p class="hero-lead">Simple, purposeful, and privacy-first tools crafted for iOS and Android.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#apps">Explore Apps</a>
+          <a class="btn" href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play &#8599;</a>
         </div>
 
-        <div id="hero-stage" class="hero-stage" aria-label="Interactive studio showcase">
-          <div class="hero-stage-tabs" role="tablist" aria-label="Featured applications">
-            <button type="button" role="tab" class="hero-stage-tab is-active" data-slug="breathe-calm" aria-selected="true">Breathe &amp; Calm</button>
-            <button type="button" role="tab" class="hero-stage-tab" data-slug="stamper" aria-selected="false">Stamper</button>
-            <button type="button" role="tab" class="hero-stage-tab" data-slug="dinamik-ada" aria-selected="false">Dynamic Pill</button>
-          </div>
-          <div class="hero-stage-viewport">
-            <div class="hero-stage-bar">
-              <div class="hero-stage-identity">
-                <img src="assets/image/breathe-calm-icon.svg" alt="Breathe &amp; Calm icon" width="38" height="38" />
-                <div>
-                  <strong>Breathe &amp; Calm - Stress &amp; Mind Journal</strong>
-                  <span>Health &amp; Fitness · iOS</span>
-                </div>
-              </div>
-              <a class="hero-stage-link" href="app.html?slug=breathe-calm">Open &rarr;</a>
-            </div>
-            <a class="hero-stage-frame app-accent-breathe-calm" href="app.html?slug=breathe-calm" aria-label="View Breathe &amp; Calm">
-              <img src="assets/image/breathe-calm-screen-1.svg" alt="Breathe &amp; Calm interface preview" />
-            </a>
-            <p class="hero-stage-caption">Scientific breathwork, cognitive stress relief tools, and private offline journaling for a calmer mind.</p>
-          </div>
+        <div class="hero-dock" aria-label="Studio app icons">
+          <a class="dock-item" href="app.html?slug=breathe-calm" title="Breathe &amp; Calm">
+            <img src="assets/image/breathe-calm-icon.svg" alt="Breathe &amp; Calm" width="52" height="52" />
+            <span>Breathe &amp; Calm</span>
+          </a>
+          <a class="dock-item" href="app.html?slug=stamper" title="Stamper">
+            <img src="assets/image/stamper-icon.svg" alt="Stamper" width="52" height="52" />
+            <span>Stamper</span>
+          </a>
+          <a class="dock-item" href="app.html?slug=dinamik-ada" title="Dynamic Pill">
+            <img src="assets/image/dinamik-ada-icon.svg" alt="Dynamic Pill" width="52" height="52" />
+            <span>Dynamic Pill</span>
+          </a>
+          <a class="dock-item" href="app.html?slug=kayfe" title="Kayfe">
+            <img src="https://play-lh.googleusercontent.com/ASFgeBRkxQNspVgFSoQo8NFIWsWVhVONOXCO4iA1esJXMOejSaaxJkS2rMuG3D8bnA=w480-h960-rw" alt="Kayfe" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
+            <span>Kayfe</span>
+          </a>
+          <a class="dock-item" href="app.html?slug=expensly" title="Expensly">
+            <img src="https://play-lh.googleusercontent.com/mtr4uc5I3fTIqP_slBIt2ZBOl_OlV_GOqTip3GcC4wSxb8sYTJEh_1l_U-NzS4AJUg=w480-h960-rw" alt="Expensly" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
+            <span>Expensly</span>
+          </a>
+          <a class="dock-item" href="app.html?slug=taptap" title="TapTap">
+            <img src="https://play-lh.googleusercontent.com/D9tIUs1b36Vc3mVJ12bF60oezAcOqHylj4p1msv5IAaypv0ne4qarSnBEszqy1HMQury=s512-rw" alt="TapTap" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
+            <span>TapTap</span>
+          </a>
+          <a class="dock-item" href="app.html?slug=nowa4" title="Nowa4">
+            <img src="https://play-lh.googleusercontent.com/f9Kh7vKGB315dubX_lbhwlipSXdEt09NwIFY_QUx3SuSdGeYI-PVITVrOG8gn7QudaKSexPwzPGbMvMDuRM9vGw=w480-h960-rw" alt="Nowa4" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
+            <span>Nowa4</span>
+          </a>
         </div>
       </div>
     </section>
@@ -85,10 +84,10 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Featured Apps</h2>
-            <p class="section-desc">iOS &amp; Android Studio Portfolio</p>
+            <h2>Apps</h2>
+            <p class="section-desc">iOS &amp; Android portfolio</p>
           </div>
-          <div id="app-filters" class="filter-bar" role="group" aria-label="Filter apps by category"></div>
+          <div id="app-filters" class="filter-tabs" role="group" aria-label="Filter apps by category"></div>
         </div>
         <div id="app-grid" class="app-grid" aria-live="polite"></div>
         <div id="app-grid-fallback" class="fallback" hidden>The app list could not be loaded. Please refresh the page.</div>
@@ -97,44 +96,29 @@
 
     <section id="about" class="about-section">
       <div class="container">
-        <div class="about-card">
+        <div class="about-layout">
           <div class="about-copy">
-            <span class="stamper-section-label">Studio Philosophy</span>
+            <p class="section-kicker">Studio Philosophy</p>
             <h2>About Laphedus</h2>
-            <p>Laphedus is an independent mobile application studio dedicated to crafting simple, purposeful, and intuitive tools. Every app is built with privacy-first principles and an uncompromising focus on user experience.</p>
+            <p>Laphedus is an independent mobile application studio dedicated to crafting simple, purposeful, and intuitive tools built around privacy-first principles and calm user experience.</p>
             <div class="about-actions">
               <a class="btn primary" href="mailto:laphedusapp@gmail.com">Contact Studio</a>
               <a class="btn" href="privacy.html">Privacy Standards</a>
             </div>
           </div>
 
-          <div class="about-pillars">
-            <div class="about-pillar">
-              <div class="about-pillar-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div>
-                <h3>Privacy-First</h3>
-                <p>No data brokering or invasive cross-app tracking. Clear, readable policies for every app.</p>
-              </div>
+          <div class="about-list">
+            <div class="about-row">
+              <h3>Privacy-first</h3>
+              <p>No data brokering or invasive cross-app tracking. Clear documentation for every app.</p>
             </div>
-            <div class="about-pillar">
-              <div class="about-pillar-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-              </div>
-              <div>
-                <h3>Local-First Storage</h3>
-                <p>Personal albums, stress logs, and expenses stay under your control on your own device.</p>
-              </div>
+            <div class="about-row">
+              <h3>Local-first storage</h3>
+              <p>Albums, stress journals, and expense records remain under your control on your device.</p>
             </div>
-            <div class="about-pillar">
-              <div class="about-pillar-icon" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.79 1.02 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-              </div>
-              <div>
-                <h3>Crafted Interfaces</h3>
-                <p>Clean typography, thoughtful tactile feedback, and zero unnecessary clutter.</p>
-              </div>
+            <div class="about-row">
+              <h3>Focused craft</h3>
+              <p>Quiet typography, thoughtful interactions, and zero unnecessary clutter.</p>
             </div>
           </div>
         </div>
@@ -144,9 +128,9 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <small>© <span id="year"></span> Laphedus. All rights reserved.</small>
+      <small>© <span id="year"></span> Laphedus</small>
       <div class="footer-links">
-        <a href="index.html#apps">All Apps</a>
+        <a href="index.html#apps">Apps</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="support.html">Support</a>
