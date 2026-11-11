@@ -447,7 +447,8 @@ function initLightbox(screenshots, appName) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const slug = qs('slug');
+  const rawSlug = qs('slug');
+  const slug = window.LaphedusUI?.normalizeAppSlug ? window.LaphedusUI.normalizeAppSlug(rawSlug) : rawSlug;
   const container = document.getElementById('app-detail');
   const fallback = document.getElementById('app-detail-fallback');
 

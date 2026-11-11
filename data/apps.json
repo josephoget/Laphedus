@@ -13,7 +13,8 @@
       "https://play-lh.googleusercontent.com/NgnJEEngQMi20nITjcVG_-8ZeqbsiNE4JoGU7dbCMWoBbgr0JHBjyb5Zjlx9SU3zEQ=w1052-h592-rw"
     ],
     "category": "Entertainment",
-    "has_terms": true
+    "has_terms": true,
+    "has_support": true
   },
   {
     "slug": "dinamik-ada",
@@ -100,9 +101,9 @@
     "slug": "expensly",
     "name": "Expensly - Expense Tracker",
     "platform": "Android",
-    "short_description": "Record and track your expenses easily.",
-    "long_description": "With Expensly, you can quickly record, categorize, and report your daily expenses. A clean interface and practical flows help improve your financial awareness.",
-    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "short_description": "Track expenses, budgets, accounts, recurring bills, and savings goals privately on your device.",
+    "long_description": "Expensly helps you record expenses and income, organize categories, manage multiple accounts and recurring payments, monitor monthly budgets and savings goals, view home screen widgets, and export CSV or JSON backups across 8 languages. Local-first by design with an ad-supported free tier and optional one-time Premium unlock via Google Play Billing and RevenueCat.",
+    "play_store_url": "https://play.google.com/store/apps/details?id=com.laphedus.masrafkaydedici.masrafkaydedici",
     "icon_url": "https://play-lh.googleusercontent.com/mtr4uc5I3fTIqP_slBIt2ZBOl_OlV_GOqTip3GcC4wSxb8sYTJEh_1l_U-NzS4AJUg=w480-h960-rw",
     "screenshots": [
       "https://play-lh.googleusercontent.com/DtcK5l76ykOaiPCx-EXkd1pIc-YgyNdk35EfGuAWuULhQg-WGbVPp7BTYRCUaHIUvQ=w1052-h592-rw",
@@ -112,7 +113,9 @@
       "https://play-lh.googleusercontent.com/CSalmHaBwRMsKfB4axCyBK4rN_G7wEWMhlVaNWEdKiQd0BWTau_zggmfd8uoWs6WXw=w1052-h592-rw"
     ],
     "category": "Finance",
-    "has_terms": true
+    "has_terms": true,
+    "has_account": false,
+    "has_support": true
   },
   {
     "slug": "taptap",
@@ -129,7 +132,9 @@
       "https://play-lh.googleusercontent.com/UZyK4O_caM1VGP-NzqMOrRuj5cvZfnF5dkoyW6TZ6cD2rZUiCUd0fDEyV2fRNK54CtYo=w1052-h592-rw"
     ],
     "category": "Tools",
-    "has_terms": true
+    "has_terms": true,
+    "has_account": false,
+    "has_support": true
   },
   {
     "slug": "nowa4",
@@ -148,7 +153,8 @@
       "https://play-lh.googleusercontent.com/vzXroMn6z6NCJbCON2uXx6PGMY_hG_PH8IeKLYC9I9ot074ZjvSqIbiV49p8n6zL-76Q7cUn4Rt29fcwdMSfAQ=w1052-h592-rw"
     ],
     "category": "Tools",
-    "has_terms": true
+    "has_terms": true,
+    "has_support": true
   },
   {
     "slug": "breathe-calm",

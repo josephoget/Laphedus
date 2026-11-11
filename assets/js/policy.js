@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  const app = qs('app');
+  const rawApp = qs('app');
+  const app = window.LaphedusUI?.normalizeAppSlug ? window.LaphedusUI.normalizeAppSlug(rawApp) : rawApp;
   const appNameEl = document.getElementById('appName');
   const backEl = document.getElementById('backToApp');
   const isPrivacy = /privacy(\.html)?$/.test(window.location.pathname);
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (app === 'kayfe' && contentEl) {
     if (isPrivacy) {
+      document.title = 'Privacy Policy | Kayfe - Laphedus';
       const kayfePrivacy = `Introduction
 Welcome to Kayfe. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your personal data when you use our app and informs you about your privacy rights.
 
@@ -90,6 +92,7 @@ Email: laphedusapp@gmail.com`;
     }
 
     if (isDeletion) {
+      document.title = 'Account Deletion | Kayfe - Laphedus';
       const kayfeDeletion = `This page explains how to delete your account from the Kayfe application.
 
 Follow these steps to delete your account:
@@ -121,6 +124,7 @@ If you have any questions or issues with the account deletion process, please em
 
   if (app === 'nowa4' && contentEl) {
     if (isPrivacy) {
+      document.title = 'Privacy Policy | Nowa4 - Laphedus';
       const nowa4Privacy = `Overview
 This privacy policy explains what data the app collects, how it is used, and the controls you have. The app focuses on image generation features and token-based usage.
 
@@ -150,16 +154,16 @@ Data Sharing and Third Parties
     We do not sell your personal data. We only share your information with the following third-party services to provide and improve our app. We encourage you to review their privacy policies.
     
     Supabase:
-    We use Supabase for our backend, including database storage and authentication. All your account data, prompt history, and token information are stored here. Supabase Privacy Policy.
+    We use Supabase for our backend, including database storage and authentication. All your account data, prompt history, and token information are stored here. https://supabase.com/privacy
     
     Google Sign-In:
-    We use Google Sign-In for account authentication. Google handles your login credentials. Google Privacy Policy.
+    We use Google Sign-In for account authentication. Google handles your login credentials. https://policies.google.com/privacy
     
     Image Generation API:
     We use a third-party API to generate images from your prompts. Your prompts are sent to this service for processing.
     
     In-App Purchases:
-    All in-app purchases are processed securely by the Google Play Store. We do not handle or store your payment information. Google Play Terms of Service.
+    All in-app purchases are processed securely by the Google Play Store. We do not handle or store your payment information. https://play.google.com/about/play-terms/
 
 Your Rights and Controls
 
@@ -173,11 +177,30 @@ Your Rights and Controls
     
     Delete Your Data:
     - Clear Prompt History: You can delete your entire prompt history from our servers at any time.
-    - Delete Account: You can permanently delete your account. This action will erase all your data from our servers, including your account information, prompt history, and token balance. This action is irreversible and we cannot recover your data once it is deleted.`;
+    - Delete Account: You can permanently delete your account. This action will erase all your data from our servers, including your account information, prompt history, and token balance. This action is irreversible and we cannot recover your data once it is deleted.
+
+Data Security and Retention
+
+    We implement technical safeguards such as Row Level Security in our database to protect account data. When you delete your account, it is deactivated immediately and personal data is permanently removed within 30 days, while backup systems may retain encrypted snapshots for up to 90 days for technical recovery before automatic expiry.
+
+Children's Privacy
+
+    Nowa4 is not directed to children under the age of 13. We do not knowingly collect personal data from children under 13.
+
+Changes to This Privacy Policy
+
+    We may update this privacy policy from time to time. Changes will be published on this page.
+
+Contact Us
+
+    If you have questions about this privacy policy or data requests:
+    Developer: Laphedus
+    Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, nowa4Privacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Nowa4';
     }
     if (isDeletion) {
+      document.title = 'Account Deletion | Nowa4 - Laphedus';
       const nowa4Deletion = `⚠️
 Important Warning
 Account deletion is permanent and irreversible. All your data will be permanently lost.
@@ -206,7 +229,7 @@ How to Delete Your Account
         Open the Nowa4 app on your device
         Go to Settings (gear icon)
         Click on the Account section and open the page.
-        Find "Delete Account"button.
+        Find the "Delete Account" button.
         Read the warning carefully
         Confirm your decision by typing "DELETE" when prompted
         Your account will be scheduled for deletion within 30 days
@@ -342,94 +365,24 @@ For privacy or data deletion requests:
       if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
 
-    if (isTerms) {
-      document.title = 'Terms of Use | Dynamic Pill';
-      const dynamicPillTerms = `Dynamic Pill Terms of Use
-Last updated: 04.08.2026
+    if (isDeletion) {
+      document.title = 'Data Deletion | Dynamic Pill - Laphedus';
+      const dynamicPillDeletion = `Dynamic Pill - Data Deletion
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
 
-By downloading, installing, or using this app, you are deemed to accept the following terms.
+Dynamic Pill does not require a user account and does not store your notification text, typed content, or installed app lists in a developer cloud database.
 
-1. Scope of the Service
+1. Deleting Local App Data
+- Open Android Settings > Apps > Dynamic Pill > Storage & cache > Clear storage (or Clear data), or uninstall the app to remove all local capsule settings, module preferences, and filters.
 
-Dynamic Pill is a helper app designed to show media, selected notifications, connection events, battery status, gestures, and certain helper system controls in a top capsule interface on Android devices.
+2. Third-Party Billing & Analytics Records
+- Purchase records and active entitlements handled via Google Play Billing and RevenueCat are managed by those providers under their retention practices; uninstalling the app does not cancel a store subscription or erase Google Play billing history.
+- Limited product analytics events processed by Firebase Analytics follow Google/Firebase retention rules.
 
-The app may behave differently depending on device model, Android version, manufacturer interface, and permission status.
-
-2. Permissions and System Behavior
-
-If permissions such as accessibility, display over other apps, notification access, Bluetooth, or modify system settings are not granted, some modules may work in a limited way or may not work at all.
-
-Notification-based modules may interpret selected notification fields on the device. Features related to gestures and app selection may list installed apps locally. When premium, purchase, or restore features are used, the app may communicate with the relevant payment and subscription infrastructure.
-
-3. Acceptable Use
-
-You must:
-
-- not bypass the device's system security
-- not misuse the app
-- not use system gestures, shortcuts, quick settings, or similar controls in an unauthorized or harmful way
-- not infringe third-party rights
-- not use the app for unlawful purposes
-
-4. Compatibility and Warranty Limit
-
-- the same appearance is not guaranteed on all devices
-- full compatibility with all manufacturer interfaces is not guaranteed
-- background behavior is not guaranteed to be the same on every device
-- lock screen, cutout, media, notification, and torch behavior may vary by device
-- changes may occur due to system updates
-
-5. Interruptions and Changes
-
-The developer may change app features, remove some modules, add new modules, or optimize the app differently for certain devices.
-
-6. Limitation of Liability
-
-- uninterrupted operation is not guaranteed
-- error-free operation is not guaranteed
-- absolute fitness for a particular purpose is not guaranteed
-
-To the extent permitted by law, the developer is not responsible for indirect damage, data loss, or unexpected system behavior that may occur on the user's device.
-
-7. Intellectual Property
-
-The app's design, brand, text, and related content belong to the developer or relevant rights holders. They may not be copied, distributed, or used commercially unless explicitly permitted.
-
-8. Third-Party Components
-
-The app may use third-party components such as Flutter, Android system APIs, Google Play Billing, RevenueCat, and other open-source libraries. These components may be subject to their own licenses, privacy policies, and terms of use.
-
-9. Account and Payment Features
-
-The app does not require a mandatory user account. However, it may support payment flows such as premium features, purchases, restores, or subscription status checks.
-
-During these flows:
-
-- pricing and purchase conditions are subject to the relevant store infrastructure
-- premium access may be technically verified through third-party subscription services
-- purchase features may not be available in the same way on every device or in every country
-- the user is responsible for checking current prices and conditions in the store before purchasing
-
-10. Account and Data Deletion
-
-Because the app does not require a mandatory user account, there is no classic account closure flow. The user may uninstall the app, clear app data, or request data deletion through laphedusapp@gmail.com.
-
-11. Termination of Use
-
-The user may uninstall or stop using the app at any time. The developer also reserves the right to terminate or change certain app features.
-
-12. Changes
-
-These terms of use may be updated from time to time. The current text may be shared through the in-app screen, website, or store listing.
-
-13. Contact
-
-For questions about these terms:
-
-- Brand: LaphedusApp
-- Developer: Laphedus
-- Email: laphedusapp@gmail.com`;
-      setPreContent(contentEl, dynamicPillTerms, 'defaultTerms');
+3. Support & Privacy Requests
+- For privacy or data deletion assistance, email laphedusapp@gmail.com.`;
+      setPreContent(contentEl, dynamicPillDeletion, 'defaultDeletion');
       if (appNameEl) appNameEl.textContent = 'Dynamic Pill';
     }
   }
@@ -535,58 +488,191 @@ For privacy or data requests:
       setPreContent(contentEl, stamperPrivacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Stamper';
     }
+
+    if (isDeletion) {
+      document.title = 'Data Deletion | Stamper - Laphedus';
+      const stamperDeletion = `Stamper - Data Deletion
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+Stamper does not require a user account and keeps your photos, stamps, and albums locally on your device.
+
+1. Deleting Local Stamps, Albums & App Data
+- You can delete individual stamps and albums directly inside the app.
+- To remove all local Stamper data, uninstall the app or clear its storage in Android Settings > Apps > Stamper > Storage & cache > Clear storage.
+- Any backup files you manually exported to external folders or shared elsewhere must be deleted separately from those locations.
+
+2. Purchase Records
+- Store purchase and entitlement records handled by Google Play Billing and RevenueCat remain subject to those providers' policies.
+
+3. Contact
+- For privacy or data deletion assistance, email laphedusapp@gmail.com.`;
+      setPreContent(contentEl, stamperDeletion, 'defaultDeletion');
+      if (appNameEl) appNameEl.textContent = 'Stamper';
+    }
   }
 
   if (app === 'expensly' && contentEl) {
     if (isPrivacy) {
+      document.title = 'Privacy Policy | Expensly - Laphedus';
       const expenslyPrivacy = `Privacy Policy - Expensly
-Last updated: 2026-05-05
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
 
-Thank you for using Expense Tracker. Your privacy matters to us. This privacy policy explains how information may be processed when you use the application.
+Thank you for using Expensly (Expense Tracker). Your privacy matters to us. This privacy policy explains what information may be processed on your device or through third-party SDKs when you use Expensly, and how that data is controlled.
 
-Information We Collect
-The app may process the following categories of information to provide its features:
+1. Overview & Local-First Architecture
+Expensly is a local-first personal finance, budget, and savings tracker. You do not need to create a user account, and your expense, income, account, budget, goal, and recurring schedule records are stored locally on your device rather than uploaded to a Laphedus cloud server.
 
-    User Provided Data: expense records, category information, budget plans, recurring expense plans, and any optional notes or images you attach.
-    App Settings and Preferences: notification preferences, widget-related display data, language, theme, and similar settings stored locally on your device.
-    Limited Technical Data: some technical information may be processed by your device or third-party SDKs to support app functionality, ad delivery, or abuse prevention.
+2. Information We Collect or Process
+- Financial Records You Enter: Expense and income transactions, categories, accounts, transfer records, monthly and category budgets, savings goals, recurring plans, optional notes, and optional receipt or item images you select from your device gallery.
+- App Settings & Preferences: Selected display language (across 8 supported languages), theme, currency/formatting preferences, local notification schedules, and home screen widget summary values stored locally on your device.
+- Advertising Data (Free Tier): On the free ad-funded tier, Google Mobile Ads (AdMob) may process technical data such as the Google Advertising ID, IP address / approximate location, device and app information, diagnostics, and ad interaction signals according to Google's privacy policy. Ad loading is disabled when Expensly Premium is active.
+- In-App Purchases & Entitlement Data: Expensly offers an optional one-time non-consumable purchase (Expensly Premium) and purchase restoration processed through Google Play Billing and RevenueCat. When initializing purchase status, upgrading, or restoring purchases, RevenueCat and Google Play process an anonymous App User ID, product/entitlement identifiers, purchase tokens or receipts, purchase timestamps, and limited device/app version context required to verify and restore your Premium access. Laphedus does not receive or store full payment card credentials.
 
-Use of Data
-We use this information for the following purposes:
+3. How Data Is Used
+- Provide core expense, income, account, budget, recurring payment, and savings-goal tracking and analytics on your device
+- Keep Android home screen widgets updated with your daily and monthly summaries and quick-add shortcuts
+- Schedule strictly on-device local notifications for daily summaries, weekly summaries, budget alerts, savings target progress, and upcoming recurring payments (without remote push notification servers)
+- Create manual JSON backups, restore backups, and export CSV reports when initiated by you
+- Serve ads on the free tier via Google Mobile Ads
+- Process optional Expensly Premium purchases, verify entitlement status, prevent fraud, and support Restore Purchases via Google Play Billing and RevenueCat
 
-    To provide the core functionality of the app
-    To keep home screen widgets updated with relevant summaries and quick actions
-    To schedule on-device notifications for daily summaries, weekly summaries, budget alerts, savings target warnings, and upcoming recurring payments
-    To improve stability, protect security, and reduce technical issues
-    To support an ad-funded experience
+4. Device Permissions & Optional Access
+- Notifications (POST_NOTIFICATIONS on Android 13+): Optional permission used only for on-device reminder scheduling.
+- Gallery / Photo Access: Requested only if you choose to attach an image from your gallery to a transaction. Selected image references stay local on your device and are not uploaded to Laphedus servers.
+- Document / File Access (Storage Access Framework / Share Sheet): Accessed only when you manually export or import a JSON backup or CSV file. You control where exported files are saved or shared.
 
-Data Storage
-Expense Tracker primarily stores the data you enter locally on your device. Expense records, budget settings, recurring plans, notification preferences, and widget summaries remain on your device unless you choose to delete them.
+5. Third-Party Services & Data Sharing
+We do not sell your personal financial records or upload them for data brokering. Limited technical data may be processed by the following third-party providers to deliver ads and in-app purchase verification:
+- Google Mobile Ads (AdMob): Used in the free tier for banner and interstitial advertisements. Privacy Policy: https://policies.google.com/privacy
+- Google Play Billing: Processes optional one-time Premium payments under Google Play terms. Privacy Policy: https://policies.google.com/privacy
+- RevenueCat: Manages purchase validation, anonymous App User ID entitlement mapping, and Restore Purchases functionality. Privacy Policy: https://www.revenuecat.com/privacy
+- Legal Requirements: Information may be disclosed if strictly required to comply with applicable law, valid court orders, or official requests.
 
-Widgets and Notifications
-The app may provide home screen widgets and local notifications. Widgets use app data stored on your device to show items such as daily or monthly net summaries and quick add shortcuts. Notifications are scheduled on-device for daily summaries, weekly summaries, budget threshold alerts, savings target status, and upcoming recurring payments. This feature does not rely on remote push notification infrastructure.
+6. Data Retention & Deletion Controls
+- Local Data: Financial records, preferences, and widget state remain on your device until you clear/reset data inside the app, clear Expensly storage in Android Settings, or uninstall the app.
+- Exported Backups & CSVs: JSON backup and CSV files saved to your device storage or shared to third-party storage remain under your control and must be deleted manually from those locations.
+- Ad Personalization & ID Controls: You can reset or delete your Android Advertising ID or adjust ad personalization settings in Android Settings > Privacy > Ads.
+- Purchase Records: Google Play and RevenueCat retain purchase receipts and entitlement records per their operational and legal obligations so you can restore non-consumable purchases. Uninstalling the app removes local records but does not erase store transaction history.
 
-Data Sharing
-We do not sell your personal information. However, limited data may be processed or shared in the following situations:
+7. Data Security
+Keeping financial records locally minimizes remote exposure. Third-party SDK communications use encrypted transport (HTTPS/TLS). Please protect your device with a screen lock and keep exported backup files secure, as no storage method is 100% immune to device loss or unauthorized device access.
 
-    Advertising Services: the app may use third-party ad services such as Google Mobile Ads. These services may process limited technical data, such as advertising identifiers, device information, or interaction signals, according to their own policies.
-    Legal Requirements: when required to comply with legal obligations, respond to lawful requests, or enforce applicable laws.
+8. Children's Privacy
+Expensly is not directed to children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children.
 
-Data Security
-We take reasonable technical and organizational measures to help protect your data. However, no method of transmission or electronic storage can be guaranteed to be completely secure.
+9. Changes to This Privacy Policy
+We may update this privacy policy from time to time. Updated versions are published on this page with a revised "Last updated" date.
 
-Children's Privacy
-Our services are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.
-
-Changes to This Privacy Policy
-We may update this privacy policy from time to time. Changes will be posted on this page. If a change is material, we may also provide additional notice inside the app or through relevant publishing channels.
-
-Contact Us
-If you have any questions or concerns about this privacy policy, please contact us using the information below:
+10. Contact Us
+If you have questions about this privacy policy or data requests, please contact:
 Developer: Laphedus
 Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, expenslyPrivacy, 'defaultPrivacy');
       if (appNameEl) appNameEl.textContent = 'Expensly';
+    }
+
+    if (isSupport) {
+      document.title = 'Support | Expensly - Laphedus';
+      const expenslySupport = `Expensly - Customer Care & Support
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+Thank you for using Expensly. Here is quick guidance on common features and how to reach support.
+
+1. Common Help Topics
+- Language Selection: Switch between 8 supported languages (English, Turkish, German, Spanish, French, Indonesian, Italian, Portuguese) in Settings.
+- Backups & CSV Export: Use Settings > Data and backup to export or import a JSON backup, or export transactions and recurring plans as CSV. Store your backup files safely before changing devices.
+- Restoring Expensly Premium: Make sure you are signed into Android with the same Google Play account used for your purchase, then tap Restore Purchases on the Premium screen.
+- Home Screen Widgets: Add the daily or monthly Expensly summary widget from your Android launcher and open the app if widget data needs a manual refresh.
+- Local Notifications: Enable notification permission in Android Settings > Apps > Expensly if daily/weekly summaries, budget alerts, or recurring payment reminders do not appear.
+
+2. Direct Contact
+Email laphedusapp@gmail.com with:
+- Your Expensly app version
+- Android version and device model
+- Screenshots or steps to reproduce the issue
+- Purchase order ID (for Premium purchase questions; never send full card details)`;
+      setPreContent(contentEl, expenslySupport, 'defaultSupport');
+      if (appNameEl) appNameEl.textContent = 'Expensly';
+    }
+
+    if (isDeletion) {
+      document.title = 'Data Deletion | Expensly - Laphedus';
+      const expenslyDeletion = `Expensly - Data Deletion
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+Expensly operates without user accounts or developer-hosted cloud databases. Your financial records stay on your device.
+
+1. Deleting All Local Financial Data
+- In the App: Use the reset/clear data controls in Settings to remove stored financial entries, budgets, and settings.
+- Via Android Settings: Go to Android Settings > Apps > Expensly > Storage & cache > Clear storage (or Clear data), or uninstall Expensly.
+
+2. Deleting Exported Backups & Attached Files
+- Any JSON backup or CSV export file you created, as well as original photos in your device gallery, remain wherever you saved them and must be deleted manually from those folders.
+
+3. Advertising & Purchase Records
+- You can reset your Advertising ID in Android Settings > Privacy > Ads.
+- Google Play Billing and RevenueCat retain purchase/entitlement history required to verify and restore your one-time Expensly Premium license under their respective policies.
+
+4. Contact
+- For privacy or data deletion assistance, contact laphedusapp@gmail.com.`;
+      setPreContent(contentEl, expenslyDeletion, 'defaultDeletion');
+      if (appNameEl) appNameEl.textContent = 'Expensly';
+    }
+  }
+
+  if (app === 'taptap' && contentEl) {
+    if (isPrivacy) {
+      document.title = 'Privacy Policy | TapTap - Laphedus';
+      const taptapPrivacy = `Privacy Policy - TapTap - Score
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+Thank you for using TapTap - Score. This page summarizes how data is handled in TapTap in line with its Terms of Use.
+
+1. Score Tracking & User-Entered Content
+- TapTap is built as a lightweight score-tracking tool. You enter and manage match or game scores directly on your device.
+- No account registration is required under current app policies.
+
+2. Sharing Scores & Respecting Others
+- When you choose to share scores or participant names using your device's sharing options, that sharing is initiated by you. Please ensure you have permission before sharing information about other people.
+
+3. Data Retention & Deletion
+- Score entries stored locally on your device remain until you clear them in the app, clear app storage in Android Settings, or uninstall TapTap.
+
+4. Children's Privacy & Contact
+- TapTap is not designed to knowingly collect personal data from children under 13.
+- For privacy, support, or data questions, email laphedusapp@gmail.com (please identify TapTap and its version, and never send passwords or payment details).`;
+      setPreContent(contentEl, taptapPrivacy, 'defaultPrivacy');
+      if (appNameEl) appNameEl.textContent = 'TapTap - Score';
+    }
+
+    if (isSupport) {
+      document.title = 'Support | TapTap - Laphedus';
+      const taptapSupport = `TapTap - Score Support
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+For bug reports, score-tracking questions, or feedback about TapTap - Score, please email laphedusapp@gmail.com and include:
+- The TapTap app version
+- Your device model and OS version
+- A brief description of what happened`;
+      setPreContent(contentEl, taptapSupport, 'defaultSupport');
+      if (appNameEl) appNameEl.textContent = 'TapTap - Score';
+    }
+
+    if (isDeletion) {
+      document.title = 'Data Deletion | TapTap - Laphedus';
+      const taptapDeletion = `TapTap - Score Data Deletion
+Last updated: 11 November 2026
+Developer: Laphedus (laphedusapp@gmail.com)
+
+TapTap - Score does not operate a developer account system under its current policies. To remove locally saved scores and app preferences, clear the app's storage in device Settings or uninstall TapTap. For additional questions, contact laphedusapp@gmail.com.`;
+      setPreContent(contentEl, taptapDeletion, 'defaultDeletion');
+      if (appNameEl) appNameEl.textContent = 'TapTap - Score';
     }
   }
 
@@ -625,36 +711,6 @@ This app does not knowingly collect personal information from children under 13.
 Developer: Laphedus
 Email: laphedusapp@gmail.com`;
       setPreContent(contentEl, breathePrivacy, 'defaultPrivacy');
-    }
-
-    if (isTerms) {
-      document.title = 'Terms of Use | Breathe & Calm - Laphedus';
-      const breatheTerms = `Breathe & Calm Terms of Use & Legal Agreement
-Last Updated: September 19, 2026
-Developer: Laphedus (laphedusapp@gmail.com)
-
-By downloading, installing, or using Breathe & Calm, you agree to be bound by these Terms of Use and the standard Apple End User License Agreement (EULA).
-
-1. Medical & Health Disclaimer (Critical Notice)
-This application is NOT a medical device, clinical psychiatric instrument, diagnostic tool, or emergency psychological therapy service. Breathwork exercises, cognitive reframing tools, and soundscapes are designed solely for general wellness, relaxation, and mindfulness. They cannot substitute for professional diagnosis, psychiatric counsel, or clinical treatment. Individuals with cardiovascular, respiratory, epileptic, or acute psychiatric conditions should consult a licensed physician before engaging in paced breathwork. If you experience acute distress or thoughts of self-harm, please immediately contact emergency services (e.g. 911 / 112) or local crisis hotlines.
-
-2. License to Use & Intellectual Property
-The developer (Laphedus) grants you a personal, non-commercial, non-transferable, revocable license to use the app on Apple-branded products. App designs, 3D Claymorphism interfaces, original acoustic sound recordings, algorithms, and trademarks belong exclusively to Laphedus and may not be extracted, reproduced, or reverse-engineered.
-
-3. Pro Subscriptions, Billing & Cancellations
-Optional Pro subscriptions renew automatically unless cancelled at least 24 hours prior to the conclusion of the active billing cycle. Payment is billed directly to your Apple ID account upon purchase confirmation. You may manage or cancel your subscription at any time via iOS Settings > Apple ID > Subscriptions.
-
-4. User Responsibilities & Device Security
-Because your reflections and logs are stored strictly on-device, maintaining device security (passcode, biometric sensors) and securing exported backup files is entirely your responsibility. In the event of device damage, loss, or OS reset without a prior local backup, data cannot be recovered by the developer.
-
-5. Disclaimer of Warranties & Limitation of Liability
-The service is provided on an "as-is" and "as-available" basis without warranties of any kind. To the fullest extent permitted by law, Laphedus is not liable for indirect, incidental, or consequential damages arising from the use of or inability to use the application.
-
-6. Modifications & Contact
-These terms may be updated periodically. Continued use constitutes acceptance of updated terms. For legal notices, questions, or support:
-Developer: Laphedus
-Email: laphedusapp@gmail.com`;
-      setPreContent(contentEl, breatheTerms, 'defaultTerms');
     }
 
     if (isSupport) {

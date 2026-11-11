@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const slug = new URLSearchParams(location.search).get('app');
+  const rawSlug = new URLSearchParams(location.search).get('app');
+  const slug = window.LaphedusUI?.normalizeAppSlug ? window.LaphedusUI.normalizeAppSlug(rawSlug) : rawSlug;
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 

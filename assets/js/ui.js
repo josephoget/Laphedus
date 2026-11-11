@@ -10,9 +10,19 @@
     { slug: 'dinamik-ada', label: 'Dynamic Pill', pages: ['privacy', 'terms', 'support'] },
     { slug: 'kayfe', label: 'Kayfe', pages: ['privacy', 'terms', 'support', 'account-deletion'] },
     { slug: 'expensly', label: 'Expensly', pages: ['privacy', 'terms', 'support'] },
-    { slug: 'taptap', label: 'TapTap', pages: ['terms', 'support'] },
+    { slug: 'taptap', label: 'TapTap', pages: ['privacy', 'terms', 'support'] },
     { slug: 'nowa4', label: 'Nowa4', pages: ['privacy', 'terms', 'support', 'account-deletion'] }
   ];
+
+  const APP_SLUG_ALIASES = {
+    masraf: 'expensly',
+    masrafkaydedici: 'expensly'
+  };
+
+  function normalizeAppSlug(slug) {
+    const clean = String(slug ?? '').trim().toLowerCase();
+    return APP_SLUG_ALIASES[clean] || String(slug ?? '').trim();
+  }
 
   const APP_DISPLAY_NAMES = {
     'breathe-calm': 'Breathe & Calm',
@@ -146,7 +156,7 @@
     if (!pageKey) return;
 
     const params = new URLSearchParams(window.location.search);
-    const activeSlug = params.get('app') || '';
+    const activeSlug = normalizeAppSlug(params.get('app'));
 
     const appNameEl = document.getElementById('appName');
     if (appNameEl && activeSlug && APP_DISPLAY_NAMES[activeSlug]) {
@@ -393,6 +403,7 @@
 
   window.LaphedusUI = {
     escapeHtml,
+    normalizeAppSlug,
     renderFormattedDocument,
     APP_DISPLAY_NAMES
   };
