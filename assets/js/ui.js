@@ -3,6 +3,27 @@
   const SUN_ICON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
   const MOON_ICON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 
+  const APP_SCOPE_CATALOG = [
+    { slug: '', label: 'General', pages: ['privacy', 'terms', 'support', 'account-deletion'] },
+    { slug: 'breathe-calm', label: 'Breathe & Calm', pages: ['privacy', 'terms', 'support', 'account-deletion'] },
+    { slug: 'stamper', label: 'Stamper', pages: ['privacy', 'terms', 'support'] },
+    { slug: 'dinamik-ada', label: 'Dynamic Pill', pages: ['privacy', 'terms', 'support'] },
+    { slug: 'kayfe', label: 'Kayfe', pages: ['privacy', 'terms', 'support', 'account-deletion'] },
+    { slug: 'expensly', label: 'Expensly', pages: ['privacy', 'terms', 'support'] },
+    { slug: 'taptap', label: 'TapTap', pages: ['terms', 'support'] },
+    { slug: 'nowa4', label: 'Nowa4', pages: ['privacy', 'terms', 'support', 'account-deletion'] }
+  ];
+
+  const APP_DISPLAY_NAMES = {
+    'breathe-calm': 'Breathe & Calm',
+    'stamper': 'Stamper - My Stamp Album',
+    'dinamik-ada': 'Dynamic Pill',
+    'kayfe': 'Kayfe - Coffee Fortune App',
+    'expensly': 'Expensly - Expense Tracker',
+    'taptap': 'TapTap - Score',
+    'nowa4': 'Nowa4'
+  };
+
   function getPreferredTheme() {
     try {
       const saved = localStorage.getItem(THEME_STORAGE_KEY);
@@ -80,6 +101,73 @@
         closeNav();
       }
     });
+  }
+
+  function initCopyButtons() {
+    document.querySelectorAll('[data-copy-email]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const value = btn.getAttribute('data-copy-email');
+        if (!value) return;
+        const labelEl = btn.querySelector('.copy-label') || btn;
+        const original = labelEl.textContent;
+
+        try {
+          if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(value);
+          } else {
+            const input = document.createElement('input');
+            input.value = value;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            input.remove();
+          }
+          labelEl.textContent = 'Copied!';
+          btn.classList.add('is-copied');
+          setTimeout(() => {
+            labelEl.textContent = original;
+            btn.classList.remove('is-copied');
+          }, 1800);
+        } catch (_) {}
+      });
+    });
+  }
+
+  function initAppScopeBar() {
+    const bar = document.getElementById('appScopeBar');
+    if (!bar) return;
+
+    const path = window.location.pathname || '';
+    let pageKey = '';
+    if (/privacy(\.html)?$/.test(path)) pageKey = 'privacy';
+    else if (/terms(\.html)?$/.test(path)) pageKey = 'terms';
+    else if (/support(\.html)?$/.test(path)) pageKey = 'support';
+    else if (/account-deletion(\.html)?$/.test(path)) pageKey = 'account-deletion';
+    if (!pageKey) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const activeSlug = params.get('app') || '';
+
+    const appNameEl = document.getElementById('appName');
+    if (appNameEl && activeSlug && APP_DISPLAY_NAMES[activeSlug]) {
+      appNameEl.textContent = APP_DISPLAY_NAMES[activeSlug];
+    }
+
+    const items = APP_SCOPE_CATALOG.filter(entry => entry.pages.includes(pageKey));
+    const frag = document.createDocumentFragment();
+
+    items.forEach(entry => {
+      const a = document.createElement('a');
+      a.className = 'scope-pill' + (entry.slug === activeSlug ? ' is-active' : '');
+      a.href = entry.slug ? `${pageKey}.html?app=${encodeURIComponent(entry.slug)}` : `${pageKey}.html`;
+      a.textContent = entry.label;
+      if (entry.slug === activeSlug) {
+        a.setAttribute('aria-current', 'page');
+      }
+      frag.appendChild(a);
+    });
+
+    bar.replaceChildren(frag);
   }
 
   function escapeHtml(value) {
@@ -211,12 +299,10 @@
         continue;
       }
 
-      // Skip standalone emoji warning icon line if followed by "Important Warning"
       if (trimmed === '⚠️' && /^Important Warning/i.test(nextTrimmed)) {
         continue;
       }
 
-      // Metadata lines at the very top of the document
       if (i <= 3 && /^(Last\s+updated|Developer):/i.test(trimmed)) {
         flushList();
         const pill = document.createElement('span');
@@ -227,7 +313,6 @@
         continue;
       }
 
-      // Top document title line
       if (i === 0 && trimmed.length <= 95 && !trimmed.endsWith('.')) {
         flushList();
         const title = document.createElement('h2');
@@ -237,7 +322,6 @@
         continue;
       }
 
-      // Bullet list items (- or •)
       if (/^[-•]\s+/.test(trimmed)) {
         const ul = ensureList('ul');
         const li = document.createElement('li');
@@ -246,7 +330,6 @@
         continue;
       }
 
-      // Numbered instruction steps (e.g. "1. Open Breathe & Calm...")
       if (/^\d+\.\s+/.test(trimmed) && trimmed.endsWith('.')) {
         const ol = ensureList('ol');
         const li = document.createElement('li');
@@ -255,7 +338,6 @@
         continue;
       }
 
-      // Numbered section headings (e.g. "1. Scope of the Service")
       if (isNumberedHeading(trimmed)) {
         flushList();
         const h2 = document.createElement('h2');
@@ -264,7 +346,6 @@
         continue;
       }
 
-      // Indented consecutive items (e.g. Kayfe lists)
       const isIndented = /^ {4,}/.test(rawLine);
       const nextIsIndented = i + 1 < lines.length && /^ {4,}/.test(lines[i + 1]) && lines[i + 1].trim() !== '' && !/^[-•]/.test(lines[i + 1].trim());
       const prevWasIndented = i > 0 && /^ {4,}/.test(lines[i - 1]) && prevTrimmed !== '' && !/^[-•]/.test(prevTrimmed) && !prevTrimmed.endsWith(':');
@@ -277,7 +358,6 @@
         continue;
       }
 
-      // Standalone headings
       if (isShortHeading(trimmed, nextTrimmed) && (!prevTrimmed || prevTrimmed === '⚠️' || /^Method\s+\d+:/i.test(trimmed))) {
         flushList();
         const headingTag = /^(Method\s+\d+:|.*:$)/i.test(trimmed) ? 'h3' : 'h2';
@@ -307,10 +387,13 @@
 
     initThemeToggle();
     initMobileNav();
+    initCopyButtons();
+    initAppScopeBar();
   });
 
   window.LaphedusUI = {
     escapeHtml,
-    renderFormattedDocument
+    renderFormattedDocument,
+    APP_DISPLAY_NAMES
   };
 })();

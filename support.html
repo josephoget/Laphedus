@@ -6,6 +6,9 @@
   <title>Support &amp; Contact - Laphedus</title>
   <meta name="description" content="Support and contact information for Laphedus apps." />
   <link rel="icon" type="image/svg+xml" href="assets/image/laphedus-store-logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -22,9 +25,9 @@
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="index.html#apps">Apps</a>
-          <a href="index.html#about">About</a>
+          <a href="privacy.html">Privacy</a>
           <a href="support.html" class="active">Support</a>
-          <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" class="nav-cta" target="_blank" rel="noopener">Google Play</a>
+          <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" class="nav-cta" target="_blank" rel="noopener">Google Play <span aria-hidden="true">&#8599;</span></a>
         </nav>
         <button type="button" class="theme-toggle" aria-label="Switch color theme" aria-pressed="false"></button>
         <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
@@ -42,19 +45,33 @@
           <h1>Support and Contact</h1>
           <p class="muted">Application Scope: <strong id="appName">General</strong></p>
 
+          <div id="appScopeBar" class="scope-bar" aria-label="Select application support"></div>
+
           <div id="policyContent"></div>
 
           <div id="defaultSupport">
-            <h2>Support Channel</h2>
-            <p>For questions, feedback, and technical support requests about our apps, you can reach out directly via email at <a href="mailto:laphedusapp@gmail.com">laphedusapp@gmail.com</a>.</p>
+            <div class="support-grid">
+              <div class="support-panel">
+                <h2>Direct Support Channel</h2>
+                <p>For questions, bug reports, purchase help, or feedback about any Laphedus app, contact us directly via email:</p>
+                <div class="support-email-box">
+                  <a href="mailto:laphedusapp@gmail.com">laphedusapp@gmail.com</a>
+                  <button type="button" class="btn subtle" data-copy-email="laphedusapp@gmail.com">
+                    <span class="copy-label">Copy</span>
+                  </button>
+                </div>
+              </div>
 
-            <h2>Helpful Details to Share</h2>
-            <p>To help us resolve your inquiry as quickly as possible, please include:</p>
-            <ul>
-              <li>The name and version of the app</li>
-              <li>Your device model and operating system version</li>
-              <li>A brief description of the issue or steps to reproduce it</li>
-            </ul>
+              <div class="support-panel">
+                <h2>Helpful Details to Share</h2>
+                <p>To help us resolve your inquiry quickly, please include:</p>
+                <ul>
+                  <li>The name and version of the app</li>
+                  <li>Your device model and OS version</li>
+                  <li>A brief description or steps to reproduce</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="app-actions">

@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const isDeletion = /account-deletion(\.html)?$/.test(window.location.pathname);
   const contentEl = document.getElementById('policyContent');
 
-  if (appNameEl) appNameEl.textContent = app ? app : 'General';
+  if (appNameEl) {
+    appNameEl.textContent = app ? (window.LaphedusUI?.APP_DISPLAY_NAMES?.[app] || app) : 'General';
+  }
   if (backEl) {
     backEl.href = app ? `app.html?slug=${encodeURIComponent(app)}` : 'index.html';
   }

@@ -2,12 +2,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('app-grid');
   const filtersEl = document.getElementById('app-filters');
   const fallback = document.getElementById('app-grid-fallback');
+  const heroStage = document.getElementById('hero-stage');
   const esc = window.LaphedusUI?.escapeHtml ?? (v => String(v ?? ''));
 
   const getIconFallback = (app) => app.fallback_icon_url || 'assets/image/laphedus-store-logo.svg';
 
   const getStoreButton = (app, isFeatured = false) => {
-    const label = isFeatured ? 'View Details' : 'Details';
+    const label = isFeatured ? 'Explore App' : 'Details';
     const detailsBtn = `<a class="btn primary" href="app.html?slug=${encodeURIComponent(app.slug)}">${label}</a>`;
 
     if (app.app_store_url) {
@@ -31,6 +32,77 @@ document.addEventListener('DOMContentLoaded', async () => {
   const renderStatusPill = (app) => {
     if (!app.status) return '';
     return `<span class="meta-pill meta-pill-status">${esc(app.status)}</span>`;
+  };
+
+  const initHeroStage = (apps) => {
+    if (!heroStage) return;
+    const spotlightSlugs = ['breathe-calm', 'stamper', 'dinamik-ada'];
+    const showcaseApps = spotlightSlugs
+      .map(slug => apps.find(a => a.slug === slug))
+      .filter(Boolean);
+    if (!showcaseApps.length) return;
+
+    const tabsEl = heroStage.querySelector('.hero-stage-tabs');
+    const viewportEl = heroStage.querySelector('.hero-stage-viewport');
+    if (!tabsEl || !viewportEl) return;
+
+    let currentSlug = showcaseApps[0].slug;
+
+    const renderStage = (slug) => {
+      const app = showcaseApps.find(a => a.slug === slug) || showcaseApps[0];
+      const screen = (app.screenshots && app.screenshots[0]) || 'assets/image/laphedus-store-banner.svg';
+      const fallbackIcon = esc(getIconFallback(app));
+
+      tabsEl.querySelectorAll('.hero-stage-tab').forEach(btn => {
+        const active = btn.getAttribute('data-slug') === app.slug;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-selected', String(active));
+      });
+
+      viewportEl.innerHTML = `
+        <div class="hero-stage-bar">
+          <div class="hero-stage-identity">
+            <img
+              src="${esc(app.icon_url)}"
+              alt="${esc(app.name)} icon"
+              width="38"
+              height="38"
+              onerror="this.onerror=null;this.src='${fallbackIcon}';"
+            />
+            <div>
+              <strong>${esc(app.name)}</strong>
+              <span>${esc(app.category || 'App')} · ${esc(app.platform || 'Mobile')}</span>
+            </div>
+          </div>
+          <a class="hero-stage-link" href="app.html?slug=${encodeURIComponent(app.slug)}">Open &rarr;</a>
+        </div>
+        <a class="hero-stage-frame app-accent-${esc(app.slug)}" href="app.html?slug=${encodeURIComponent(app.slug)}" aria-label="View ${esc(app.name)}">
+          <img src="${esc(screen)}" alt="${esc(app.name)} interface preview" />
+        </a>
+        <p class="hero-stage-caption">${esc(app.short_description)}</p>
+      `;
+    };
+
+    tabsEl.innerHTML = showcaseApps.map(app => `
+      <button
+        type="button"
+        role="tab"
+        class="hero-stage-tab${app.slug === currentSlug ? ' is-active' : ''}"
+        data-slug="${esc(app.slug)}"
+        aria-selected="${app.slug === currentSlug ? 'true' : 'false'}"
+      >${esc(app.name.split(' - ')[0])}</button>
+    `).join('');
+
+    tabsEl.addEventListener('click', (event) => {
+      const btn = event.target.closest('.hero-stage-tab');
+      if (!btn) return;
+      const nextSlug = btn.getAttribute('data-slug');
+      if (!nextSlug || nextSlug === currentSlug) return;
+      currentSlug = nextSlug;
+      renderStage(currentSlug);
+    });
+
+    renderStage(currentSlug);
   };
 
   const renderFeaturedCard = (app) => {
@@ -84,38 +156,29 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const renderStandardCard = (app) => {
     const fallbackIcon = esc(getIconFallback(app));
-    const preview = Array.isArray(app.screenshots) && app.screenshots.length > 0 ? app.screenshots[0] : '';
 
     return `
-      <article class="card app-accent-${esc(app.slug)}">
-        ${preview ? `
-          <a class="card-preview" href="app.html?slug=${encodeURIComponent(app.slug)}" tabindex="-1" aria-hidden="true">
-            <img
-              src="${esc(preview)}"
-              alt=""
-              loading="lazy"
-              onerror="this.closest('.card-preview')?.remove();"
-            />
-          </a>
-        ` : ''}
-        <div class="card-top">
-          <img
-            class="app-squircle-icon"
-            src="${esc(app.icon_url)}"
-            alt="${esc(app.name)} icon"
-            loading="lazy"
-            onerror="this.onerror=null;this.src='${fallbackIcon}';"
-          />
-          <div class="card-top-info">
-            <div class="card-badges">
-              <span class="card-category">${esc(app.category || 'App')}</span>
+      <article class="card card-studio app-accent-${esc(app.slug)}">
+        <a class="card-stage" href="app.html?slug=${encodeURIComponent(app.slug)}" aria-label="View ${esc(app.name)} details">
+          <div class="card-stage-top">
+            <span class="card-category">${esc(app.category || 'App')}</span>
+            <div class="card-stage-pills">
               ${renderPlatformPill(app)}
               ${renderStatusPill(app)}
             </div>
-            <h3 class="card-title">${esc(app.name)}</h3>
           </div>
-        </div>
+          <div class="card-stage-icon-wrap">
+            <img
+              class="app-squircle-icon app-squircle-stage"
+              src="${esc(app.icon_url)}"
+              alt="${esc(app.name)} icon"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='${fallbackIcon}';"
+            />
+          </div>
+        </a>
         <div class="card-body">
+          <h3 class="card-title">${esc(app.name)}</h3>
           <p class="card-desc">${esc(app.short_description)}</p>
           <div class="card-actions">
             ${getStoreButton(app)}
@@ -129,6 +192,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const res = await fetch('data/apps.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('apps.json could not be loaded');
     const apps = await res.json();
+
+    initHeroStage(apps);
 
     const categories = ['All', ...new Set(apps.map(app => app.category).filter(Boolean))];
     let activeCategory = 'All';

@@ -6,6 +6,9 @@
   <title>Laphedus - Apps &amp; Experiences</title>
   <meta name="description" content="Laphedus - Independent mobile app developer focused on useful, user-friendly and privacy-first products." />
   <link rel="icon" type="image/svg+xml" href="assets/image/laphedus-store-logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -22,9 +25,9 @@
         <nav id="site-nav" class="nav" aria-label="Primary">
           <a href="index.html" class="active">Home</a>
           <a href="#apps">Apps</a>
-          <a href="#about">About</a>
+          <a href="privacy.html">Privacy</a>
           <a href="support.html">Support</a>
-          <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" class="nav-cta" target="_blank" rel="noopener">Google Play</a>
+          <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" class="nav-cta" target="_blank" rel="noopener">Google Play <span aria-hidden="true">&#8599;</span></a>
         </nav>
         <button type="button" class="theme-toggle" aria-label="Switch color theme" aria-pressed="false"></button>
         <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
@@ -39,49 +42,40 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="hero-tag">Independent App Studio</span>
-          <h1>User-focused mobile apps.</h1>
+          <h1>User-focused <span class="text-gradient">mobile apps.</span></h1>
           <p>Practical, refined, and privacy-first mobile experiences crafted with care for iOS and Android.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#apps">Explore Apps</a>
             <a class="btn" href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play Store</a>
           </div>
           <div class="hero-metrics">
-            <span>7 Published &amp; Upcoming Apps</span>
+            <span>Crafted for iOS &amp; Android</span>
             <span>Local-First Architecture</span>
-            <span>iOS &amp; Android</span>
+            <span>Zero Ad-Data Selling</span>
           </div>
         </div>
 
-        <div class="hero-showcase" aria-label="Featured studio highlights">
-          <a class="hero-bento-card hero-bento-main" href="app.html?slug=breathe-calm">
-            <div class="hero-bento-head">
-              <img src="assets/image/breathe-calm-icon.svg" alt="Breathe &amp; Calm icon" width="48" height="48" />
-              <div>
-                <span class="hero-bento-tag">iOS Wellness</span>
-                <strong>Breathe &amp; Calm</strong>
+        <div id="hero-stage" class="hero-stage" aria-label="Interactive studio showcase">
+          <div class="hero-stage-tabs" role="tablist" aria-label="Featured applications">
+            <button type="button" role="tab" class="hero-stage-tab is-active" data-slug="breathe-calm" aria-selected="true">Breathe &amp; Calm</button>
+            <button type="button" role="tab" class="hero-stage-tab" data-slug="stamper" aria-selected="false">Stamper</button>
+            <button type="button" role="tab" class="hero-stage-tab" data-slug="dinamik-ada" aria-selected="false">Dynamic Pill</button>
+          </div>
+          <div class="hero-stage-viewport">
+            <div class="hero-stage-bar">
+              <div class="hero-stage-identity">
+                <img src="assets/image/breathe-calm-icon.svg" alt="Breathe &amp; Calm icon" width="38" height="38" />
+                <div>
+                  <strong>Breathe &amp; Calm - Stress &amp; Mind Journal</strong>
+                  <span>Health &amp; Fitness · iOS</span>
+                </div>
               </div>
+              <a class="hero-stage-link" href="app.html?slug=breathe-calm">Open &rarr;</a>
             </div>
-            <img class="hero-bento-screen" src="assets/image/breathe-calm-screen-1.svg" alt="Breathe &amp; Calm interface preview" />
-          </a>
-
-          <div class="hero-bento-stack">
-            <a class="hero-bento-card hero-bento-mini" href="app.html?slug=stamper">
-              <img src="assets/image/stamper-icon.svg" alt="Stamper icon" width="44" height="44" />
-              <div>
-                <span class="hero-bento-tag">Memories</span>
-                <strong>Stamper</strong>
-                <small>Stamp-style photo albums</small>
-              </div>
+            <a class="hero-stage-frame app-accent-breathe-calm" href="app.html?slug=breathe-calm" aria-label="View Breathe &amp; Calm">
+              <img src="assets/image/breathe-calm-screen-1.svg" alt="Breathe &amp; Calm interface preview" />
             </a>
-
-            <a class="hero-bento-card hero-bento-mini" href="app.html?slug=dinamik-ada">
-              <img src="assets/image/dinamik-ada-icon.svg" alt="Dynamic Pill icon" width="44" height="44" />
-              <div>
-                <span class="hero-bento-tag">Android Utility</span>
-                <strong>Dynamic Pill</strong>
-                <small>Top capsule media &amp; alerts</small>
-              </div>
-            </a>
+            <p class="hero-stage-caption">Scientific breathwork, cognitive stress relief tools, and private offline journaling for a calmer mind.</p>
           </div>
         </div>
       </div>

@@ -72,7 +72,45 @@ function renderScreenshotButton(src, appName, index, totalCount) {
   `;
 }
 
-function renderShowcasePage(app) {
+function renderMoreAppsStrip(currentApp, allApps) {
+  const esc = getEscaper();
+  const others = allApps.filter(a => a.slug !== currentApp.slug).slice(0, 3);
+  if (!others.length) return '';
+
+  return `
+    <section class="more-apps-section" aria-label="More apps by Laphedus">
+      <div class="more-apps-head">
+        <div>
+          <p class="stamper-section-label">Studio Portfolio</p>
+          <h2>Explore more apps</h2>
+        </div>
+        <a class="btn subtle" href="index.html#apps">View All Apps &rarr;</a>
+      </div>
+      <div class="more-apps-grid">
+        ${others.map(other => {
+          const fallbackIcon = esc(getFallbackIcon(other));
+          return `
+            <a class="more-app-card" href="app.html?slug=${encodeURIComponent(other.slug)}">
+              <img
+                class="app-squircle-icon"
+                src="${esc(other.icon_url)}"
+                alt="${esc(other.name)} icon"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='${fallbackIcon}';"
+              />
+              <div class="more-app-info">
+                <span>${esc(other.category || 'App')} · ${esc(other.platform || 'Mobile')}</span>
+                <strong>${esc(other.name)}</strong>
+              </div>
+            </a>
+          `;
+        }).join('')}
+      </div>
+    </section>
+  `;
+}
+
+function renderShowcasePage(app, allApps) {
   const esc = getEscaper();
   const fallbackIcon = esc(getFallbackIcon(app));
   const legalActions = renderLegalActions(app, app.secondary_cta_label ?? 'Privacy Policy');
@@ -206,10 +244,12 @@ function renderShowcasePage(app) {
         </div>
       </section>
     ` : ''}
+
+    ${renderMoreAppsStrip(app, allApps)}
   `;
 }
 
-function renderGenericPage(app) {
+function renderGenericPage(app, allApps) {
   const esc = getEscaper();
   const fallbackIcon = esc(getFallbackIcon(app));
   const primaryAction = app.app_store_url
@@ -218,7 +258,7 @@ function renderGenericPage(app) {
       ? `<a class="btn primary" href="${esc(app.play_store_url)}" target="_blank" rel="noopener">Get on Google Play</a>`
       : app.external_url
         ? `<a class="btn primary" href="${esc(app.external_url)}" target="_blank" rel="noopener">${esc(app.external_label ?? 'Open Details')}</a>`
-        : '';
+        : `<a class="btn primary" href="#overview">Explore Overview</a>`;
 
   const legalActions = renderLegalActions(app, 'Privacy Policy');
   const screens = Array.isArray(app.screenshots) ? app.screenshots : [];
@@ -246,7 +286,7 @@ function renderGenericPage(app) {
           <div class="stamper-inline-meta">
             ${app.platform ? `<span>${esc(app.platform)}</span>` : ''}
             <span>${esc(app.category ?? 'Mobile App')}</span>
-            <span>${app.has_account === false ? 'No Account Required' : 'Account Support'}</span>
+            <span>${app.has_account === false ? 'No Account Required' : 'Account Controls'}</span>
           </div>
         </div>
         <div class="generic-visual">
@@ -269,12 +309,30 @@ function renderGenericPage(app) {
         </article>
       </section>
 
+      <section class="generic-facts-grid" aria-label="App highlights">
+        <article class="generic-fact-card">
+          <p class="stamper-section-label">Platform</p>
+          <h3>${esc(app.platform ?? 'Mobile')}</h3>
+          <p>Built and maintained by Laphedus for responsive everyday performance.</p>
+        </article>
+        <article class="generic-fact-card">
+          <p class="stamper-section-label">Privacy &amp; Data</p>
+          <h3>${app.has_account === false ? 'Accountless Use' : 'Transparent Controls'}</h3>
+          <p>Dedicated privacy policy${app.has_account === false ? ' with no mandatory account setup.' : ' and user data deletion workflow.'}</p>
+        </article>
+        <article class="generic-fact-card">
+          <p class="stamper-section-label">Resources</p>
+          <h3>Legal &amp; Support</h3>
+          <p>Review <a href="privacy.html?app=${encodeURIComponent(app.slug)}">Privacy</a>${app.has_terms ? `, <a href="terms.html?app=${encodeURIComponent(app.slug)}">Terms</a>` : ''}, or reach <a href="support.html?app=${encodeURIComponent(app.slug)}">Support</a>.</p>
+        </article>
+      </section>
+
       ${leadScreens.length > 0 ? `
         <section class="generic-gallery">
           <div class="generic-gallery-head">
             <p class="stamper-section-label">Preview</p>
             <h2>Screenshots</h2>
-            <p>Click any screenshot to view it larger.</p>
+            <p>Click any screenshot to inspect it at full scale.</p>
           </div>
           <div class="generic-gallery-grid generic-gallery-cols-${leadCols}">
             ${leadScreens.map((src, index) => `
@@ -294,6 +352,8 @@ function renderGenericPage(app) {
           ` : ''}
         </section>
       ` : ''}
+
+      ${renderMoreAppsStrip(app, allApps)}
     </section>
   `;
 }
@@ -301,7 +361,6 @@ function renderGenericPage(app) {
 function initLightbox(screenshots, appName) {
   if (!Array.isArray(screenshots) || screenshots.length === 0) return;
 
-  const esc = getEscaper();
   const modal = document.createElement('div');
   modal.className = 'lightbox';
   modal.hidden = true;
@@ -420,7 +479,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const hasRichShowcase = app.slug === 'stamper' || app.slug === 'breathe-calm' || Boolean(app.highlights);
     container.className = `app-detail app-detail-${hasRichShowcase ? 'stamper' : 'generic'}`;
-    container.innerHTML = hasRichShowcase ? renderShowcasePage(app) : renderGenericPage(app);
+    container.innerHTML = hasRichShowcase ? renderShowcasePage(app, apps) : renderGenericPage(app, apps);
 
     initLightbox(app.screenshots ?? [], app.name);
     if (fallback) fallback.hidden = true;
