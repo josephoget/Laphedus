@@ -5,23 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terms of Use - Laphedus</title>
   <meta name="description" content="Terms of use for Laphedus apps." />
+  <link rel="icon" type="image/svg+xml" href="assets/image/laphedus-store-logo.svg" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <a href="index.html" class="logo">Laphedus</a>
+        <a href="index.html" class="logo">
+          <img class="logo-mark" src="assets/image/laphedus-store-logo.svg" alt="" width="28" height="28" />
+          <span>Laphedus</span>
+          <span class="logo-badge">Studio</span>
+        </a>
       </div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#apps">Apps</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html" class="active">Terms</a>
-        <a href="support.html">Support</a>
-        <a href="account-deletion.html">Account Deletion</a>
-        <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play</a>
-      </nav>
+      <div class="header-controls">
+        <nav id="site-nav" class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="index.html#apps">Apps</a>
+          <a href="index.html#about">About</a>
+          <a href="support.html">Support</a>
+          <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" class="nav-cta" target="_blank" rel="noopener">Google Play</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch color theme" aria-pressed="false"></button>
+        <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -63,14 +72,17 @@
     <div class="container footer-inner">
       <small>© <span id="year"></span> Laphedus. All rights reserved.</small>
       <div class="footer-links">
-        <a href="index.html">Home</a>
+        <a href="index.html#apps">All Apps</a>
         <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
         <a href="support.html">Support</a>
         <a href="account-deletion.html">Account Deletion</a>
+        <a href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play</a>
       </div>
     </div>
   </footer>
 
+  <script src="assets/js/ui.js"></script>
   <script src="assets/js/terms.js"></script>
 </body>
 </html>

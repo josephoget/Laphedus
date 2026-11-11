@@ -18,9 +18,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const appName = termsText.split(/\s+—\s+Terms of Use(?:\s|$)/i, 1)[0] || slug;
     document.getElementById('appName').textContent = appName;
     document.title = 'Terms of Use | ' + appName;
-    const pre = document.createElement('pre');
-    pre.textContent = termsText;
-    content.replaceChildren(pre);
+    if (window.LaphedusUI?.renderFormattedDocument) {
+      window.LaphedusUI.renderFormattedDocument(content, termsText);
+    } else {
+      const pre = document.createElement('pre');
+      pre.textContent = termsText;
+      content.replaceChildren(pre);
+    }
     const defaultTerms = document.getElementById('defaultTerms');
     if (defaultTerms) defaultTerms.hidden = true;
     const privacy = document.createElement('a');

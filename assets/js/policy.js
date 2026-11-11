@@ -5,11 +5,15 @@ function qs(name) {
 
 function setPreContent(container, text, hideId) {
   if (!container) return;
-  const pre = document.createElement('pre');
-  // Use textContent to preserve original text exactly and prevent HTML injection
-  pre.textContent = text;
-  container.innerHTML = '';
-  container.appendChild(pre);
+  if (window.LaphedusUI?.renderFormattedDocument) {
+    window.LaphedusUI.renderFormattedDocument(container, text);
+  } else {
+    const pre = document.createElement('pre');
+    // Use textContent to preserve original text exactly and prevent HTML injection
+    pre.textContent = text;
+    container.innerHTML = '';
+    container.appendChild(pre);
+  }
   if (hideId) {
     const def = document.getElementById(hideId);
     if (def) def.style.display = 'none';
