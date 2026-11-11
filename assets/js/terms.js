@@ -8,21 +8,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!slug) return;
   const content = document.getElementById('policyContent');
   try {
-    const [termsResponse, appsResponse] = await Promise.all([fetch('data/terms.json'), fetch('data/apps.json')]);
-    if (!termsResponse.ok || !appsResponse.ok) throw new Error('Terms unavailable');
-    const [terms, apps] = await Promise.all([termsResponse.json(), appsResponse.json()]);
-    const app = apps.find(item => item.slug === slug);
-    if (!app || !Object.prototype.hasOwnProperty.call(terms, slug)) throw new Error('Unknown app');
-    document.getElementById('appName').textContent = app.name;
-    document.title = 'Terms of Use | ' + app.name;
+    const termsResponse = await fetch('./data/terms.json');
+    if (!termsResponse.ok) throw new Error('Terms unavailable');
+    const terms = await termsResponse.json();
+    const termsText = terms[slug];
+    if (typeof termsText !== 'string' || !termsText.trim()) throw new Error('Unknown app');
+    // Keep this page independent from apps.json so a missing app catalog cannot
+    // prevent otherwise available legal text from rendering.
+    const appName = termsText.split(/\s+—\s+Terms of Use(?:\s|$)/i, 1)[0] || slug;
+    document.getElementById('appName').textContent = appName;
+    document.title = 'Terms of Use | ' + appName;
     const pre = document.createElement('pre');
-    pre.textContent = terms[slug];
+    pre.textContent = termsText;
     content.replaceChildren(pre);
     const defaultTerms = document.getElementById('defaultTerms');
     if (defaultTerms) defaultTerms.hidden = true;
     const privacy = document.createElement('a');
     privacy.href = 'privacy.html?app=' + encodeURIComponent(slug);
-    privacy.textContent = 'Read the privacy policy for ' + app.name;
+    privacy.textContent = 'Read the privacy policy for ' + appName;
     const related = document.createElement('p');
     related.appendChild(privacy);
     const support = document.createElement('a');
