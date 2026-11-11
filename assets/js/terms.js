@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const slug = new URLSearchParams(location.search).get('app');
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  const backToApp = document.getElementById('backToApp');
+  if (backToApp && slug) backToApp.href = 'app.html?slug=' + encodeURIComponent(slug);
   if (!slug) return;
   const content = document.getElementById('policyContent');
   try {
@@ -10,7 +15,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!app || !Object.prototype.hasOwnProperty.call(terms, slug)) throw new Error('Unknown app');
     document.getElementById('appName').textContent = app.name;
     document.title = 'Terms of Use | ' + app.name;
-    setPreContent(content, terms[slug], 'defaultTerms');
+    const pre = document.createElement('pre');
+    pre.textContent = terms[slug];
+    content.replaceChildren(pre);
+    const defaultTerms = document.getElementById('defaultTerms');
+    if (defaultTerms) defaultTerms.hidden = true;
     const privacy = document.createElement('a');
     privacy.href = 'privacy.html?app=' + encodeURIComponent(slug);
     privacy.textContent = 'Read the privacy policy for ' + app.name;
