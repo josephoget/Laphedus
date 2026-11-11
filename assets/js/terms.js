@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!slug) return;
   const content = document.getElementById('policyContent');
   try {
-    const termsResponse = await fetch('./data/terms.json');
-    if (!termsResponse.ok) throw new Error('Terms unavailable');
-    const terms = await termsResponse.json();
+    let terms = window.LAPHEDUS_TERMS;
+    if (!terms || typeof terms !== 'object') {
+      const termsResponse = await fetch('./data/terms.json');
+      if (!termsResponse.ok) throw new Error('Terms unavailable');
+      terms = await termsResponse.json();
+    }
     const termsText = terms[slug];
     if (typeof termsText !== 'string' || !termsText.trim()) throw new Error('Unknown app');
     // Keep this page independent from apps.json so a missing app catalog cannot

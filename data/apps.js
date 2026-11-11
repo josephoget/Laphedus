@@ -1,0 +1,221 @@
+/* Local-file fallback. Keep in sync with apps.json. */
+window.LAPHEDUS_APPS = [
+  {
+    "slug": "kayfe",
+    "name": "Kayfe - Coffee Fortune App",
+    "platform": "Android",
+    "short_description": "Read your coffee cup and enjoy a glimpse into your future.",
+    "long_description": "Kayfe offers a modern and enjoyable coffee fortune experience. With in-app purchase options, you can access richer content and build a fun daily routine with fresh readings.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/ASFgeBRkxQNspVgFSoQo8NFIWsWVhVONOXCO4iA1esJXMOejSaaxJkS2rMuG3D8bnA=w480-h960-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/NPpXiw4faFl4PDQKBo45sKa8r8cC4uHbrfLsfc2vc4bPMV3kQMeS80vMs56QvJtEamM=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/aLaiJHE20GL7X8lwvixLUMmNnvdzhRXrigLgD9MVH2XDWTuO0nGYTvFhUOLxBBSBtaw=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/NgnJEEngQMi20nITjcVG_-8ZeqbsiNE4JoGU7dbCMWoBbgr0JHBjyb5Zjlx9SU3zEQ=w1052-h592-rw"
+    ],
+    "category": "Entertainment",
+    "has_terms": true
+  },
+  {
+    "slug": "dinamik-ada",
+    "name": "Dynamic Pill",
+    "platform": "Android",
+    "status": "In Development",
+    "short_description": "A customizable Android overlay experience that shows media, connection, and system events in a top capsule.",
+    "long_description": "Dynamic Pill brings media playback, battery, and connection events together in a capsule interface at the top of the screen. Appearance, position, theme, gestures, and selected helper modules can be customized on the device. Its hybrid structure combines a Flutter interface with an Android service layer to provide both settings screens and the system overlay experience in one product.",
+    "play_store_url": "",
+    "has_account": false,
+    "has_terms": true,
+    "has_support": true,
+    "icon_url": "assets/image/dinamik-ada-icon.svg",
+    "screenshots": [
+      "assets/image/dinamik-ada-screen-1.svg",
+      "assets/image/dinamik-ada-screen-2.svg"
+    ],
+    "category": "Tools"
+  },
+  {
+    "slug": "stamper",
+    "name": "Stamper - My Stamp Album",
+    "platform": "Android",
+    "short_description": "Turn your photos into stamp-style memories, organize them in albums, and keep everything on your device.",
+    "long_description": "Stamper is a local-first Android app for collecting memories in a more personal format. Choose a photo from your camera or gallery, transform it into a stamp-style keepsake, and organize your collection in albums that stay under your control. There is no required account, your content remains on your device, and premium features are handled through Google Play Billing with RevenueCat.",
+    "play_store_url": "https://play.google.com/store/apps/details?id=com.laphedus.stamperalbumapp.stamper&hl=en-US",
+    "has_account": false,
+    "has_support": true,
+    "icon_url": "https://play-lh.googleusercontent.com/Wn4LvyoqcwYiqF-mUbqZfcja6Lx9Yqt4eRTJumIgdo291nCQ-dFKeDIBin1Z3yUIeocxwIiLFa_3-JXKrMh4wA=w480-h960-rw",
+    "fallback_icon_url": "assets/image/stamper-icon.svg",
+    "screenshots": [
+      "assets/image/stamper-screen-1.svg"
+    ],
+    "category": "Photos and Memories",
+    "eyebrow": "Digital memories, kept simple",
+    "hero_title": "Your personal stamp album for the moments worth keeping.",
+    "hero_description": "Create warm, stamp-style keepsakes from your own photos, collect them in albums, and keep your memories local, private, and easy to revisit.",
+    "intro": "Stamper is built for people who want something more personal than a standard gallery. It gives your favorite photos a collectible feel without turning memory-keeping into a complicated workflow.",
+    "primary_cta_label": "View on Google Play",
+    "secondary_cta_label": "Read Privacy Policy",
+    "highlights": [
+      {
+        "title": "Create stamp-style memories",
+        "description": "Turn a photo from your camera or gallery into a polished, collectible-looking digital stamp."
+      },
+      {
+        "title": "Organize by album",
+        "description": "Keep your creations tidy with albums that make your collection feel intentional instead of scattered."
+      },
+      {
+        "title": "Local-first by design",
+        "description": "Your content stays on your device, so you can keep control over your memories without relying on an account."
+      }
+    ],
+    "benefits": [
+      "A calmer alternative to crowded gallery apps",
+      "A more emotional, collectible format for personal photos",
+      "A simple flow that works without account setup"
+    ],
+    "how_it_works": [
+      {
+        "title": "Pick a photo",
+        "description": "Start with an image from your camera or gallery."
+      },
+      {
+        "title": "Create your stamp",
+        "description": "Transform the photo into Stamper's signature memory style."
+      },
+      {
+        "title": "Save it to an album",
+        "description": "Build themed collections you can revisit anytime."
+      }
+    ],
+    "trust_points": [
+      "No account required to use the core experience",
+      "Your content stays stored on your device",
+      "Premium access is handled with Google Play Billing"
+    ],
+    "cta_title": "Keep your favorite moments in a format that feels worth saving.",
+    "cta_description": "If you want a photo app that feels more personal, more intentional, and easier to own, Stamper is designed for that.",
+    "has_terms": true
+  },
+  {
+    "slug": "expensly",
+    "name": "Expensly - Expense Tracker",
+    "platform": "Android",
+    "short_description": "Record and track your expenses easily.",
+    "long_description": "With Expensly, you can quickly record, categorize, and report your daily expenses. A clean interface and practical flows help improve your financial awareness.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/mtr4uc5I3fTIqP_slBIt2ZBOl_OlV_GOqTip3GcC4wSxb8sYTJEh_1l_U-NzS4AJUg=w480-h960-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/DtcK5l76ykOaiPCx-EXkd1pIc-YgyNdk35EfGuAWuULhQg-WGbVPp7BTYRCUaHIUvQ=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/gaCTAcyUPKO9oLYUdHrYpDyY3zimB2X1IOCx_U2GD_JAgP0eXiwAJj4tPPFrylaoVvhI=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/T-CjqiY2y4QMKl99sRd9LXwmhLa92ZWujSgZnm09BjQiqxLfzNXiN30ZfWorTFByOg=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/UimvRaTVoKai-2R7OeOMO7tspBHq27FxbsBXs_y83IR8Xb2h83C0zDNfS8io8x1_sqZL=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/CSalmHaBwRMsKfB4axCyBK4rN_G7wEWMhlVaNWEdKiQd0BWTau_zggmfd8uoWs6WXw=w1052-h592-rw"
+    ],
+    "category": "Finance",
+    "has_terms": true
+  },
+  {
+    "slug": "taptap",
+    "name": "TapTap - Score",
+    "platform": "Android",
+    "short_description": "Simple and enjoyable score tracking.",
+    "long_description": "TapTap simplifies keeping and sharing scores. Its lightweight and fast structure makes it ideal for quick use.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/D9tIUs1b36Vc3mVJ12bF60oezAcOqHylj4p1msv5IAaypv0ne4qarSnBEszqy1HMQury=s512-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/vX6gTTVLWubCOqYatBPwlsaTTVsvDxzyfbGop9SCb7Zj8RiRGJzy02WmUd3te2Vylg=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/ymKMJq9NHkarLLte8FkVbjXmZcHL4Fd83IbP-ZRbIaoyadqrNJtYyLbxlfCVwOo36Q0=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/Djo0eBn_hlDAObmILi5_2wJM78N4KCJIEZP0dkSjHRrYSs0b4dxaERfxtZvWuGeSPbyM=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/UZyK4O_caM1VGP-NzqMOrRuj5cvZfnF5dkoyW6TZ6cD2rZUiCUd0fDEyV2fRNK54CtYo=w1052-h592-rw"
+    ],
+    "category": "Tools",
+    "has_terms": true
+  },
+  {
+    "slug": "nowa4",
+    "name": "Nowa4",
+    "platform": "Android",
+    "status": "Coming Soon",
+    "short_description": "AI prompt-based image creation with transparent token tracking and privacy controls.",
+    "long_description": "Nowa4 is an AI image generation companion where users can turn prompts into visual creations and manage prompt history and token balances. Full app showcase details are coming soon; privacy, terms, and account deletion resources are available directly from this page.",
+    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "icon_url": "https://play-lh.googleusercontent.com/f9Kh7vKGB315dubX_lbhwlipSXdEt09NwIFY_QUx3SuSdGeYI-PVITVrOG8gn7QudaKSexPwzPGbMvMDuRM9vGw=w480-h960-rw",
+    "screenshots": [
+      "https://play-lh.googleusercontent.com/iDIH45sTwO7nhuvThbTMrmSxLofv-RKlgIqF7lNfDRSM5pa0muwUMovIMAvLBU-tmTpyvN1OBxS37bYcrH851rk=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/HIzhSmKK0CL69GnXdsjDjzEnY-Y_8RIxJyzFD-ZknIBDBvEvLAkyml_s_a0jTVBewAGtbq8b1qBmqpR264AJ=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/s87Liu0nLpgrtMFMpOYgTdQq1opJe5ceOxDdZkvcMrWreI7kxijWG5TNXsrhsvCzb0zLFpRNlVgmz10-zHkfqQ=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/OMVR22aM6kwpobcctvmBuoDTwfFQMt1QZtWRxhbwuKqNFJqgmD4Tge_4-VlFXqRbU7UB8_NYwlFaIJ4rYS5qBh0=w1052-h592-rw",
+      "https://play-lh.googleusercontent.com/vzXroMn6z6NCJbCON2uXx6PGMY_hG_PH8IeKLYC9I9ot074ZjvSqIbiV49p8n6zL-76Q7cUn4Rt29fcwdMSfAQ=w1052-h592-rw"
+    ],
+    "category": "Tools",
+    "has_terms": true
+  },
+  {
+    "slug": "breathe-calm",
+    "name": "Breathe & Calm - Stress & Mind Journal",
+    "platform": "iOS",
+    "featured": true,
+    "status": "Coming Soon",
+    "short_description": "Scientific breathwork, cognitive stress relief tools, and private offline journaling for a calmer mind.",
+    "long_description": "Breathe & Calm is an offline-first iOS wellness sanctuary designed to ease stress, soothe anxiety, and interrupt mental looping. Grounded in science, the app offers paced breathwork routines (Box Breathing, 4-7-8, Deep Release), cognitive journaling tools (Cognitive Distortion Reframing, Circle of Control, Mind Dump), and weekly emotional rhythm analytics. Built with strict privacy-first principles: no accounts required, no tracking SDKs, and local SwiftData storage secured behind Face ID / Touch ID hardware authentication.",
+    "play_store_url": "",
+    "app_store_url": "",
+    "has_account": false,
+    "has_terms": true,
+    "has_support": true,
+    "icon_url": "assets/image/breathe-calm-icon.svg",
+    "screenshots": [
+      "assets/image/breathe-calm-screen-1.svg",
+      "assets/image/breathe-calm-screen-2.svg",
+      "assets/image/breathe-calm-screen-3.svg"
+    ],
+    "category": "Health & Fitness",
+    "eyebrow": "Mental Well-Being, Offline & Private",
+    "hero_title": "Take a breath. Reclaim your headspace in minutes.",
+    "hero_description": "A mindful iOS companion combining paced scientific breathwork, cognitive stress reframing, and local-only journaling to restore calm whenever life feels overwhelming.",
+    "intro": "Breathe & Calm was built for those who value privacy, simplicity, and scientifically grounded peace of mind. Without invasive cloud servers or overwhelming features, it delivers tactile, focused tools for your daily mental well-being.",
+    "primary_cta_label": "Explore App Features",
+    "secondary_cta_label": "Read Privacy Policy",
+    "highlights": [
+      {
+        "title": "Guided Paced Breathwork",
+        "description": "Engage your parasympathetic nervous system with Box Breathing (4-4-4-4), Relaxing (4-7-8), and custom calming tempos."
+      },
+      {
+        "title": "Cognitive Stress Reframing",
+        "description": "Deconstruct anxiety triggers, untangle cognitive distortions, and regain clarity with the Circle of Control tool."
+      },
+      {
+        "title": "100% Offline & Biometric Security",
+        "description": "Your journal and stress entries are saved exclusively on your device via SwiftData, protected with Apple Face ID hardware lock."
+      }
+    ],
+    "benefits": [
+      "Quick relief during stress peaks and panic surges",
+      "Zero accounts, zero ads, and zero third-party tracking",
+      "Tactile Claymorphism design crafted for emotional serenity"
+    ],
+    "how_it_works": [
+      {
+        "title": "Pause & Breathe",
+        "description": "Start a short 2 to 4 minute breathwork session to physically down-regulate nervous system arousal."
+      },
+      {
+        "title": "Log & Reframe",
+        "description": "Dump your thoughts onto paper and use guided prompts to challenge automatic negative thoughts."
+      },
+      {
+        "title": "Track Your Rhythm",
+        "description": "Review your weekly pulse and discover time-of-day stress patterns without compromising personal privacy."
+      }
+    ],
+    "trust_points": [
+      "No account required to use all core features",
+      "All health and journal reflections stay strictly on your device",
+      "Pro upgrades and subscriptions managed securely via Apple StoreKit"
+    ],
+    "cta_title": "A calmer, more centered mind starts with a single mindful breath.",
+    "cta_description": "Experience thoughtful, privacy-first wellness on your iPhone and iPad."
+  }
+];

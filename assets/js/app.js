@@ -458,10 +458,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    const response = await fetch('data/apps.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error('apps.json could not be loaded');
-
-    const apps = await response.json();
+    let apps = window.LAPHEDUS_APPS;
+    if (!Array.isArray(apps)) {
+      const response = await fetch('./data/apps.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('apps.json could not be loaded');
+      apps = await response.json();
+    }
     const app = apps.find(entry => entry.slug === slug);
     if (!app) throw new Error('App not found');
 

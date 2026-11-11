@@ -95,9 +95,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   try {
-    const res = await fetch('data/apps.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('apps.json could not be loaded');
-    const apps = await res.json();
+    let apps = window.LAPHEDUS_APPS;
+    if (!Array.isArray(apps)) {
+      const res = await fetch('./data/apps.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('apps.json could not be loaded');
+      apps = await res.json();
+    }
 
     const categories = ['All', ...new Set(apps.map(app => app.category).filter(Boolean))];
     let activeCategory = 'All';
