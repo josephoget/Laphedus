@@ -223,5 +223,77 @@ window.LAPHEDUS_APPS = [
     ],
     "cta_title": "A calmer, more centered mind starts with a single mindful breath.",
     "cta_description": "Experience thoughtful, privacy-first wellness on your iPhone and iPad."
+  },
+  {
+    "slug": "forma",
+    "name": "Forma - Workout & Fitness",
+    "platform": "Android & iOS",
+    "status": "Coming Soon",
+    "featured": true,
+    "short_description": "Plan your training, explore a real exercise library, and keep your progress synced to your account.",
+    "long_description": "Forma is an account-based fitness app for Android and iOS. Sign in with Google, explore a Supabase-powered workout and exercise catalog, follow training programs, complete timed workouts, and review your history and weekly goals. Training preferences and progress sync to your account, with an offline queue for supported changes. The app includes a multilingual interface, themes, and reduced-motion support.",
+    "play_store_url": "",
+    "app_store_url": "",
+    "has_account": true,
+    "has_terms": false,
+    "has_support": true,
+    "icon_url": "assets/image/forma-icon.png",
+    "fallback_icon_url": "assets/image/laphedus-store-logo.svg",
+    "screenshots": [],
+    "category": "Health & Fitness",
+    "eyebrow": "Training, made personal",
+    "hero_title": "Build a training rhythm that fits your life.",
+    "hero_description": "Explore workouts and exercises, follow a plan, and see your progress grow week by week with Forma.",
+    "intro": "Forma brings workout discovery, guided sessions, and account-based progress together in one focused fitness app. Choose a goal, find a session, and keep your training history close as your routine develops.",
+    "primary_cta_label": "Explore App Features",
+    "secondary_cta_label": "Read Privacy Policy",
+    "highlights": [
+      {
+        "title": "A real workout library",
+        "description": "Explore published workouts, programs, exercise categories, and video-supported movement guidance."
+      },
+      {
+        "title": "Training that keeps moving",
+        "description": "Follow movement and rest timers, pause when needed, and complete sessions with dated workout history."
+      },
+      {
+        "title": "Progress linked to your account",
+        "description": "Track weekly goals and training totals. Supported preferences and progress sync with your Supabase account."
+      }
+    ],
+    "benefits": [
+      "Choose a training goal and shape your profile around it",
+      "Find programs, workouts, and exercises in one place",
+      "Review your completed training and weekly progress"
+    ],
+    "how_it_works": [
+      {
+        "title": "Sign in and set a goal",
+        "description": "Use Google sign-in and choose the training direction that suits you."
+      },
+      {
+        "title": "Find your next session",
+        "description": "Browse the exercise catalog, workouts, and program days."
+      },
+      {
+        "title": "Train and track progress",
+        "description": "Complete a session, then revisit your history and weekly activity."
+      }
+    ],
+    "trust_points": [
+      "Account access uses Google sign-in",
+      "Supabase is the source of truth for account-linked data",
+      "No guest mode or separate local account is used"
+    ],
+    "cta_title": "Make room for a steadier training routine.",
+    "cta_description": "Forma brings discovery, guided workouts, and account-linked progress together for your next session.",
+    "showcase_meta": [
+      "Android & iOS",
+      "Google sign-in",
+      "Account sync",
+      "Coming Soon"
+    ],
+    "overview_title": "Training discovery and progress, connected to your account.",
+    "flow_title": "Three steps to keep your training moving."
   }
 ];

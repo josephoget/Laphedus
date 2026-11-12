@@ -5,6 +5,7 @@
 
   const APP_SCOPE_CATALOG = [
     { slug: '', label: 'General', pages: ['privacy', 'terms', 'support', 'account-deletion'] },
+    { slug: 'forma', label: 'Forma', pages: ['privacy', 'support'] },
     { slug: 'breathe-calm', label: 'Breathe & Calm', pages: ['privacy', 'terms', 'support', 'account-deletion'] },
     { slug: 'stamper', label: 'Stamper', pages: ['privacy', 'terms', 'support'] },
     { slug: 'dinamik-ada', label: 'Dynamic Pill', pages: ['privacy', 'terms', 'support'] },
@@ -25,6 +26,7 @@
   }
 
   const APP_DISPLAY_NAMES = {
+    'forma': 'Forma - Workout & Fitness',
     'breathe-calm': 'Breathe & Calm',
     'stamper': 'Stamper - My Stamp Album',
     'dinamik-ada': 'Dynamic Pill',

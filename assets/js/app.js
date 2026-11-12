@@ -118,7 +118,7 @@ function renderShowcasePage(app, allApps) {
   const screens = Array.isArray(app.screenshots) ? app.screenshots : [];
   const screenCols = Math.min(Math.max(screens.length, 1), 3);
 
-  const metaItems = [
+  const metaItems = app.showcase_meta ?? [
     app.platform || (app.slug === 'breathe-calm' ? 'iOS (SwiftUI)' : 'iOS & Android'),
     'Local-first',
     app.slug === 'breathe-calm' ? 'Zero Tracking' : 'Album-based',
@@ -158,7 +158,7 @@ function renderShowcasePage(app, allApps) {
     <section id="overview" class="stamper-story-grid">
       <article class="stamper-story-card stamper-story-card-wide">
         <p class="stamper-section-label">Overview</p>
-        <h2>${app.slug === 'breathe-calm' ? 'A quiet sanctuary for your daily headspace and calm.' : 'Built for people who want their memories to feel collected, not buried.'}</h2>
+        <h2>${esc(app.overview_title ?? (app.slug === 'breathe-calm' ? 'A quiet sanctuary for your daily headspace and calm.' : 'Built for people who want their memories to feel collected, not buried.'))}</h2>
         <p>${esc(app.intro ?? app.long_description)}</p>
       </article>
 
@@ -197,7 +197,7 @@ function renderShowcasePage(app, allApps) {
     <section class="stamper-flow">
       <div class="stamper-flow-head">
         <p class="stamper-section-label">How It Works</p>
-        <h2>${app.slug === 'breathe-calm' ? 'Three mindful steps to ease tension.' : 'Three simple steps from photo to keepsake.'}</h2>
+        <h2>${esc(app.flow_title ?? (app.slug === 'breathe-calm' ? 'Three mindful steps to ease tension.' : 'Three simple steps from photo to keepsake.'))}</h2>
       </div>
       <div class="stamper-flow-steps">
         ${(app.how_it_works ?? []).slice(0, 3).map((item, index) => `
