@@ -593,6 +593,25 @@ a:hover {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+.app-group + .app-group {
+  margin-top: 42px;
+}
+
+.app-group-head {
+  margin: 0 0 16px;
+}
+
+.app-group-head .section-kicker {
+  margin: 0 0 5px;
+}
+
+.app-group-head h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+
 /* Minimal Cards */
 .card {
   background: var(--bg-card);

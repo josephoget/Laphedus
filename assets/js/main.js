@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const grid = document.getElementById('app-grid');
+  const publishedGrid = document.getElementById('published-app-grid');
+  const unpublishedGrid = document.getElementById('unpublished-app-grid');
+  const publishedSection = document.getElementById('published-apps');
+  const unpublishedSection = document.getElementById('unpublished-apps');
   const filtersEl = document.getElementById('app-filters');
   const fallback = document.getElementById('app-grid-fallback');
   const esc = window.LaphedusUI?.escapeHtml ?? (v => String(v ?? ''));
@@ -106,16 +109,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     let activeCategory = 'All';
 
     const renderApps = () => {
-      if (activeCategory === 'All') {
-        const featuredApp = apps.find(app => app.featured) || null;
-        const otherApps = featuredApp ? apps.filter(app => app.slug !== featuredApp.slug) : apps;
-        grid.className = 'app-grid';
-        grid.innerHTML = (featuredApp ? renderFeaturedCard(featuredApp) : '') + otherApps.map(renderStandardCard).join('');
-      } else {
-        const filtered = apps.filter(app => app.category === activeCategory);
-        grid.className = 'app-grid app-grid-filtered';
-        grid.innerHTML = filtered.map(renderStandardCard).join('');
-      }
+      const filtered = activeCategory === 'All' ? apps : apps.filter(app => app.category === activeCategory);
+      const published = filtered.filter(app => app.published === true);
+      const unpublished = filtered.filter(app => app.published !== true);
+      const featuredApp = activeCategory === 'All' ? published.find(app => app.featured) : null;
+      const publishedOthers = featuredApp ? published.filter(app => app.slug !== featuredApp.slug) : published;
+
+      publishedGrid.className = activeCategory === 'All' ? 'app-grid' : 'app-grid app-grid-filtered';
+      publishedGrid.innerHTML = (featuredApp ? renderFeaturedCard(featuredApp) : '') + publishedOthers.map(renderStandardCard).join('');
+      unpublishedGrid.className = activeCategory === 'All' ? 'app-grid' : 'app-grid app-grid-filtered';
+      unpublishedGrid.innerHTML = unpublished.map(renderStandardCard).join('');
+      publishedSection.hidden = published.length === 0;
+      unpublishedSection.hidden = unpublished.length === 0;
     };
 
     if (filtersEl) {

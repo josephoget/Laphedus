@@ -58,34 +58,18 @@
           <a class="btn" href="https://play.google.com/store/apps/dev?id=8741306643833691211" target="_blank" rel="noopener">Google Play &#8599;</a>
         </div>
 
-        <div class="hero-dock" aria-label="Studio app icons">
-          <a class="dock-item" href="app.html?slug=breathe-calm" title="Breathe &amp; Calm">
-            <img src="assets/image/breathe-calm-icon.svg" alt="Breathe &amp; Calm" width="52" height="52" />
-            <span>Breathe &amp; Calm</span>
-          </a>
+        <div class="hero-dock" aria-label="Published app icons">
           <a class="dock-item" href="app.html?slug=stamper" title="Stamper">
-            <img src="assets/image/stamper-icon.svg" alt="Stamper" width="52" height="52" />
+            <img src="assets/image/stamper-icon.webp" alt="Stamper" width="52" height="52" />
             <span>Stamper</span>
           </a>
           <a class="dock-item" href="app.html?slug=dinamik-ada" title="Dynamic Pill">
-            <img src="assets/image/dinamik-ada-icon.svg" alt="Dynamic Pill" width="52" height="52" />
+            <img src="assets/image/dynamic-pill-icon.webp" alt="Dynamic Pill" width="52" height="52" />
             <span>Dynamic Pill</span>
           </a>
-          <a class="dock-item" href="app.html?slug=kayfe" title="Kayfe">
-            <img src="https://play-lh.googleusercontent.com/ASFgeBRkxQNspVgFSoQo8NFIWsWVhVONOXCO4iA1esJXMOejSaaxJkS2rMuG3D8bnA=w480-h960-rw" alt="Kayfe" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
-            <span>Kayfe</span>
-          </a>
           <a class="dock-item" href="app.html?slug=expensly" title="Expensly">
-            <img src="https://play-lh.googleusercontent.com/mtr4uc5I3fTIqP_slBIt2ZBOl_OlV_GOqTip3GcC4wSxb8sYTJEh_1l_U-NzS4AJUg=w480-h960-rw" alt="Expensly" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
+            <img src="assets/image/expensly-icon.webp" alt="Expensly" width="52" height="52" />
             <span>Expensly</span>
-          </a>
-          <a class="dock-item" href="app.html?slug=taptap" title="TapTap">
-            <img src="https://play-lh.googleusercontent.com/D9tIUs1b36Vc3mVJ12bF60oezAcOqHylj4p1msv5IAaypv0ne4qarSnBEszqy1HMQury=s512-rw" alt="TapTap" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
-            <span>TapTap</span>
-          </a>
-          <a class="dock-item" href="app.html?slug=nowa4" title="Nowa4">
-            <img src="https://play-lh.googleusercontent.com/f9Kh7vKGB315dubX_lbhwlipSXdEt09NwIFY_QUx3SuSdGeYI-PVITVrOG8gn7QudaKSexPwzPGbMvMDuRM9vGw=w480-h960-rw" alt="Nowa4" width="52" height="52" onerror="this.onerror=null;this.src='assets/image/laphedus-store-logo.svg';" />
-            <span>Nowa4</span>
           </a>
         </div>
       </div>
@@ -100,7 +84,16 @@
           </div>
           <div id="app-filters" class="filter-tabs" role="group" aria-label="Filter apps by category"></div>
         </div>
-        <div id="app-grid" class="app-grid" aria-live="polite"></div>
+        <div id="app-collections" aria-live="polite">
+          <section class="app-group" id="published-apps">
+            <div class="app-group-head"><p class="section-kicker">Available now</p><h3>Published on Google Play</h3></div>
+            <div id="published-app-grid" class="app-grid"></div>
+          </section>
+          <section class="app-group" id="unpublished-apps">
+            <div class="app-group-head"><p class="section-kicker">On the way</p><h3>In Development &amp; Not Published</h3></div>
+            <div id="unpublished-app-grid" class="app-grid"></div>
+          </section>
+        </div>
         <div id="app-grid-fallback" class="fallback" hidden>The app list could not be loaded. Please refresh the page.</div>
       </div>
     </section>

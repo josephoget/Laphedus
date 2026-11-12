@@ -6,7 +6,7 @@ window.LAPHEDUS_APPS = [
     "platform": "Android",
     "short_description": "Read your coffee cup and enjoy a glimpse into your future.",
     "long_description": "Kayfe offers a modern and enjoyable coffee fortune experience. With in-app purchase options, you can access richer content and build a fun daily routine with fresh readings.",
-    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "play_store_url": "",
     "icon_url": "https://play-lh.googleusercontent.com/ASFgeBRkxQNspVgFSoQo8NFIWsWVhVONOXCO4iA1esJXMOejSaaxJkS2rMuG3D8bnA=w480-h960-rw",
     "screenshots": [
       "https://play-lh.googleusercontent.com/NPpXiw4faFl4PDQKBo45sKa8r8cC4uHbrfLsfc2vc4bPMV3kQMeS80vMs56QvJtEamM=w1052-h592-rw",
@@ -15,25 +15,32 @@ window.LAPHEDUS_APPS = [
     ],
     "category": "Entertainment",
     "has_terms": true,
-    "has_support": true
+    "has_support": true,
+    "published": false,
+    "status": "Not Published"
   },
   {
     "slug": "dinamik-ada",
     "name": "Dynamic Pill",
     "platform": "Android",
-    "status": "In Development",
+    "status": "Available",
     "short_description": "A customizable Android overlay experience that shows media, connection, and system events in a top capsule.",
     "long_description": "Dynamic Pill brings media playback, battery, and connection events together in a capsule interface at the top of the screen. Appearance, position, theme, gestures, and selected helper modules can be customized on the device. Its hybrid structure combines a Flutter interface with an Android service layer to provide both settings screens and the system overlay experience in one product.",
-    "play_store_url": "",
+    "play_store_url": "https://play.google.com/store/apps/details?id=com.laphedus.dynamicpill",
     "has_account": false,
     "has_terms": true,
     "has_support": true,
-    "icon_url": "assets/image/dinamik-ada-icon.svg",
+    "icon_url": "assets/image/dynamic-pill-icon.webp",
     "screenshots": [
-      "assets/image/dinamik-ada-screen-1.svg",
-      "assets/image/dinamik-ada-screen-2.svg"
+      "assets/image/dynamic-pill-screen-1.webp",
+      "assets/image/dynamic-pill-screen-2.webp",
+      "assets/image/dynamic-pill-screen-3.webp",
+      "assets/image/dynamic-pill-screen-4.webp",
+      "assets/image/dynamic-pill-screen-5.webp",
+      "assets/image/dynamic-pill-screen-6.webp"
     ],
-    "category": "Tools"
+    "category": "Tools",
+    "published": true
   },
   {
     "slug": "stamper",
@@ -44,10 +51,14 @@ window.LAPHEDUS_APPS = [
     "play_store_url": "https://play.google.com/store/apps/details?id=com.laphedus.stamperalbumapp.stamper&hl=en-US",
     "has_account": false,
     "has_support": true,
-    "icon_url": "https://play-lh.googleusercontent.com/Wn4LvyoqcwYiqF-mUbqZfcja6Lx9Yqt4eRTJumIgdo291nCQ-dFKeDIBin1Z3yUIeocxwIiLFa_3-JXKrMh4wA=w480-h960-rw",
+    "icon_url": "assets/image/stamper-icon.webp",
     "fallback_icon_url": "assets/image/stamper-icon.svg",
     "screenshots": [
-      "assets/image/stamper-screen-1.svg"
+      "assets/image/stamper-screen-1.webp",
+      "assets/image/stamper-screen-2.webp",
+      "assets/image/stamper-screen-3.webp",
+      "assets/image/stamper-screen-4.webp",
+      "assets/image/stamper-screen-5.webp"
     ],
     "category": "Photos and Memories",
     "eyebrow": "Digital memories, kept simple",
@@ -96,7 +107,10 @@ window.LAPHEDUS_APPS = [
     ],
     "cta_title": "Keep your favorite moments in a format that feels worth saving.",
     "cta_description": "If you want a photo app that feels more personal, more intentional, and easier to own, Stamper is designed for that.",
-    "has_terms": true
+    "has_terms": true,
+    "published": true,
+    "status": "Available",
+    "featured": true
   },
   {
     "slug": "expensly",
@@ -105,18 +119,20 @@ window.LAPHEDUS_APPS = [
     "short_description": "Track expenses, budgets, accounts, recurring bills, and savings goals privately on your device.",
     "long_description": "Expensly helps you record expenses and income, organize categories, manage multiple accounts and recurring payments, monitor monthly budgets and savings goals, view home screen widgets, and export CSV or JSON backups across 8 languages. Local-first by design with an ad-supported free tier and optional one-time Premium unlock via Google Play Billing and RevenueCat.",
     "play_store_url": "https://play.google.com/store/apps/details?id=com.laphedus.masrafkaydedici.masrafkaydedici",
-    "icon_url": "https://play-lh.googleusercontent.com/mtr4uc5I3fTIqP_slBIt2ZBOl_OlV_GOqTip3GcC4wSxb8sYTJEh_1l_U-NzS4AJUg=w480-h960-rw",
+    "icon_url": "assets/image/expensly-icon.webp",
     "screenshots": [
-      "https://play-lh.googleusercontent.com/DtcK5l76ykOaiPCx-EXkd1pIc-YgyNdk35EfGuAWuULhQg-WGbVPp7BTYRCUaHIUvQ=w1052-h592-rw",
-      "https://play-lh.googleusercontent.com/gaCTAcyUPKO9oLYUdHrYpDyY3zimB2X1IOCx_U2GD_JAgP0eXiwAJj4tPPFrylaoVvhI=w1052-h592-rw",
-      "https://play-lh.googleusercontent.com/T-CjqiY2y4QMKl99sRd9LXwmhLa92ZWujSgZnm09BjQiqxLfzNXiN30ZfWorTFByOg=w1052-h592-rw",
-      "https://play-lh.googleusercontent.com/UimvRaTVoKai-2R7OeOMO7tspBHq27FxbsBXs_y83IR8Xb2h83C0zDNfS8io8x1_sqZL=w1052-h592-rw",
-      "https://play-lh.googleusercontent.com/CSalmHaBwRMsKfB4axCyBK4rN_G7wEWMhlVaNWEdKiQd0BWTau_zggmfd8uoWs6WXw=w1052-h592-rw"
+      "assets/image/expensly-screen-1.webp",
+      "assets/image/expensly-screen-2.webp",
+      "assets/image/expensly-screen-3.webp",
+      "assets/image/expensly-screen-4.webp",
+      "assets/image/expensly-screen-5.webp"
     ],
     "category": "Finance",
     "has_terms": true,
     "has_account": false,
-    "has_support": true
+    "has_support": true,
+    "published": true,
+    "status": "Available"
   },
   {
     "slug": "taptap",
@@ -124,7 +140,7 @@ window.LAPHEDUS_APPS = [
     "platform": "Android",
     "short_description": "Simple and enjoyable score tracking.",
     "long_description": "TapTap simplifies keeping and sharing scores. Its lightweight and fast structure makes it ideal for quick use.",
-    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "play_store_url": "",
     "icon_url": "https://play-lh.googleusercontent.com/D9tIUs1b36Vc3mVJ12bF60oezAcOqHylj4p1msv5IAaypv0ne4qarSnBEszqy1HMQury=s512-rw",
     "screenshots": [
       "https://play-lh.googleusercontent.com/vX6gTTVLWubCOqYatBPwlsaTTVsvDxzyfbGop9SCb7Zj8RiRGJzy02WmUd3te2Vylg=w1052-h592-rw",
@@ -135,16 +151,18 @@ window.LAPHEDUS_APPS = [
     "category": "Tools",
     "has_terms": true,
     "has_account": false,
-    "has_support": true
+    "has_support": true,
+    "published": false,
+    "status": "Not Published"
   },
   {
     "slug": "nowa4",
     "name": "Nowa4",
     "platform": "Android",
-    "status": "Coming Soon",
+    "status": "Not Published",
     "short_description": "AI prompt-based image creation with transparent token tracking and privacy controls.",
     "long_description": "Nowa4 is an AI image generation companion where users can turn prompts into visual creations and manage prompt history and token balances. Full app showcase details are coming soon; privacy, terms, and account deletion resources are available directly from this page.",
-    "play_store_url": "https://play.google.com/store/apps/dev?id=8741306643833691211",
+    "play_store_url": "",
     "icon_url": "https://play-lh.googleusercontent.com/f9Kh7vKGB315dubX_lbhwlipSXdEt09NwIFY_QUx3SuSdGeYI-PVITVrOG8gn7QudaKSexPwzPGbMvMDuRM9vGw=w480-h960-rw",
     "screenshots": [
       "https://play-lh.googleusercontent.com/iDIH45sTwO7nhuvThbTMrmSxLofv-RKlgIqF7lNfDRSM5pa0muwUMovIMAvLBU-tmTpyvN1OBxS37bYcrH851rk=w1052-h592-rw",
@@ -155,14 +173,15 @@ window.LAPHEDUS_APPS = [
     ],
     "category": "Tools",
     "has_terms": true,
-    "has_support": true
+    "has_support": true,
+    "published": false
   },
   {
     "slug": "breathe-calm",
     "name": "Breathe & Calm - Stress & Mind Journal",
     "platform": "iOS",
-    "featured": true,
-    "status": "Coming Soon",
+    "featured": false,
+    "status": "In Development",
     "short_description": "Scientific breathwork, cognitive stress relief tools, and private offline journaling for a calmer mind.",
     "long_description": "Breathe & Calm is an offline-first iOS wellness sanctuary designed to ease stress, soothe anxiety, and interrupt mental looping. Grounded in science, the app offers paced breathwork routines (Box Breathing, 4-7-8, Deep Release), cognitive journaling tools (Cognitive Distortion Reframing, Circle of Control, Mind Dump), and weekly emotional rhythm analytics. Built with strict privacy-first principles: no accounts required, no tracking SDKs, and local SwiftData storage secured behind Face ID / Touch ID hardware authentication.",
     "play_store_url": "",
@@ -222,13 +241,14 @@ window.LAPHEDUS_APPS = [
       "Pro upgrades and subscriptions managed securely via Apple StoreKit"
     ],
     "cta_title": "A calmer, more centered mind starts with a single mindful breath.",
-    "cta_description": "Experience thoughtful, privacy-first wellness on your iPhone and iPad."
+    "cta_description": "Experience thoughtful, privacy-first wellness on your iPhone and iPad.",
+    "published": false
   },
   {
     "slug": "forma",
     "name": "Forma - Workout & Fitness",
     "platform": "Android & iOS",
-    "status": "Coming Soon",
+    "status": "In Development",
     "featured": true,
     "short_description": "Plan your training, explore a real exercise library, and keep your progress synced to your account.",
     "long_description": "Forma is an account-based fitness app for Android and iOS. Sign in with Google, explore a Supabase-powered workout and exercise catalog, follow training programs, complete timed workouts, and review your history and weekly goals. Training preferences and progress sync to your account, with an offline queue for supported changes. The app includes a multilingual interface, themes, and reduced-motion support.",
@@ -294,6 +314,7 @@ window.LAPHEDUS_APPS = [
       "Coming Soon"
     ],
     "overview_title": "Training discovery and progress, connected to your account.",
-    "flow_title": "Three steps to keep your training moving."
+    "flow_title": "Three steps to keep your training moving.",
+    "published": false
   }
 ];
