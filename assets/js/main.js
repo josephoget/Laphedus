@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const fallback = document.getElementById('app-grid-fallback');
   const esc = window.LaphedusUI?.escapeHtml ?? (v => String(v ?? ''));
 
-  const getIconFallback = (app) => app.fallback_icon_url || 'assets/image/laphedus-store-logo.svg';
+  const getIconFallback = (app) => app.fallback_icon_url || 'assets/image/laphedus-store-logo.svg?v=20261112-2';
 
   const getStoreButton = (app, isFeatured = false) => {
     const label = isFeatured ? 'Explore App' : 'Details';

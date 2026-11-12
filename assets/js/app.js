@@ -11,7 +11,7 @@ function getEscaper() {
 }
 
 function getFallbackIcon(app) {
-  return app.fallback_icon_url || 'assets/image/laphedus-store-logo.svg';
+  return app.fallback_icon_url || 'assets/image/laphedus-store-logo.svg?v=20261112-2';
 }
 
 function renderBreadcrumb(app) {

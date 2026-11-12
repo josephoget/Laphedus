@@ -258,7 +258,7 @@ window.LAPHEDUS_APPS = [
     "has_terms": false,
     "has_support": true,
     "icon_url": "assets/image/forma-icon.png",
-    "fallback_icon_url": "assets/image/laphedus-store-logo.svg",
+    "fallback_icon_url": "assets/image/laphedus-store-logo.svg?v=20261112-2",
     "screenshots": [],
     "category": "Health & Fitness",
     "eyebrow": "Training, made personal",
